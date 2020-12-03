@@ -2,17 +2,27 @@ package tian.web.bean.user;
 
 import java.io.Serializable;
 import java.util.Date;
+
+import com.alibaba.fastjson.annotation.JSONField;
+import com.baomidou.mybatisplus.annotation.*;
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
+import tian.web.TimeUtil;
 
 /**
  * user
  * @author 
  */
 @Data
+@AllArgsConstructor
+@NoArgsConstructor
+@TableName("user")
 public class User implements Serializable {
     /**
      * 用户表主键
      */
+    @TableId(type = IdType.AUTO)
     private Long userId;
 
     /**
@@ -23,6 +33,7 @@ public class User implements Serializable {
     /**
      * 密码（加密）
      */
+    @JSONField(serialize = false)
     private String password;
 
     /**
@@ -33,21 +44,27 @@ public class User implements Serializable {
     /**
      * 创建时间
      */
+    @JSONField(format = TimeUtil.DATE_PATTERN.YYYY_MM_DD_HH_MM_SS)
     private Date createTime;
 
     /**
      * 更新时间
      */
+    @JSONField(format = TimeUtil.DATE_PATTERN.YYYY_MM_DD_HH_MM_SS)
     private Date updateTime;
 
     /**
      * 删除状态（1已删除，0未删除）
      */
-    private Integer delete;
+    @TableLogic(value = "0",delval = "1")
+    @JSONField(serialize = false)
+    private Integer del;
 
     /**
      * 版本号
      */
+    @Version
+    @JSONField(serialize = false)
     private Integer version;
 
     private static final long serialVersionUID = 1L;

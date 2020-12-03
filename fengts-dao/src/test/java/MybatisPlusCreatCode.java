@@ -1,16 +1,17 @@
 import com.baomidou.mybatisplus.annotation.DbType;
 import com.baomidou.mybatisplus.annotation.FieldFill;
 import com.baomidou.mybatisplus.annotation.IdType;
+import com.baomidou.mybatisplus.core.toolkit.StringPool;
 import com.baomidou.mybatisplus.generator.AutoGenerator;
-import com.baomidou.mybatisplus.generator.config.DataSourceConfig;
-import com.baomidou.mybatisplus.generator.config.GlobalConfig;
-import com.baomidou.mybatisplus.generator.config.PackageConfig;
-import com.baomidou.mybatisplus.generator.config.StrategyConfig;
+import com.baomidou.mybatisplus.generator.config.*;
 import com.baomidou.mybatisplus.generator.config.po.TableFill;
+import com.baomidou.mybatisplus.generator.config.po.TableInfo;
 import com.baomidou.mybatisplus.generator.config.rules.DateType;
 import com.baomidou.mybatisplus.generator.config.rules.NamingStrategy;
+import org.junit.Test;
 
 import java.util.ArrayList;
+import java.util.List;
 
 /**
  * @author tian
@@ -29,7 +30,8 @@ public class MybatisPlusCreatCode {
         gc.setOpen(false);
         gc.setFileOverride(false); // 是否覆盖
         gc.setServiceName("%sService"); // 去Service的I前缀
-        gc.setIdType(IdType.ID_WORKER);
+
+        gc.setIdType(IdType.AUTO);
         gc.setDateType(DateType.ONLY_DATE);
         gc.setSwagger2(false);
         mpg.setGlobalConfig(gc);
@@ -47,12 +49,14 @@ public class MybatisPlusCreatCode {
         //3、包的配置
         PackageConfig pc = new PackageConfig();
 //        pc.setModuleName("blog");
-        pc.setParent("tian.web");
+        pc.setParent("tian.web.blog");
         pc.setEntity("bean");
         pc.setMapper("dao");
         pc.setService("service");
         pc.setController("controller");
         mpg.setPackageInfo(pc);
+
+
 
         //4、策略配置
         StrategyConfig strategy = new StrategyConfig();
@@ -75,5 +79,10 @@ public class MybatisPlusCreatCode {
         strategy.setControllerMappingHyphenStyle(true); //localhost:8080/hello_id_2
         mpg.setStrategy(strategy);
         mpg.execute(); //执行
+    }
+
+    @Test
+    public void test(){
+        System.out.println(System.getProperty("user.dir"));
     }
 }
