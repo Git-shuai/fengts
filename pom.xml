@@ -12,6 +12,7 @@
         <module>fengts-bean</module>
         <module>fengts-dao</module>
         <module>fengts-service</module>
+        <module>fengts-utils</module>
     </modules>
 
     <dependencyManagement>
