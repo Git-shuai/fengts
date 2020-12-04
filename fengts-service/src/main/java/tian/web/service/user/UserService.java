@@ -1,5 +1,6 @@
 package tian.web.service.user;
 
+import tian.web.Result;
 import tian.web.bean.user.User;
 
 /**
@@ -7,5 +8,7 @@ import tian.web.bean.user.User;
  * @date 2020/12/3
  */
 public interface UserService {
-    public Boolean insertUser(User user);
+    public Result insertUser(User user);
+
+    public Boolean exitsUsername(User user);
 }
