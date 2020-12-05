@@ -11,4 +11,6 @@ public interface UserService {
     public Result insertUser(User user);
 
     public Boolean exitsUsername(User user);
+
+    public Boolean checkLogin(String username,String password) throws Exception;
 }

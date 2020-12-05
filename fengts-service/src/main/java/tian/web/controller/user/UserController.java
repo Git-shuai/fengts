@@ -27,20 +27,20 @@ public class UserController {
         return result;
     }
 
-    @PostMapping("/login")
-    public Result login(@RequestBody User user){
-        Result result =new Result();
-        //判断用户是否存在
-        Boolean exitsUsername = userService.exitsUsername(user);
-        if (!exitsUsername){
-           result.setCode(ResCode.ERROR_CODE);
-           result.setMessage("用户名不存在");
-        }
-        //登录
-        result.setCode(ResCode.SUCCESS_CODE);
-        result.setMessage("登录成功");
-        return result;
-    }
+//    @PostMapping("/login")
+//    public Result login(@RequestBody User user){
+//        Result result =new Result();
+//        //判断用户是否存在
+//        Boolean exitsUsername = userService.exitsUsername(user);
+//        if (!exitsUsername){
+//           result.setCode(ResCode.ERROR_CODE);
+//           result.setMessage("用户名不存在");
+//        }
+//        //登录
+//        result.setCode(ResCode.SUCCESS_CODE);
+//        result.setMessage("登录成功");
+//        return result;
+//    }
 
     @PostMapping("/getCode")
     public Result<Object> getCode(@RequestBody User user){
