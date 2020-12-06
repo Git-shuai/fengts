@@ -22,12 +22,21 @@ public class UserController {
     @Autowired
     private UserService userService;
 
+    /**
+     * 用户注册API
+     * @param user 用户类
+     * @return Result
+     */
     @PostMapping("/register")
     public Result registeredUser(@RequestBody User user){
         Result result = userService.insertUser(user);
         return result;
     }
 
+    /**
+     * 用户查询API
+     * @return  Result
+     */
     @GetMapping("/admin/userlist")
     public Result userlist(){
         Result result=new Result();
@@ -35,6 +44,11 @@ public class UserController {
         return result;
     }
 
+    /**
+     * 获取验证码API
+     * @param user 用户实体类
+     * @return Result<Object>
+     */
     @PostMapping("/getCode")
     public Result<Object> getCode(@RequestBody User user){
         Result<Object> result = new Result<>();
