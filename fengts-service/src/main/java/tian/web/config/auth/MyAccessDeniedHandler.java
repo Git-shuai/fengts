@@ -4,6 +4,8 @@ import com.baomidou.mybatisplus.extension.api.R;
 import org.springframework.security.access.AccessDeniedException;
 import org.springframework.security.web.access.AccessDeniedHandler;
 import org.springframework.stereotype.Component;
+import tian.web.Result;
+import tian.web.enums.ResCode;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
@@ -21,7 +23,9 @@ public class MyAccessDeniedHandler extends JSONAuthentication implements AccessD
                        AccessDeniedException accessDeniedException) throws IOException, ServletException {
 
         //装入token
-        R<String> data = R.failed("权限不足:"+accessDeniedException.getMessage());
+        Result<Object> data = new Result<>();
+        data.setCode(ResCode.ERROR_CODE);
+        data.setMessage("您没有该权限");
         //输出
         this.WriteJSON(request, response, data);
     }

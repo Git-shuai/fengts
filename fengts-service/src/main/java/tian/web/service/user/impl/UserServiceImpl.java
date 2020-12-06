@@ -5,6 +5,7 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.util.StringUtils;
 import tian.web.Result;
+import tian.web.bean.user.Permission;
 import tian.web.bean.user.User;
 import tian.web.components.BCryptPasswordEncoderUtil;
 import tian.web.dao.user.UserDao;
@@ -78,5 +79,21 @@ public class UserServiceImpl implements UserService {
             throw new Exception("密码不正确！");
         }
         return true;
+    }
+
+    @Override
+    public User queryUserByUsername(String username) {
+        HashMap<String, Object> map = new HashMap<>();
+        map.put("username",username);
+        List<User> users = userDao.selectByMap(map);
+        if (!users.isEmpty()){
+            return users.get(0);
+        }
+        return null;
+    }
+
+    @Override
+    public List<Permission> getListPerByUsername(String username) {
+        return userDao.getListPerByUsername(username);
     }
 }

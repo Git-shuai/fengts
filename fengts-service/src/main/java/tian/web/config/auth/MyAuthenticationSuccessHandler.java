@@ -7,7 +7,11 @@ import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.web.authentication.AuthenticationSuccessHandler;
 import org.springframework.stereotype.Component;
+import tian.web.Result;
+import tian.web.bean.user.Permission;
 import tian.web.components.TokenCache;
+import tian.web.enums.ResCode;
+import tian.web.service.user.UserService;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
@@ -25,6 +29,9 @@ public class MyAuthenticationSuccessHandler extends JSONAuthentication implement
 
 //    @Autowired
 //    SysFrontendMenuTableService service;
+
+    @Autowired
+    private UserService userService;
 
     @Override
     public void onAuthenticationSuccess(HttpServletRequest request,
@@ -50,15 +57,19 @@ public class MyAuthenticationSuccessHandler extends JSONAuthentication implement
         }
 
         //加载前端菜单
-//        List<SysFrontendMenuTable> menus = service.getMenusByUserName(userDetails.getUsername());
+        List<Permission> urls = userService.getListPerByUsername(userDetails.getUsername());
+
         //
         Map<String,Object> map = new HashMap<>();
         map.put("username",userDetails.getUsername());
         map.put("auth",userDetails.getAuthorities());
-        map.put("menus","前端菜单");
+        map.put("menus",urls);
         map.put("token",token);
         //装入token
-        R<Map<String,Object>> data = R.ok(map);
+        Result<Object> data = new Result<>();
+        data.setCode(ResCode.SUCCESS_CODE);
+        data.setMessage("登录成功");
+        data.setData(map);
         //输出
         this.WriteJSON(request, response, data);
 

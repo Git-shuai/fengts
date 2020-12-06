@@ -4,6 +4,8 @@ import com.baomidou.mybatisplus.extension.api.R;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.web.authentication.logout.LogoutSuccessHandler;
 import org.springframework.stereotype.Component;
+import tian.web.Result;
+import tian.web.enums.ResCode;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
@@ -21,8 +23,9 @@ public class MyLogoutSuccessHandler extends JSONAuthentication implements Logout
                                 Authentication authentication) throws IOException, ServletException {
 //        UserDetails user = (UserDetails) authentication.getPrincipal();
 //        String username = user.getUsername();
-        System.out.println("退出成功。。。。。。");
-        R<String> data = R.ok("退出成功");
+        Result<Object> data = new Result<>();
+        data.setCode(ResCode.SUCCESS_CODE);
+        data.setMessage("退出成功");
         super.WriteJSON(request,response,data);
     }
 }

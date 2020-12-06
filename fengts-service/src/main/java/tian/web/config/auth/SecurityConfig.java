@@ -74,6 +74,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
         //第三步，请求权限配置
         http.authorizeRequests()
                 .antMatchers(HttpMethod.POST,"/register").permitAll()
+                .antMatchers(HttpMethod.POST,"/getCode").authenticated()
                  //动态配置请求路径问题
                 .anyRequest().access("@dynamicPermission.checkPermisstion(request,authentication)");
 

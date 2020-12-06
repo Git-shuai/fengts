@@ -31,6 +31,16 @@ public class Permission implements Serializable {
     private String perName;
 
     /**
+     * url
+     */
+    private String perApiUrl;
+
+    /**
+     * url类型
+     */
+    private String perMethod;
+
+    /**
      * 父权限id
      */
     private Long parentPerId;

@@ -32,7 +32,7 @@ public class RolePermission implements Serializable {
     /**
      * 权限id
      */
-    private Long preId;
+    private Long perId;
 
     private static final long serialVersionUID = 1L;
 }

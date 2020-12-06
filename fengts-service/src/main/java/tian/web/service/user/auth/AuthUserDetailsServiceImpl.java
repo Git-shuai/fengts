@@ -1,12 +1,19 @@
 package tian.web.service.user.auth;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
+import tian.web.bean.user.Role;
+import tian.web.bean.user.User;
+import tian.web.dao.user.UserDao;
+import tian.web.service.user.UserService;
 
+import javax.annotation.Resource;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 
 /**
@@ -15,11 +22,11 @@ import java.util.List;
 @Service
 public class AuthUserDetailsServiceImpl implements UserDetailsService {
 
-//    @Autowired
-//    private SysUserService userService;
-//
-//    @Autowired
-//    private SysRoleTableService roleService;
+    @Autowired
+    private UserService userService;
+
+    @Resource
+    private UserDao userDao;
 
     /**
      * 通过账号查找用户、角色的信息
@@ -29,19 +36,19 @@ public class AuthUserDetailsServiceImpl implements UserDetailsService {
      */
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
-//        SysUserEntity user = userService.getUserByUserName(username);
-//        if (user == null) {
-//            throw new UsernameNotFoundException(String.format("%s.这个用户不存在", username));
-//        }else {
-//            //查找角色
-//            List<String> roles =  roleService.getRolesByUserName(username);
+        User user = userService.queryUserByUsername(username);
+        if (user==null){
+            throw new UsernameNotFoundException(String.format("%s.这个用户不存在", username));
+        }else {
+            HashMap<String, Object> map = new HashMap<>();
+            map.put("userId",user.getUserId());
+            List<Role> roles = userDao.getRoleByUsername(map);
             List<SimpleGrantedAuthority> authorities = new ArrayList<>();
-//            for (String role : roles) {
-//                authorities.add(new SimpleGrantedAuthority(role));
-//            }
-//            System.out.println("loadUserByUsername......user ===> " + user);
-//            return new AuthUser(user.getUserName(), user.getPassWord(), user.getState(), authorities);
-//        }
-        return new AuthUser("冯天帅","$2a$10$8OntzGcJ3AELvyzSTCVHTOYN.ID7aD4cBiRe.AccAkK1DdaqdmZV6",0,authorities);
+            for (Role role : roles) {
+                authorities.add(new SimpleGrantedAuthority(role.getRoleName()));
+            }
+
+            return new AuthUser(user.getUsername(), user.getPassword(), user.getDel(), authorities);
+        }
     }
 }

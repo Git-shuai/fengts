@@ -4,6 +4,8 @@ import com.baomidou.mybatisplus.extension.api.R;
 import org.springframework.security.core.AuthenticationException;
 import org.springframework.security.web.AuthenticationEntryPoint;
 import org.springframework.stereotype.Component;
+import tian.web.Result;
+import tian.web.enums.ResCode;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
@@ -20,7 +22,9 @@ public class MyAuthenticationEntryPoint extends JSONAuthentication  implements A
                          HttpServletResponse response,
                          AuthenticationException authException) throws IOException, ServletException {
 
-        R<String> data = R.failed("访问此资源需要完全身份验证（"+authException.getMessage()+"）！");
+        Result<Object> data = new Result<>();
+        data.setCode(ResCode.ERROR_CODE);
+        data.setMessage("请先登录");
         //输出
         this.WriteJSON(request, response, data);
     }

@@ -1,6 +1,7 @@
 package tian.web.controller.user;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
@@ -27,20 +28,12 @@ public class UserController {
         return result;
     }
 
-//    @PostMapping("/login")
-//    public Result login(@RequestBody User user){
-//        Result result =new Result();
-//        //判断用户是否存在
-//        Boolean exitsUsername = userService.exitsUsername(user);
-//        if (!exitsUsername){
-//           result.setCode(ResCode.ERROR_CODE);
-//           result.setMessage("用户名不存在");
-//        }
-//        //登录
-//        result.setCode(ResCode.SUCCESS_CODE);
-//        result.setMessage("登录成功");
-//        return result;
-//    }
+    @GetMapping("/admin/userlist")
+    public Result userlist(){
+        Result result=new Result();
+        result.setMessage("用户列表");
+        return result;
+    }
 
     @PostMapping("/getCode")
     public Result<Object> getCode(@RequestBody User user){
