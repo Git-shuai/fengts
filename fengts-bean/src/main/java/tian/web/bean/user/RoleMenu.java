@@ -1,57 +1,69 @@
 package tian.web.bean.user;
 
-import lombok.AllArgsConstructor;
+import java.io.Serializable;
 import lombok.Data;
-import lombok.NoArgsConstructor;
 
 /**
- * 用户菜单关联表
- *
- * @author FTS36
+ * role_menu
+ * @author 
  */
 @Data
-@AllArgsConstructor
-@NoArgsConstructor
-public class RoleMenu {
-
+public class RoleMenu implements Serializable {
     /**
-     * 用户菜单主键
+     * 用户菜单表主键
      */
-    private long id;
+    private Long id;
+
     /**
      * 用户id
      */
-    private long roleId;
+    private Long roleId;
+
     /**
      * 菜单id
      */
-    private long menuId;
+    private Long menuId;
 
+    private static final long serialVersionUID = 1L;
 
-    public long getId() {
-        return id;
+    @Override
+    public boolean equals(Object that) {
+        if (this == that) {
+            return true;
+        }
+        if (that == null) {
+            return false;
+        }
+        if (getClass() != that.getClass()) {
+            return false;
+        }
+        RoleMenu other = (RoleMenu) that;
+        return (this.getId() == null ? other.getId() == null : this.getId().equals(other.getId()))
+            && (this.getRoleId() == null ? other.getRoleId() == null : this.getRoleId().equals(other.getRoleId()))
+            && (this.getMenuId() == null ? other.getMenuId() == null : this.getMenuId().equals(other.getMenuId()));
     }
 
-    public void setId(long id) {
-        this.id = id;
+    @Override
+    public int hashCode() {
+        final int prime = 31;
+        int result = 1;
+        result = prime * result + ((getId() == null) ? 0 : getId().hashCode());
+        result = prime * result + ((getRoleId() == null) ? 0 : getRoleId().hashCode());
+        result = prime * result + ((getMenuId() == null) ? 0 : getMenuId().hashCode());
+        return result;
     }
 
-
-    public long getRoleId() {
-        return roleId;
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        sb.append(getClass().getSimpleName());
+        sb.append(" [");
+        sb.append("Hash = ").append(hashCode());
+        sb.append(", id=").append(id);
+        sb.append(", roleId=").append(roleId);
+        sb.append(", menuId=").append(menuId);
+        sb.append(", serialVersionUID=").append(serialVersionUID);
+        sb.append("]");
+        return sb.toString();
     }
-
-    public void setRoleId(long roleId) {
-        this.roleId = roleId;
-    }
-
-
-    public long getMenuId() {
-        return menuId;
-    }
-
-    public void setMenuId(long menuId) {
-        this.menuId = menuId;
-    }
-
 }

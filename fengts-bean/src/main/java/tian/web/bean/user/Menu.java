@@ -1,29 +1,21 @@
 package tian.web.bean.user;
 
-import com.baomidou.mybatisplus.annotation.IdType;
-import com.baomidou.mybatisplus.annotation.TableId;
-import lombok.AllArgsConstructor;
+import java.io.Serializable;
 import lombok.Data;
-import lombok.NoArgsConstructor;
 
 /**
- * 菜单表
- *
- * @author FTS36
+ * menu
+ * @author 
  */
 @Data
-@AllArgsConstructor
-@NoArgsConstructor
-public class Menu {
-
+public class Menu implements Serializable {
     /**
-     * 菜单id
+     * 菜单列表主键
      */
-    @TableId(type = IdType.AUTO)
-    private long menuId;
+    private Long menuId;
 
     /**
-     * 菜单名
+     * 菜单名称
      */
     private String menuName;
 
@@ -33,58 +25,61 @@ public class Menu {
     private String menuUrl;
 
     /**
-     * 父路径
+     * 父路径id
      */
-    private long parentId;
+    private Long parentId;
 
     /**
      * 菜单描述
      */
     private String menuDes;
 
+    private static final long serialVersionUID = 1L;
 
-    public long getMenuId() {
-        return menuId;
+    @Override
+    public boolean equals(Object that) {
+        if (this == that) {
+            return true;
+        }
+        if (that == null) {
+            return false;
+        }
+        if (getClass() != that.getClass()) {
+            return false;
+        }
+        Menu other = (Menu) that;
+        return (this.getMenuId() == null ? other.getMenuId() == null : this.getMenuId().equals(other.getMenuId()))
+            && (this.getMenuName() == null ? other.getMenuName() == null : this.getMenuName().equals(other.getMenuName()))
+            && (this.getMenuUrl() == null ? other.getMenuUrl() == null : this.getMenuUrl().equals(other.getMenuUrl()))
+            && (this.getParentId() == null ? other.getParentId() == null : this.getParentId().equals(other.getParentId()))
+            && (this.getMenuDes() == null ? other.getMenuDes() == null : this.getMenuDes().equals(other.getMenuDes()));
     }
 
-    public void setMenuId(long menuId) {
-        this.menuId = menuId;
+    @Override
+    public int hashCode() {
+        final int prime = 31;
+        int result = 1;
+        result = prime * result + ((getMenuId() == null) ? 0 : getMenuId().hashCode());
+        result = prime * result + ((getMenuName() == null) ? 0 : getMenuName().hashCode());
+        result = prime * result + ((getMenuUrl() == null) ? 0 : getMenuUrl().hashCode());
+        result = prime * result + ((getParentId() == null) ? 0 : getParentId().hashCode());
+        result = prime * result + ((getMenuDes() == null) ? 0 : getMenuDes().hashCode());
+        return result;
     }
 
-
-    public String getMenuName() {
-        return menuName;
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        sb.append(getClass().getSimpleName());
+        sb.append(" [");
+        sb.append("Hash = ").append(hashCode());
+        sb.append(", menuId=").append(menuId);
+        sb.append(", menuName=").append(menuName);
+        sb.append(", menuUrl=").append(menuUrl);
+        sb.append(", parentId=").append(parentId);
+        sb.append(", menuDes=").append(menuDes);
+        sb.append(", serialVersionUID=").append(serialVersionUID);
+        sb.append("]");
+        return sb.toString();
     }
-
-    public void setMenuName(String menuName) {
-        this.menuName = menuName;
-    }
-
-
-    public String getMenuUrl() {
-        return menuUrl;
-    }
-
-    public void setMenuUrl(String menuUrl) {
-        this.menuUrl = menuUrl;
-    }
-
-
-    public long getParentId() {
-        return parentId;
-    }
-
-    public void setParentId(long parentId) {
-        this.parentId = parentId;
-    }
-
-
-    public String getMenuDes() {
-        return menuDes;
-    }
-
-    public void setMenuDes(String menuDes) {
-        this.menuDes = menuDes;
-    }
-
 }
