@@ -22,6 +22,19 @@ public class JwtTokenUtil {
     // 过期时间 毫秒,设置默认1周的时间过期
     private  static final long EXPIRATION_TIME = 3600000L * 24*7;
 
+
+    /**
+     * 生成令牌
+     *
+     * @param username 用户名
+     * @return 令牌
+     */
+    public String generateToken(String username) {
+        Map<String, Object> claims = new HashMap<>(2);
+        claims.put(Claims.SUBJECT, username);
+        claims.put(Claims.ISSUED_AT, new Date());
+        return generateToken(claims);
+    }
     /**
      * 生成令牌
      *

@@ -1,6 +1,7 @@
 package tian.web.service.user;
 
 import tian.web.Result;
+import tian.web.bean.user.Menu;
 import tian.web.bean.user.Permission;
 import tian.web.bean.user.User;
 
@@ -11,7 +12,7 @@ import java.util.List;
  * @date 2020/12/3
  */
 public interface UserService {
-    public Result insertUser(User user);
+    public Result<Object> insertUser(User user);
 
     public Boolean exitsUsername(User user);
 
@@ -20,4 +21,6 @@ public interface UserService {
     public User queryUserByUsername(String username);
 
     public List<Permission> getListPerByUsername(String username);
+
+    public List<Menu> getListMenuByUsername(String username);
 }

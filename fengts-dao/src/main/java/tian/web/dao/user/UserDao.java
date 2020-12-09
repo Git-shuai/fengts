@@ -1,6 +1,7 @@
 package tian.web.dao.user;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
+import tian.web.bean.user.Menu;
 import tian.web.bean.user.Permission;
 import tian.web.bean.user.Role;
 import tian.web.bean.user.User;
@@ -16,4 +17,6 @@ public interface UserDao extends BaseMapper<User> {
     public List<Role> getRoleByUsername(Map<String,Object> params);
 
     public List<Permission> getListPerByUsername(String username);
+
+    List<Menu> getListMenuByUsername(String username);
 }

@@ -5,9 +5,11 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.util.StringUtils;
 import tian.web.Result;
+import tian.web.bean.user.Menu;
 import tian.web.bean.user.Permission;
 import tian.web.bean.user.User;
 import tian.web.components.BCryptPasswordEncoderUtil;
+import tian.web.components.JwtTokenUtil;
 import tian.web.dao.user.UserDao;
 import tian.web.enums.ResCode;
 import tian.web.service.user.UserService;
@@ -30,10 +32,13 @@ public class UserServiceImpl implements UserService {
     @Resource
     private UserDao userDao;
 
+    @Autowired
+    private JwtTokenUtil jwtTokenUtil;
+
     @Override
-    public Result insertUser(User user) {
+    public Result<Object> insertUser(User user) {
         //判断用户是否存在
-        Result result = new Result();
+        Result<Object> result = new Result<>();
         Boolean userExits = this.exitsUsername(user);
         if (userExits){
             result.setCode(ResCode.ERROR_CODE);
@@ -54,6 +59,15 @@ public class UserServiceImpl implements UserService {
         }
         result.setCode(ResCode.SUCCESS_CODE);
         result.setMessage("注册成功");
+        //设置返回token
+        String token = jwtTokenUtil.generateToken(user.getUsername());
+        List<Menu> urls = this.getListMenuByUsername(user.getUsername());
+        HashMap<Object, Object> map = new HashMap<>();
+        map.put("token",token);
+        map.put("username",user.getUsername());
+        map.put("menu",urls);
+        map.put("auth","默认用户");
+        result.setData(map);
         return result;
     }
 
@@ -95,5 +109,10 @@ public class UserServiceImpl implements UserService {
     @Override
     public List<Permission> getListPerByUsername(String username) {
         return userDao.getListPerByUsername(username);
+    }
+
+    @Override
+    public List<Menu> getListMenuByUsername(String username) {
+        return userDao.getListMenuByUsername(username);
     }
 }
