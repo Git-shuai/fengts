@@ -74,7 +74,6 @@
         </dependencies>
     </dependencyManagement>
 
-
     <dependencies>
         <!--全局引入不需要在其他地方引入-->
         <!--工具包-->
