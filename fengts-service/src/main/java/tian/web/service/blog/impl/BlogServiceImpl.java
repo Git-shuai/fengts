@@ -34,12 +34,13 @@ public class BlogServiceImpl implements BlogService {
     @Resource
     private BlogClassifyDao blogClassifyDao;
 
-    @Transactional
+    @Transactional(rollbackFor = Exception.class)
     @Override
     public Result<Blog> addBlog(Map<String,Object> params) {
         //判断入参是否为空
         if (params.isEmpty()){return new Result<>(ResCode.ERROR_CODE, null);}
         //得到入参blog
+
         Blog blog = (Blog) params.get("blog");
         //得到标签数组
         List<BlogTag> blogTag = (List<BlogTag>) params.get("tags");
