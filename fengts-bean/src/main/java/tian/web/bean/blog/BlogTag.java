@@ -1,24 +1,29 @@
 package tian.web.bean.blog;
 
+import com.baomidou.mybatisplus.annotation.IdType;
+import com.baomidou.mybatisplus.annotation.TableId;
 import java.io.Serializable;
-
-import com.baomidou.mybatisplus.annotation.TableName;
-import lombok.AllArgsConstructor;
 import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.EqualsAndHashCode;
 
 /**
- * blog_tag
+ * <p>
+ * 
+ * </p>
+ *
  * @author FTS
+ * @since 2021-01-05
  */
 @Data
-@NoArgsConstructor
-@AllArgsConstructor
-@TableName("blog_tag")
+@EqualsAndHashCode(callSuper = false)
 public class BlogTag implements Serializable {
+
+    private static final long serialVersionUID = 1L;
+
     /**
      * 文章标签表id
      */
+    @TableId(value = "id", type = IdType.AUTO)
     private Long id;
 
     /**
@@ -31,5 +36,5 @@ public class BlogTag implements Serializable {
      */
     private Long tagId;
 
-    private static final long serialVersionUID = 1L;
+
 }

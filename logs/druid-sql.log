@@ -1,0 +1,988 @@
+[2020-12-09 10:06:55] DEBUG 134 statementLog - {conn-10006, pstmt-20000} created. SELECT user_id,username,password,headurl,create_time,update_time,del,version FROM user  WHERE username = ? 
+
+
+ AND del=0
+[2020-12-09 10:06:55] DEBUG 134 statementLog - {conn-10006, pstmt-20000} Parameters : [冯天帅]
+[2020-12-09 10:06:55] DEBUG 134 statementLog - {conn-10006, pstmt-20000} Types : [VARCHAR]
+[2020-12-09 10:06:55] DEBUG 134 statementLog - {conn-10006, pstmt-20000} executed. 31.2857 millis. SELECT user_id,username,password,headurl,create_time,update_time,del,version FROM user  WHERE username = ? 
+
+
+ AND del=0
+[2020-12-09 10:06:55] DEBUG 134 statementLog - {conn-10006, pstmt-20001} created. SELECT user_id,username,password,headurl,create_time,update_time,del,version FROM user  WHERE username = ? 
+
+
+ AND del=0
+[2020-12-09 10:06:55] DEBUG 134 statementLog - {conn-10006, pstmt-20001} Parameters : [冯天帅]
+[2020-12-09 10:06:55] DEBUG 134 statementLog - {conn-10006, pstmt-20001} Types : [VARCHAR]
+[2020-12-09 10:06:55] DEBUG 134 statementLog - {conn-10006, pstmt-20001} executed. 1.2945 millis. SELECT user_id,username,password,headurl,create_time,update_time,del,version FROM user  WHERE username = ? 
+
+
+ AND del=0
+[2020-12-09 10:06:55] DEBUG 134 statementLog - {conn-10006, pstmt-20002} created. SELECT  r.role_id,r.role_name
+        FROM `user` u,role r,user_role ur
+        WHERE u.user_id=? and  u.user_id=ur.user_id  and r.role_id=ur.role_id
+[2020-12-09 10:06:55] DEBUG 134 statementLog - {conn-10006, pstmt-20002} Parameters : [22]
+[2020-12-09 10:06:55] DEBUG 134 statementLog - {conn-10006, pstmt-20002} Types : [BIGINT]
+[2020-12-09 10:06:55] DEBUG 134 statementLog - {conn-10006, pstmt-20002} executed. 3.2374 millis. SELECT  r.role_id,r.role_name
+        FROM `user` u,role r,user_role ur
+        WHERE u.user_id=? and  u.user_id=ur.user_id  and r.role_id=ur.role_id
+[2020-12-09 10:06:55] DEBUG 134 statementLog - {conn-10006, pstmt-20003} created. SELECT
+            m.menu_id, m.menu_name,m. menu_url,m.parent_id
+        FROM
+            `user` u,
+            role r,
+            user_role ur,
+            menu m,
+            role_menu rm
+        WHERE
+            u.username=?
+          AND u.user_id = ur.user_id
+          AND ur.role_id = r.role_id
+          AND r.role_id = rm.role_id
+          AND rm.menu_id = m.menu_id
+          AND m.menu_url IS NOT NULL
+[2020-12-09 10:06:55] DEBUG 134 statementLog - {conn-10006, pstmt-20003} Parameters : [冯天帅]
+[2020-12-09 10:06:55] DEBUG 134 statementLog - {conn-10006, pstmt-20003} Types : [VARCHAR]
+[2020-12-09 10:06:55] DEBUG 134 statementLog - {conn-10006, pstmt-20003} executed. 3.5977 millis. SELECT
+            m.menu_id, m.menu_name,m. menu_url,m.parent_id
+        FROM
+            `user` u,
+            role r,
+            user_role ur,
+            menu m,
+            role_menu rm
+        WHERE
+            u.username=?
+          AND u.user_id = ur.user_id
+          AND ur.role_id = r.role_id
+          AND r.role_id = rm.role_id
+          AND rm.menu_id = m.menu_id
+          AND m.menu_url IS NOT NULL
+[2020-12-09 10:20:32] DEBUG 134 statementLog - {conn-10007, pstmt-20004} created. SELECT user_id,username,password,headurl,create_time,update_time,del,version FROM user  WHERE username = ? 
+
+
+ AND del=0
+[2020-12-09 10:20:32] DEBUG 134 statementLog - {conn-10007, pstmt-20004} Parameters : [1873461@qq.com]
+[2020-12-09 10:20:32] DEBUG 134 statementLog - {conn-10007, pstmt-20004} Types : [VARCHAR]
+[2020-12-09 10:20:32] DEBUG 134 statementLog - {conn-10007, pstmt-20004} executed. 3.568599 millis. SELECT user_id,username,password,headurl,create_time,update_time,del,version FROM user  WHERE username = ? 
+
+
+ AND del=0
+[2020-12-09 10:20:32] DEBUG 134 statementLog - {conn-10007, pstmt-20005} created. INSERT INTO user  ( username,
+password,
+
+create_time,
+update_time,
+del,
+version )  VALUES  ( ?,
+?,
+
+?,
+?,
+?,
+? )
+[2020-12-09 10:20:32] DEBUG 134 statementLog - {conn-10007, pstmt-20005} Parameters : [1873461@qq.com, $2a$10$Ugd78ZNVWm6tre8MsdsO4erfxZEGXaTkz3fwELW93CVOUGEgyMZKq, 2020-12-09 10:20:32.892, 2020-12-09 10:20:32.892, 0, 1]
+[2020-12-09 10:20:32] DEBUG 134 statementLog - {conn-10007, pstmt-20005} Types : [VARCHAR, VARCHAR, TIMESTAMP, TIMESTAMP, INTEGER, INTEGER]
+[2020-12-09 10:20:32] DEBUG 134 statementLog - {conn-10007, pstmt-20005} executed. 33.789699 millis. INSERT INTO user  ( username,
+password,
+
+create_time,
+update_time,
+del,
+version )  VALUES  ( ?,
+?,
+
+?,
+?,
+?,
+? )
+[2020-12-09 10:20:44] DEBUG 134 statementLog - {conn-10007, pstmt-20006} created. SELECT user_id,username,password,headurl,create_time,update_time,del,version FROM user  WHERE username = ? 
+
+
+ AND del=0
+[2020-12-09 10:20:44] DEBUG 134 statementLog - {conn-10007, pstmt-20006} Parameters : [1873461@qq.com]
+[2020-12-09 10:20:44] DEBUG 134 statementLog - {conn-10007, pstmt-20006} Types : [VARCHAR]
+[2020-12-09 10:20:44] DEBUG 134 statementLog - {conn-10007, pstmt-20006} executed. 0.955199 millis. SELECT user_id,username,password,headurl,create_time,update_time,del,version FROM user  WHERE username = ? 
+
+
+ AND del=0
+[2020-12-09 10:20:44] DEBUG 134 statementLog - {conn-10007, pstmt-20007} created. SELECT user_id,username,password,headurl,create_time,update_time,del,version FROM user  WHERE username = ? 
+
+
+ AND del=0
+[2020-12-09 10:20:44] DEBUG 134 statementLog - {conn-10007, pstmt-20007} Parameters : [1873461@qq.com]
+[2020-12-09 10:20:44] DEBUG 134 statementLog - {conn-10007, pstmt-20007} Types : [VARCHAR]
+[2020-12-09 10:20:44] DEBUG 134 statementLog - {conn-10007, pstmt-20007} executed. 0.8842 millis. SELECT user_id,username,password,headurl,create_time,update_time,del,version FROM user  WHERE username = ? 
+
+
+ AND del=0
+[2020-12-09 10:20:44] DEBUG 134 statementLog - {conn-10007, pstmt-20008} created. SELECT  r.role_id,r.role_name
+        FROM `user` u,role r,user_role ur
+        WHERE u.user_id=? and  u.user_id=ur.user_id  and r.role_id=ur.role_id
+[2020-12-09 10:20:44] DEBUG 134 statementLog - {conn-10007, pstmt-20008} Parameters : [26]
+[2020-12-09 10:20:44] DEBUG 134 statementLog - {conn-10007, pstmt-20008} Types : [BIGINT]
+[2020-12-09 10:20:44] DEBUG 134 statementLog - {conn-10007, pstmt-20008} executed. 1.232399 millis. SELECT  r.role_id,r.role_name
+        FROM `user` u,role r,user_role ur
+        WHERE u.user_id=? and  u.user_id=ur.user_id  and r.role_id=ur.role_id
+[2020-12-09 10:20:44] DEBUG 134 statementLog - {conn-10007, pstmt-20009} created. SELECT
+            m.menu_id, m.menu_name,m. menu_url,m.parent_id
+        FROM
+            `user` u,
+            role r,
+            user_role ur,
+            menu m,
+            role_menu rm
+        WHERE
+            u.username=?
+          AND u.user_id = ur.user_id
+          AND ur.role_id = r.role_id
+          AND r.role_id = rm.role_id
+          AND rm.menu_id = m.menu_id
+          AND m.menu_url IS NOT NULL
+[2020-12-09 10:20:44] DEBUG 134 statementLog - {conn-10007, pstmt-20009} Parameters : [1873461@qq.com]
+[2020-12-09 10:20:44] DEBUG 134 statementLog - {conn-10007, pstmt-20009} Types : [VARCHAR]
+[2020-12-09 10:20:44] DEBUG 134 statementLog - {conn-10007, pstmt-20009} executed. 2.2327 millis. SELECT
+            m.menu_id, m.menu_name,m. menu_url,m.parent_id
+        FROM
+            `user` u,
+            role r,
+            user_role ur,
+            menu m,
+            role_menu rm
+        WHERE
+            u.username=?
+          AND u.user_id = ur.user_id
+          AND ur.role_id = r.role_id
+          AND r.role_id = rm.role_id
+          AND rm.menu_id = m.menu_id
+          AND m.menu_url IS NOT NULL
+[2020-12-09 10:21:35] DEBUG 134 statementLog - {conn-10007, pstmt-20010} created. SELECT user_id,username,password,headurl,create_time,update_time,del,version FROM user  WHERE username = ? 
+
+
+ AND del=0
+[2020-12-09 10:21:35] DEBUG 134 statementLog - {conn-10007, pstmt-20010} Parameters : [1873461@qq.com]
+[2020-12-09 10:21:35] DEBUG 134 statementLog - {conn-10007, pstmt-20010} Types : [VARCHAR]
+[2020-12-09 10:21:35] DEBUG 134 statementLog - {conn-10007, pstmt-20010} executed. 0.8103 millis. SELECT user_id,username,password,headurl,create_time,update_time,del,version FROM user  WHERE username = ? 
+
+
+ AND del=0
+[2020-12-09 10:21:35] DEBUG 134 statementLog - {conn-10007, pstmt-20011} created. SELECT user_id,username,password,headurl,create_time,update_time,del,version FROM user  WHERE username = ? 
+
+
+ AND del=0
+[2020-12-09 10:21:35] DEBUG 134 statementLog - {conn-10007, pstmt-20011} Parameters : [1873461@qq.com]
+[2020-12-09 10:21:35] DEBUG 134 statementLog - {conn-10007, pstmt-20011} Types : [VARCHAR]
+[2020-12-09 10:21:35] DEBUG 134 statementLog - {conn-10007, pstmt-20011} executed. 1.0571 millis. SELECT user_id,username,password,headurl,create_time,update_time,del,version FROM user  WHERE username = ? 
+
+
+ AND del=0
+[2020-12-09 10:21:35] DEBUG 134 statementLog - {conn-10007, pstmt-20012} created. SELECT  r.role_id,r.role_name
+        FROM `user` u,role r,user_role ur
+        WHERE u.user_id=? and  u.user_id=ur.user_id  and r.role_id=ur.role_id
+[2020-12-09 10:21:35] DEBUG 134 statementLog - {conn-10007, pstmt-20012} Parameters : [26]
+[2020-12-09 10:21:35] DEBUG 134 statementLog - {conn-10007, pstmt-20012} Types : [BIGINT]
+[2020-12-09 10:21:35] DEBUG 134 statementLog - {conn-10007, pstmt-20012} executed. 0.8562 millis. SELECT  r.role_id,r.role_name
+        FROM `user` u,role r,user_role ur
+        WHERE u.user_id=? and  u.user_id=ur.user_id  and r.role_id=ur.role_id
+[2020-12-09 10:21:35] DEBUG 134 statementLog - {conn-10007, pstmt-20013} created. SELECT
+            m.menu_id, m.menu_name,m. menu_url,m.parent_id
+        FROM
+            `user` u,
+            role r,
+            user_role ur,
+            menu m,
+            role_menu rm
+        WHERE
+            u.username=?
+          AND u.user_id = ur.user_id
+          AND ur.role_id = r.role_id
+          AND r.role_id = rm.role_id
+          AND rm.menu_id = m.menu_id
+          AND m.menu_url IS NOT NULL
+[2020-12-09 10:21:35] DEBUG 134 statementLog - {conn-10007, pstmt-20013} Parameters : [1873461@qq.com]
+[2020-12-09 10:21:35] DEBUG 134 statementLog - {conn-10007, pstmt-20013} Types : [VARCHAR]
+[2020-12-09 10:21:35] DEBUG 134 statementLog - {conn-10007, pstmt-20013} executed. 1.5863 millis. SELECT
+            m.menu_id, m.menu_name,m. menu_url,m.parent_id
+        FROM
+            `user` u,
+            role r,
+            user_role ur,
+            menu m,
+            role_menu rm
+        WHERE
+            u.username=?
+          AND u.user_id = ur.user_id
+          AND ur.role_id = r.role_id
+          AND r.role_id = rm.role_id
+          AND rm.menu_id = m.menu_id
+          AND m.menu_url IS NOT NULL
+[2020-12-09 10:23:31] DEBUG 134 statementLog - {conn-10008, pstmt-20014} created. SELECT user_id,username,password,headurl,create_time,update_time,del,version FROM user  WHERE username = ? 
+
+
+ AND del=0
+[2020-12-09 10:23:31] DEBUG 134 statementLog - {conn-10008, pstmt-20014} Parameters : [1873461@qq.com]
+[2020-12-09 10:23:31] DEBUG 134 statementLog - {conn-10008, pstmt-20014} Types : [VARCHAR]
+[2020-12-09 10:23:31] DEBUG 134 statementLog - {conn-10008, pstmt-20014} executed. 3.4681 millis. SELECT user_id,username,password,headurl,create_time,update_time,del,version FROM user  WHERE username = ? 
+
+
+ AND del=0
+[2020-12-09 10:23:31] DEBUG 134 statementLog - {conn-10008, pstmt-20015} created. SELECT user_id,username,password,headurl,create_time,update_time,del,version FROM user  WHERE username = ? 
+
+
+ AND del=0
+[2020-12-09 10:23:31] DEBUG 134 statementLog - {conn-10008, pstmt-20015} Parameters : [1873461@qq.com]
+[2020-12-09 10:23:31] DEBUG 134 statementLog - {conn-10008, pstmt-20015} Types : [VARCHAR]
+[2020-12-09 10:23:31] DEBUG 134 statementLog - {conn-10008, pstmt-20015} executed. 0.8772 millis. SELECT user_id,username,password,headurl,create_time,update_time,del,version FROM user  WHERE username = ? 
+
+
+ AND del=0
+[2020-12-09 10:23:31] DEBUG 134 statementLog - {conn-10008, pstmt-20016} created. SELECT  r.role_id,r.role_name
+        FROM `user` u,role r,user_role ur
+        WHERE u.user_id=? and  u.user_id=ur.user_id  and r.role_id=ur.role_id
+[2020-12-09 10:23:31] DEBUG 134 statementLog - {conn-10008, pstmt-20016} Parameters : [26]
+[2020-12-09 10:23:31] DEBUG 134 statementLog - {conn-10008, pstmt-20016} Types : [BIGINT]
+[2020-12-09 10:23:31] DEBUG 134 statementLog - {conn-10008, pstmt-20016} executed. 1.7238 millis. SELECT  r.role_id,r.role_name
+        FROM `user` u,role r,user_role ur
+        WHERE u.user_id=? and  u.user_id=ur.user_id  and r.role_id=ur.role_id
+[2020-12-09 10:23:31] DEBUG 134 statementLog - {conn-10008, pstmt-20017} created. SELECT
+            m.menu_id, m.menu_name,m. menu_url,m.parent_id
+        FROM
+            `user` u,
+            role r,
+            user_role ur,
+            menu m,
+            role_menu rm
+        WHERE
+            u.username=?
+          AND u.user_id = ur.user_id
+          AND ur.role_id = r.role_id
+          AND r.role_id = rm.role_id
+          AND rm.menu_id = m.menu_id
+          AND m.menu_url IS NOT NULL
+[2020-12-09 10:23:31] DEBUG 134 statementLog - {conn-10008, pstmt-20017} Parameters : [1873461@qq.com]
+[2020-12-09 10:23:31] DEBUG 134 statementLog - {conn-10008, pstmt-20017} Types : [VARCHAR]
+[2020-12-09 10:23:31] DEBUG 134 statementLog - {conn-10008, pstmt-20017} executed. 1.067799 millis. SELECT
+            m.menu_id, m.menu_name,m. menu_url,m.parent_id
+        FROM
+            `user` u,
+            role r,
+            user_role ur,
+            menu m,
+            role_menu rm
+        WHERE
+            u.username=?
+          AND u.user_id = ur.user_id
+          AND ur.role_id = r.role_id
+          AND r.role_id = rm.role_id
+          AND rm.menu_id = m.menu_id
+          AND m.menu_url IS NOT NULL
+[2020-12-09 10:24:37] DEBUG 134 statementLog - {conn-10009, pstmt-20018} created. SELECT user_id,username,password,headurl,create_time,update_time,del,version FROM user  WHERE username = ? 
+
+
+ AND del=0
+[2020-12-09 10:24:37] DEBUG 134 statementLog - {conn-10009, pstmt-20018} Parameters : [1873461@qq.com]
+[2020-12-09 10:24:37] DEBUG 134 statementLog - {conn-10009, pstmt-20018} Types : [VARCHAR]
+[2020-12-09 10:24:37] DEBUG 134 statementLog - {conn-10009, pstmt-20018} executed. 2.2287 millis. SELECT user_id,username,password,headurl,create_time,update_time,del,version FROM user  WHERE username = ? 
+
+
+ AND del=0
+[2020-12-09 10:24:45] DEBUG 134 statementLog - {conn-10009, pstmt-20019} created. SELECT user_id,username,password,headurl,create_time,update_time,del,version FROM user  WHERE username = ? 
+
+
+ AND del=0
+[2020-12-09 10:24:45] DEBUG 134 statementLog - {conn-10009, pstmt-20019} Parameters : [1873461@qq.com]
+[2020-12-09 10:24:45] DEBUG 134 statementLog - {conn-10009, pstmt-20019} Types : [VARCHAR]
+[2020-12-09 10:24:45] DEBUG 134 statementLog - {conn-10009, pstmt-20019} executed. 1.0161 millis. SELECT user_id,username,password,headurl,create_time,update_time,del,version FROM user  WHERE username = ? 
+
+
+ AND del=0
+[2020-12-09 10:24:45] DEBUG 134 statementLog - {conn-10009, pstmt-20020} created. SELECT user_id,username,password,headurl,create_time,update_time,del,version FROM user  WHERE username = ? 
+
+
+ AND del=0
+[2020-12-09 10:24:45] DEBUG 134 statementLog - {conn-10009, pstmt-20020} Parameters : [1873461@qq.com]
+[2020-12-09 10:24:45] DEBUG 134 statementLog - {conn-10009, pstmt-20020} Types : [VARCHAR]
+[2020-12-09 10:24:45] DEBUG 134 statementLog - {conn-10009, pstmt-20020} executed. 0.803499 millis. SELECT user_id,username,password,headurl,create_time,update_time,del,version FROM user  WHERE username = ? 
+
+
+ AND del=0
+[2020-12-09 10:24:45] DEBUG 134 statementLog - {conn-10009, pstmt-20021} created. SELECT  r.role_id,r.role_name
+        FROM `user` u,role r,user_role ur
+        WHERE u.user_id=? and  u.user_id=ur.user_id  and r.role_id=ur.role_id
+[2020-12-09 10:24:45] DEBUG 134 statementLog - {conn-10009, pstmt-20021} Parameters : [26]
+[2020-12-09 10:24:45] DEBUG 134 statementLog - {conn-10009, pstmt-20021} Types : [BIGINT]
+[2020-12-09 10:24:45] DEBUG 134 statementLog - {conn-10009, pstmt-20021} executed. 1.1194 millis. SELECT  r.role_id,r.role_name
+        FROM `user` u,role r,user_role ur
+        WHERE u.user_id=? and  u.user_id=ur.user_id  and r.role_id=ur.role_id
+[2020-12-09 10:24:45] DEBUG 134 statementLog - {conn-10009, pstmt-20022} created. SELECT
+            m.menu_id, m.menu_name,m. menu_url,m.parent_id
+        FROM
+            `user` u,
+            role r,
+            user_role ur,
+            menu m,
+            role_menu rm
+        WHERE
+            u.username=?
+          AND u.user_id = ur.user_id
+          AND ur.role_id = r.role_id
+          AND r.role_id = rm.role_id
+          AND rm.menu_id = m.menu_id
+          AND m.menu_url IS NOT NULL
+[2020-12-09 10:24:45] DEBUG 134 statementLog - {conn-10009, pstmt-20022} Parameters : [1873461@qq.com]
+[2020-12-09 10:24:45] DEBUG 134 statementLog - {conn-10009, pstmt-20022} Types : [VARCHAR]
+[2020-12-09 10:24:45] DEBUG 134 statementLog - {conn-10009, pstmt-20022} executed. 1.339899 millis. SELECT
+            m.menu_id, m.menu_name,m. menu_url,m.parent_id
+        FROM
+            `user` u,
+            role r,
+            user_role ur,
+            menu m,
+            role_menu rm
+        WHERE
+            u.username=?
+          AND u.user_id = ur.user_id
+          AND ur.role_id = r.role_id
+          AND r.role_id = rm.role_id
+          AND rm.menu_id = m.menu_id
+          AND m.menu_url IS NOT NULL
+[2020-12-09 10:25:59] DEBUG 134 statementLog - {conn-10010, pstmt-20023} created. SELECT user_id,username,password,headurl,create_time,update_time,del,version FROM user  WHERE username = ? 
+
+
+ AND del=0
+[2020-12-09 10:25:59] DEBUG 134 statementLog - {conn-10010, pstmt-20023} Parameters : [1873461@qq.com]
+[2020-12-09 10:25:59] DEBUG 134 statementLog - {conn-10010, pstmt-20023} Types : [VARCHAR]
+[2020-12-09 10:25:59] DEBUG 134 statementLog - {conn-10010, pstmt-20023} executed. 2.2659 millis. SELECT user_id,username,password,headurl,create_time,update_time,del,version FROM user  WHERE username = ? 
+
+
+ AND del=0
+[2020-12-09 10:25:59] DEBUG 134 statementLog - {conn-10010, pstmt-20024} created. SELECT user_id,username,password,headurl,create_time,update_time,del,version FROM user  WHERE username = ? 
+
+
+ AND del=0
+[2020-12-09 10:25:59] DEBUG 134 statementLog - {conn-10010, pstmt-20024} Parameters : [1873461@qq.com]
+[2020-12-09 10:25:59] DEBUG 134 statementLog - {conn-10010, pstmt-20024} Types : [VARCHAR]
+[2020-12-09 10:25:59] DEBUG 134 statementLog - {conn-10010, pstmt-20024} executed. 0.9336 millis. SELECT user_id,username,password,headurl,create_time,update_time,del,version FROM user  WHERE username = ? 
+
+
+ AND del=0
+[2020-12-09 10:25:59] DEBUG 134 statementLog - {conn-10010, pstmt-20025} created. SELECT  r.role_id,r.role_name
+        FROM `user` u,role r,user_role ur
+        WHERE u.user_id=? and  u.user_id=ur.user_id  and r.role_id=ur.role_id
+[2020-12-09 10:25:59] DEBUG 134 statementLog - {conn-10010, pstmt-20025} Parameters : [26]
+[2020-12-09 10:25:59] DEBUG 134 statementLog - {conn-10010, pstmt-20025} Types : [BIGINT]
+[2020-12-09 10:25:59] DEBUG 134 statementLog - {conn-10010, pstmt-20025} executed. 1.4329 millis. SELECT  r.role_id,r.role_name
+        FROM `user` u,role r,user_role ur
+        WHERE u.user_id=? and  u.user_id=ur.user_id  and r.role_id=ur.role_id
+[2020-12-09 10:25:59] DEBUG 134 statementLog - {conn-10010, pstmt-20026} created. SELECT
+            m.menu_id, m.menu_name,m. menu_url,m.parent_id
+        FROM
+            `user` u,
+            role r,
+            user_role ur,
+            menu m,
+            role_menu rm
+        WHERE
+            u.username=?
+          AND u.user_id = ur.user_id
+          AND ur.role_id = r.role_id
+          AND r.role_id = rm.role_id
+          AND rm.menu_id = m.menu_id
+          AND m.menu_url IS NOT NULL
+[2020-12-09 10:25:59] DEBUG 134 statementLog - {conn-10010, pstmt-20026} Parameters : [1873461@qq.com]
+[2020-12-09 10:25:59] DEBUG 134 statementLog - {conn-10010, pstmt-20026} Types : [VARCHAR]
+[2020-12-09 10:25:59] DEBUG 134 statementLog - {conn-10010, pstmt-20026} executed. 1.3261 millis. SELECT
+            m.menu_id, m.menu_name,m. menu_url,m.parent_id
+        FROM
+            `user` u,
+            role r,
+            user_role ur,
+            menu m,
+            role_menu rm
+        WHERE
+            u.username=?
+          AND u.user_id = ur.user_id
+          AND ur.role_id = r.role_id
+          AND r.role_id = rm.role_id
+          AND rm.menu_id = m.menu_id
+          AND m.menu_url IS NOT NULL
+[2020-12-09 10:26:48] DEBUG 134 statementLog - {conn-10010, pstmt-20027} created. SELECT user_id,username,password,headurl,create_time,update_time,del,version FROM user  WHERE username = ? 
+
+
+ AND del=0
+[2020-12-09 10:26:48] DEBUG 134 statementLog - {conn-10010, pstmt-20027} Parameters : [1873461@qq.com]
+[2020-12-09 10:26:48] DEBUG 134 statementLog - {conn-10010, pstmt-20027} Types : [VARCHAR]
+[2020-12-09 10:26:48] DEBUG 134 statementLog - {conn-10010, pstmt-20027} executed. 0.777701 millis. SELECT user_id,username,password,headurl,create_time,update_time,del,version FROM user  WHERE username = ? 
+
+
+ AND del=0
+[2020-12-09 10:26:48] DEBUG 134 statementLog - {conn-10010, pstmt-20028} created. SELECT user_id,username,password,headurl,create_time,update_time,del,version FROM user  WHERE username = ? 
+
+
+ AND del=0
+[2020-12-09 10:26:48] DEBUG 134 statementLog - {conn-10010, pstmt-20028} Parameters : [1873461@qq.com]
+[2020-12-09 10:26:48] DEBUG 134 statementLog - {conn-10010, pstmt-20028} Types : [VARCHAR]
+[2020-12-09 10:26:48] DEBUG 134 statementLog - {conn-10010, pstmt-20028} executed. 1.1123 millis. SELECT user_id,username,password,headurl,create_time,update_time,del,version FROM user  WHERE username = ? 
+
+
+ AND del=0
+[2020-12-09 10:26:48] DEBUG 134 statementLog - {conn-10010, pstmt-20029} created. SELECT  r.role_id,r.role_name
+        FROM `user` u,role r,user_role ur
+        WHERE u.user_id=? and  u.user_id=ur.user_id  and r.role_id=ur.role_id
+[2020-12-09 10:26:48] DEBUG 134 statementLog - {conn-10010, pstmt-20029} Parameters : [26]
+[2020-12-09 10:26:48] DEBUG 134 statementLog - {conn-10010, pstmt-20029} Types : [BIGINT]
+[2020-12-09 10:26:48] DEBUG 134 statementLog - {conn-10010, pstmt-20029} executed. 0.764899 millis. SELECT  r.role_id,r.role_name
+        FROM `user` u,role r,user_role ur
+        WHERE u.user_id=? and  u.user_id=ur.user_id  and r.role_id=ur.role_id
+[2020-12-09 10:26:48] DEBUG 134 statementLog - {conn-10010, pstmt-20030} created. SELECT
+            m.menu_id, m.menu_name,m. menu_url,m.parent_id
+        FROM
+            `user` u,
+            role r,
+            user_role ur,
+            menu m,
+            role_menu rm
+        WHERE
+            u.username=?
+          AND u.user_id = ur.user_id
+          AND ur.role_id = r.role_id
+          AND r.role_id = rm.role_id
+          AND rm.menu_id = m.menu_id
+          AND m.menu_url IS NOT NULL
+[2020-12-09 10:26:48] DEBUG 134 statementLog - {conn-10010, pstmt-20030} Parameters : [1873461@qq.com]
+[2020-12-09 10:26:48] DEBUG 134 statementLog - {conn-10010, pstmt-20030} Types : [VARCHAR]
+[2020-12-09 10:26:48] DEBUG 134 statementLog - {conn-10010, pstmt-20030} executed. 0.9444 millis. SELECT
+            m.menu_id, m.menu_name,m. menu_url,m.parent_id
+        FROM
+            `user` u,
+            role r,
+            user_role ur,
+            menu m,
+            role_menu rm
+        WHERE
+            u.username=?
+          AND u.user_id = ur.user_id
+          AND ur.role_id = r.role_id
+          AND r.role_id = rm.role_id
+          AND rm.menu_id = m.menu_id
+          AND m.menu_url IS NOT NULL
+[2020-12-09 10:27:47] DEBUG 134 statementLog - {conn-10010, pstmt-20031} created. SELECT user_id,username,password,headurl,create_time,update_time,del,version FROM user  WHERE username = ? 
+
+
+ AND del=0
+[2020-12-09 10:27:47] DEBUG 134 statementLog - {conn-10010, pstmt-20031} Parameters : [1873461@qq.com]
+[2020-12-09 10:27:47] DEBUG 134 statementLog - {conn-10010, pstmt-20031} Types : [VARCHAR]
+[2020-12-09 10:27:47] DEBUG 134 statementLog - {conn-10010, pstmt-20031} executed. 0.8203 millis. SELECT user_id,username,password,headurl,create_time,update_time,del,version FROM user  WHERE username = ? 
+
+
+ AND del=0
+[2020-12-09 10:27:47] DEBUG 134 statementLog - {conn-10010, pstmt-20032} created. SELECT user_id,username,password,headurl,create_time,update_time,del,version FROM user  WHERE username = ? 
+
+
+ AND del=0
+[2020-12-09 10:27:47] DEBUG 134 statementLog - {conn-10010, pstmt-20032} Parameters : [1873461@qq.com]
+[2020-12-09 10:27:47] DEBUG 134 statementLog - {conn-10010, pstmt-20032} Types : [VARCHAR]
+[2020-12-09 10:27:47] DEBUG 134 statementLog - {conn-10010, pstmt-20032} executed. 0.850301 millis. SELECT user_id,username,password,headurl,create_time,update_time,del,version FROM user  WHERE username = ? 
+
+
+ AND del=0
+[2020-12-09 10:27:47] DEBUG 134 statementLog - {conn-10010, pstmt-20033} created. SELECT  r.role_id,r.role_name
+        FROM `user` u,role r,user_role ur
+        WHERE u.user_id=? and  u.user_id=ur.user_id  and r.role_id=ur.role_id
+[2020-12-09 10:27:47] DEBUG 134 statementLog - {conn-10010, pstmt-20033} Parameters : [26]
+[2020-12-09 10:27:47] DEBUG 134 statementLog - {conn-10010, pstmt-20033} Types : [BIGINT]
+[2020-12-09 10:27:47] DEBUG 134 statementLog - {conn-10010, pstmt-20033} executed. 0.6758 millis. SELECT  r.role_id,r.role_name
+        FROM `user` u,role r,user_role ur
+        WHERE u.user_id=? and  u.user_id=ur.user_id  and r.role_id=ur.role_id
+[2020-12-09 10:27:47] DEBUG 134 statementLog - {conn-10010, pstmt-20034} created. SELECT
+            m.menu_id, m.menu_name,m. menu_url,m.parent_id
+        FROM
+            `user` u,
+            role r,
+            user_role ur,
+            menu m,
+            role_menu rm
+        WHERE
+            u.username=?
+          AND u.user_id = ur.user_id
+          AND ur.role_id = r.role_id
+          AND r.role_id = rm.role_id
+          AND rm.menu_id = m.menu_id
+          AND m.menu_url IS NOT NULL
+[2020-12-09 10:27:47] DEBUG 134 statementLog - {conn-10010, pstmt-20034} Parameters : [1873461@qq.com]
+[2020-12-09 10:27:47] DEBUG 134 statementLog - {conn-10010, pstmt-20034} Types : [VARCHAR]
+[2020-12-09 10:27:47] DEBUG 134 statementLog - {conn-10010, pstmt-20034} executed. 0.8506 millis. SELECT
+            m.menu_id, m.menu_name,m. menu_url,m.parent_id
+        FROM
+            `user` u,
+            role r,
+            user_role ur,
+            menu m,
+            role_menu rm
+        WHERE
+            u.username=?
+          AND u.user_id = ur.user_id
+          AND ur.role_id = r.role_id
+          AND r.role_id = rm.role_id
+          AND rm.menu_id = m.menu_id
+          AND m.menu_url IS NOT NULL
+[2020-12-09 10:37:03] DEBUG 134 statementLog - {conn-10011, pstmt-20035} created. SELECT user_id,username,password,headurl,create_time,update_time,del,version FROM user  WHERE username = ? 
+
+
+ AND del=0
+[2020-12-09 10:37:03] DEBUG 134 statementLog - {conn-10011, pstmt-20035} Parameters : [1873461@qq.com]
+[2020-12-09 10:37:03] DEBUG 134 statementLog - {conn-10011, pstmt-20035} Types : [VARCHAR]
+[2020-12-09 10:37:03] DEBUG 134 statementLog - {conn-10011, pstmt-20035} executed. 3.2999 millis. SELECT user_id,username,password,headurl,create_time,update_time,del,version FROM user  WHERE username = ? 
+
+
+ AND del=0
+[2020-12-09 10:37:03] DEBUG 134 statementLog - {conn-10011, pstmt-20036} created. SELECT user_id,username,password,headurl,create_time,update_time,del,version FROM user  WHERE username = ? 
+
+
+ AND del=0
+[2020-12-09 10:37:03] DEBUG 134 statementLog - {conn-10011, pstmt-20036} Parameters : [1873461@qq.com]
+[2020-12-09 10:37:03] DEBUG 134 statementLog - {conn-10011, pstmt-20036} Types : [VARCHAR]
+[2020-12-09 10:37:03] DEBUG 134 statementLog - {conn-10011, pstmt-20036} executed. 0.8455 millis. SELECT user_id,username,password,headurl,create_time,update_time,del,version FROM user  WHERE username = ? 
+
+
+ AND del=0
+[2020-12-09 10:37:03] DEBUG 134 statementLog - {conn-10011, pstmt-20037} created. SELECT  r.role_id,r.role_name
+        FROM `user` u,role r,user_role ur
+        WHERE u.user_id=? and  u.user_id=ur.user_id  and r.role_id=ur.role_id
+[2020-12-09 10:37:03] DEBUG 134 statementLog - {conn-10011, pstmt-20037} Parameters : [26]
+[2020-12-09 10:37:03] DEBUG 134 statementLog - {conn-10011, pstmt-20037} Types : [BIGINT]
+[2020-12-09 10:37:03] DEBUG 134 statementLog - {conn-10011, pstmt-20037} executed. 2.4699 millis. SELECT  r.role_id,r.role_name
+        FROM `user` u,role r,user_role ur
+        WHERE u.user_id=? and  u.user_id=ur.user_id  and r.role_id=ur.role_id
+[2020-12-09 10:37:03] DEBUG 134 statementLog - {conn-10011, pstmt-20038} created. SELECT
+            m.menu_id, m.menu_name,m. menu_url,m.parent_id
+        FROM
+            `user` u,
+            role r,
+            user_role ur,
+            menu m,
+            role_menu rm
+        WHERE
+            u.username=?
+          AND u.user_id = ur.user_id
+          AND ur.role_id = r.role_id
+          AND r.role_id = rm.role_id
+          AND rm.menu_id = m.menu_id
+          AND m.menu_url IS NOT NULL
+[2020-12-09 10:37:03] DEBUG 134 statementLog - {conn-10011, pstmt-20038} Parameters : [1873461@qq.com]
+[2020-12-09 10:37:03] DEBUG 134 statementLog - {conn-10011, pstmt-20038} Types : [VARCHAR]
+[2020-12-09 10:37:03] DEBUG 134 statementLog - {conn-10011, pstmt-20038} executed. 2.236301 millis. SELECT
+            m.menu_id, m.menu_name,m. menu_url,m.parent_id
+        FROM
+            `user` u,
+            role r,
+            user_role ur,
+            menu m,
+            role_menu rm
+        WHERE
+            u.username=?
+          AND u.user_id = ur.user_id
+          AND ur.role_id = r.role_id
+          AND r.role_id = rm.role_id
+          AND rm.menu_id = m.menu_id
+          AND m.menu_url IS NOT NULL
+[2020-12-09 10:38:50] DEBUG 134 statementLog - {conn-10012, pstmt-20039} created. SELECT user_id,username,password,headurl,create_time,update_time,del,version FROM user  WHERE username = ? 
+
+
+ AND del=0
+[2020-12-09 10:38:50] DEBUG 134 statementLog - {conn-10012, pstmt-20039} Parameters : [1873461@qq.com]
+[2020-12-09 10:38:50] DEBUG 134 statementLog - {conn-10012, pstmt-20039} Types : [VARCHAR]
+[2020-12-09 10:38:50] DEBUG 134 statementLog - {conn-10012, pstmt-20039} executed. 1.3649 millis. SELECT user_id,username,password,headurl,create_time,update_time,del,version FROM user  WHERE username = ? 
+
+
+ AND del=0
+[2020-12-09 10:38:50] DEBUG 134 statementLog - {conn-10012, pstmt-20040} created. SELECT user_id,username,password,headurl,create_time,update_time,del,version FROM user  WHERE username = ? 
+
+
+ AND del=0
+[2020-12-09 10:38:50] DEBUG 134 statementLog - {conn-10012, pstmt-20040} Parameters : [1873461@qq.com]
+[2020-12-09 10:38:50] DEBUG 134 statementLog - {conn-10012, pstmt-20040} Types : [VARCHAR]
+[2020-12-09 10:38:50] DEBUG 134 statementLog - {conn-10012, pstmt-20040} executed. 0.9604 millis. SELECT user_id,username,password,headurl,create_time,update_time,del,version FROM user  WHERE username = ? 
+
+
+ AND del=0
+[2020-12-09 10:38:50] DEBUG 134 statementLog - {conn-10012, pstmt-20041} created. SELECT  r.role_id,r.role_name
+        FROM `user` u,role r,user_role ur
+        WHERE u.user_id=? and  u.user_id=ur.user_id  and r.role_id=ur.role_id
+[2020-12-09 10:38:50] DEBUG 134 statementLog - {conn-10012, pstmt-20041} Parameters : [26]
+[2020-12-09 10:38:50] DEBUG 134 statementLog - {conn-10012, pstmt-20041} Types : [BIGINT]
+[2020-12-09 10:38:50] DEBUG 134 statementLog - {conn-10012, pstmt-20041} executed. 2.3908 millis. SELECT  r.role_id,r.role_name
+        FROM `user` u,role r,user_role ur
+        WHERE u.user_id=? and  u.user_id=ur.user_id  and r.role_id=ur.role_id
+[2020-12-09 10:38:50] DEBUG 134 statementLog - {conn-10012, pstmt-20042} created. SELECT
+            m.menu_id, m.menu_name,m. menu_url,m.parent_id
+        FROM
+            `user` u,
+            role r,
+            user_role ur,
+            menu m,
+            role_menu rm
+        WHERE
+            u.username=?
+          AND u.user_id = ur.user_id
+          AND ur.role_id = r.role_id
+          AND r.role_id = rm.role_id
+          AND rm.menu_id = m.menu_id
+          AND m.menu_url IS NOT NULL
+[2020-12-09 10:38:50] DEBUG 134 statementLog - {conn-10012, pstmt-20042} Parameters : [1873461@qq.com]
+[2020-12-09 10:38:50] DEBUG 134 statementLog - {conn-10012, pstmt-20042} Types : [VARCHAR]
+[2020-12-09 10:38:50] DEBUG 134 statementLog - {conn-10012, pstmt-20042} executed. 2.6798 millis. SELECT
+            m.menu_id, m.menu_name,m. menu_url,m.parent_id
+        FROM
+            `user` u,
+            role r,
+            user_role ur,
+            menu m,
+            role_menu rm
+        WHERE
+            u.username=?
+          AND u.user_id = ur.user_id
+          AND ur.role_id = r.role_id
+          AND r.role_id = rm.role_id
+          AND rm.menu_id = m.menu_id
+          AND m.menu_url IS NOT NULL
+[2020-12-09 10:47:34] DEBUG 134 statementLog - {conn-10005, pstmt-20000} created. SELECT user_id,username,password,headurl,create_time,update_time,del,version FROM user  WHERE username = ? 
+
+
+ AND del=0
+[2020-12-09 10:47:34] DEBUG 134 statementLog - {conn-10005, pstmt-20000} Parameters : [冯天帅1]
+[2020-12-09 10:47:34] DEBUG 134 statementLog - {conn-10005, pstmt-20000} Types : [VARCHAR]
+[2020-12-09 10:47:34] DEBUG 134 statementLog - {conn-10005, pstmt-20000} executed. 10.1313 millis. SELECT user_id,username,password,headurl,create_time,update_time,del,version FROM user  WHERE username = ? 
+
+
+ AND del=0
+[2020-12-09 10:47:34] DEBUG 134 statementLog - {conn-10005, pstmt-20001} created. INSERT INTO user  ( username,
+password,
+
+create_time,
+update_time,
+del,
+version )  VALUES  ( ?,
+?,
+
+?,
+?,
+?,
+? )
+[2020-12-09 10:47:34] DEBUG 134 statementLog - {conn-10005, pstmt-20001} Parameters : [冯天帅1, $2a$10$eM.rEKbYjKDLGYAgRMZEU.MOuMj81pIrIVfBwHfAfJOCddURfW4lm, 2020-12-09 10:47:34.587, 2020-12-09 10:47:34.587, 0, 1]
+[2020-12-09 10:47:34] DEBUG 134 statementLog - {conn-10005, pstmt-20001} Types : [VARCHAR, VARCHAR, TIMESTAMP, TIMESTAMP, INTEGER, INTEGER]
+[2020-12-09 10:47:34] DEBUG 134 statementLog - {conn-10005, pstmt-20001} executed. 6.9546 millis. INSERT INTO user  ( username,
+password,
+
+create_time,
+update_time,
+del,
+version )  VALUES  ( ?,
+?,
+
+?,
+?,
+?,
+? )
+[2020-12-09 10:54:04] DEBUG 134 statementLog - {conn-10005, pstmt-20000} created. SELECT user_id,username,password,headurl,create_time,update_time,del,version FROM user  WHERE username = ? 
+
+
+ AND del=0
+[2020-12-09 10:54:04] DEBUG 134 statementLog - {conn-10005, pstmt-20000} Parameters : [冯天帅2]
+[2020-12-09 10:54:04] DEBUG 134 statementLog - {conn-10005, pstmt-20000} Types : [VARCHAR]
+[2020-12-09 10:54:04] DEBUG 134 statementLog - {conn-10005, pstmt-20000} executed. 7.223 millis. SELECT user_id,username,password,headurl,create_time,update_time,del,version FROM user  WHERE username = ? 
+
+
+ AND del=0
+[2020-12-09 10:54:04] DEBUG 134 statementLog - {conn-10005, pstmt-20001} created. INSERT INTO user  ( username,
+password,
+
+create_time,
+update_time,
+del,
+version )  VALUES  ( ?,
+?,
+
+?,
+?,
+?,
+? )
+[2020-12-09 10:54:04] DEBUG 134 statementLog - {conn-10005, pstmt-20001} Parameters : [冯天帅2, $2a$10$KfVMZtjf4WGj7SIteunIFOC8F5H0V5n2YuYHqU7hqMLivGhBkVXxy, 2020-12-09 10:54:04.34, 2020-12-09 10:54:04.34, 0, 1]
+[2020-12-09 10:54:04] DEBUG 134 statementLog - {conn-10005, pstmt-20001} Types : [VARCHAR, VARCHAR, TIMESTAMP, TIMESTAMP, INTEGER, INTEGER]
+[2020-12-09 10:54:04] DEBUG 134 statementLog - {conn-10005, pstmt-20001} executed. 15.0783 millis. INSERT INTO user  ( username,
+password,
+
+create_time,
+update_time,
+del,
+version )  VALUES  ( ?,
+?,
+
+?,
+?,
+?,
+? )
+[2020-12-09 10:58:55] DEBUG 134 statementLog - {conn-10006, pstmt-20002} created. SELECT user_id,username,password,headurl,create_time,update_time,del,version FROM user  WHERE username = ? 
+
+
+ AND del=0
+[2020-12-09 10:58:55] DEBUG 134 statementLog - {conn-10006, pstmt-20002} Parameters : [1873461@qq.com]
+[2020-12-09 10:58:55] DEBUG 134 statementLog - {conn-10006, pstmt-20002} Types : [VARCHAR]
+[2020-12-09 10:58:55] DEBUG 134 statementLog - {conn-10006, pstmt-20002} executed. 3.2929 millis. SELECT user_id,username,password,headurl,create_time,update_time,del,version FROM user  WHERE username = ? 
+
+
+ AND del=0
+[2020-12-09 10:58:55] DEBUG 134 statementLog - {conn-10006, pstmt-20003} created. INSERT INTO user  ( username,
+password,
+
+create_time,
+update_time,
+del,
+version )  VALUES  ( ?,
+?,
+
+?,
+?,
+?,
+? )
+[2020-12-09 10:58:55] DEBUG 134 statementLog - {conn-10006, pstmt-20003} Parameters : [1873461@qq.com, $2a$10$x.5/EWRnI8SM/0AX5owFQeCISq9723fAcj2Z/bbSwgqXN6pfGRGEa, 2020-12-09 10:58:55.729, 2020-12-09 10:58:55.729, 0, 1]
+[2020-12-09 10:58:55] DEBUG 134 statementLog - {conn-10006, pstmt-20003} Types : [VARCHAR, VARCHAR, TIMESTAMP, TIMESTAMP, INTEGER, INTEGER]
+[2020-12-09 10:58:55] DEBUG 134 statementLog - {conn-10006, pstmt-20003} executed. 6.192899 millis. INSERT INTO user  ( username,
+password,
+
+create_time,
+update_time,
+del,
+version )  VALUES  ( ?,
+?,
+
+?,
+?,
+?,
+? )
+[2020-12-09 11:03:54] DEBUG 134 statementLog - {conn-10006, pstmt-20000} created. SELECT user_id,username,password,headurl,create_time,update_time,del,version FROM user  WHERE username = ? 
+
+
+ AND del=0
+[2020-12-09 11:03:54] DEBUG 134 statementLog - {conn-10006, pstmt-20000} Parameters : [1873461847@qq.com]
+[2020-12-09 11:03:54] DEBUG 134 statementLog - {conn-10006, pstmt-20000} Types : [VARCHAR]
+[2020-12-09 11:03:54] DEBUG 134 statementLog - {conn-10006, pstmt-20000} executed. 8.4755 millis. SELECT user_id,username,password,headurl,create_time,update_time,del,version FROM user  WHERE username = ? 
+
+
+ AND del=0
+[2020-12-09 11:03:54] DEBUG 134 statementLog - {conn-10006, pstmt-20001} created. INSERT INTO user  ( username,
+password,
+
+create_time,
+update_time,
+del,
+version )  VALUES  ( ?,
+?,
+
+?,
+?,
+?,
+? )
+[2020-12-09 11:03:54] DEBUG 134 statementLog - {conn-10006, pstmt-20001} Parameters : [1873461847@qq.com, $2a$10$Xvw8UD72MZmEOuV3yhZkmelJO9V09fvmVinFlvRMSdVjMIsDUNaDW, 2020-12-09 11:03:54.491, 2020-12-09 11:03:54.491, 0, 1]
+[2020-12-09 11:03:54] DEBUG 134 statementLog - {conn-10006, pstmt-20001} Types : [VARCHAR, VARCHAR, TIMESTAMP, TIMESTAMP, INTEGER, INTEGER]
+[2020-12-09 11:03:54] DEBUG 134 statementLog - {conn-10006, pstmt-20001} executed. 5.8061 millis. INSERT INTO user  ( username,
+password,
+
+create_time,
+update_time,
+del,
+version )  VALUES  ( ?,
+?,
+
+?,
+?,
+?,
+? )
+[2020-12-09 11:03:54] DEBUG 134 statementLog - {conn-10006, pstmt-20002} created. SELECT
+            m.menu_id, m.menu_name,m. menu_url,m.parent_id
+        FROM
+            `user` u,
+            role r,
+            user_role ur,
+            menu m,
+            role_menu rm
+        WHERE
+            u.username=?
+          AND u.user_id = ur.user_id
+          AND ur.role_id = r.role_id
+          AND r.role_id = rm.role_id
+          AND rm.menu_id = m.menu_id
+          AND m.menu_url IS NOT NULL
+[2020-12-09 11:03:54] DEBUG 134 statementLog - {conn-10006, pstmt-20002} Parameters : [1873461847@qq.com]
+[2020-12-09 11:03:54] DEBUG 134 statementLog - {conn-10006, pstmt-20002} Types : [VARCHAR]
+[2020-12-09 11:03:54] DEBUG 134 statementLog - {conn-10006, pstmt-20002} executed. 3.1474 millis. SELECT
+            m.menu_id, m.menu_name,m. menu_url,m.parent_id
+        FROM
+            `user` u,
+            role r,
+            user_role ur,
+            menu m,
+            role_menu rm
+        WHERE
+            u.username=?
+          AND u.user_id = ur.user_id
+          AND ur.role_id = r.role_id
+          AND r.role_id = rm.role_id
+          AND rm.menu_id = m.menu_id
+          AND m.menu_url IS NOT NULL
+[2020-12-09 16:43:13] DEBUG 134 statementLog - {conn-10006, pstmt-20000} created. SELECT user_id,username,password,headurl,create_time,update_time,del,version FROM user  WHERE username = ? 
+
+
+ AND del=0
+[2020-12-09 16:43:13] DEBUG 134 statementLog - {conn-10006, pstmt-20000} Parameters : [1873461847@qq.com]
+[2020-12-09 16:43:13] DEBUG 134 statementLog - {conn-10006, pstmt-20000} Types : [VARCHAR]
+[2020-12-09 16:43:13] DEBUG 134 statementLog - {conn-10006, pstmt-20000} executed. 228.0054 millis. SELECT user_id,username,password,headurl,create_time,update_time,del,version FROM user  WHERE username = ? 
+
+
+ AND del=0
+[2020-12-09 16:43:13] DEBUG 134 statementLog - {conn-10006, pstmt-20001} created. SELECT  r.role_id,r.role_name
+        FROM `user` u,role r,user_role ur
+        WHERE u.user_id=? and  u.user_id=ur.user_id  and r.role_id=ur.role_id
+[2020-12-09 16:43:13] DEBUG 134 statementLog - {conn-10006, pstmt-20001} Parameters : [30]
+[2020-12-09 16:43:13] DEBUG 134 statementLog - {conn-10006, pstmt-20001} Types : [BIGINT]
+[2020-12-09 16:43:13] DEBUG 134 statementLog - {conn-10006, pstmt-20001} executed. 7.6635 millis. SELECT  r.role_id,r.role_name
+        FROM `user` u,role r,user_role ur
+        WHERE u.user_id=? and  u.user_id=ur.user_id  and r.role_id=ur.role_id
+[2020-12-09 16:43:13] DEBUG 134 statementLog - {conn-10006, pstmt-20002} created. SELECT user_id,username,password,headurl,create_time,update_time,del,version FROM user  WHERE username = ? 
+
+
+ AND del=0
+[2020-12-09 16:43:13] DEBUG 134 statementLog - {conn-10006, pstmt-20002} Parameters : [1873461847@qq.com]
+[2020-12-09 16:43:13] DEBUG 134 statementLog - {conn-10006, pstmt-20002} Types : [VARCHAR]
+[2020-12-09 16:43:13] DEBUG 134 statementLog - {conn-10006, pstmt-20002} executed. 1.4387 millis. SELECT user_id,username,password,headurl,create_time,update_time,del,version FROM user  WHERE username = ? 
+
+
+ AND del=0
+[2020-12-09 16:43:13] DEBUG 134 statementLog - {conn-10006, pstmt-20003} created. SELECT user_id,username,password,headurl,create_time,update_time,del,version FROM user  WHERE username = ? 
+
+
+ AND del=0
+[2020-12-09 16:43:13] DEBUG 134 statementLog - {conn-10006, pstmt-20003} Parameters : [1873461847@qq.com]
+[2020-12-09 16:43:13] DEBUG 134 statementLog - {conn-10006, pstmt-20003} Types : [VARCHAR]
+[2020-12-09 16:43:13] DEBUG 134 statementLog - {conn-10006, pstmt-20003} executed. 3.7464 millis. SELECT user_id,username,password,headurl,create_time,update_time,del,version FROM user  WHERE username = ? 
+
+
+ AND del=0
+[2020-12-09 16:43:13] DEBUG 134 statementLog - {conn-10006, pstmt-20004} created. SELECT  r.role_id,r.role_name
+        FROM `user` u,role r,user_role ur
+        WHERE u.user_id=? and  u.user_id=ur.user_id  and r.role_id=ur.role_id
+[2020-12-09 16:43:13] DEBUG 134 statementLog - {conn-10006, pstmt-20004} Parameters : [30]
+[2020-12-09 16:43:13] DEBUG 134 statementLog - {conn-10006, pstmt-20004} Types : [BIGINT]
+[2020-12-09 16:43:13] DEBUG 134 statementLog - {conn-10006, pstmt-20004} executed. 3.2476 millis. SELECT  r.role_id,r.role_name
+        FROM `user` u,role r,user_role ur
+        WHERE u.user_id=? and  u.user_id=ur.user_id  and r.role_id=ur.role_id
+[2020-12-09 16:43:14] DEBUG 134 statementLog - {conn-10006, pstmt-20005} created. SELECT
+            m.menu_id, m.menu_name,m. menu_url,m.parent_id
+        FROM
+            `user` u,
+            role r,
+            user_role ur,
+            menu m,
+            role_menu rm
+        WHERE
+            u.username=?
+          AND u.user_id = ur.user_id
+          AND ur.role_id = r.role_id
+          AND r.role_id = rm.role_id
+          AND rm.menu_id = m.menu_id
+          AND m.menu_url IS NOT NULL
+[2020-12-09 16:43:14] DEBUG 134 statementLog - {conn-10006, pstmt-20005} Parameters : [1873461847@qq.com]
+[2020-12-09 16:43:14] DEBUG 134 statementLog - {conn-10006, pstmt-20005} Types : [VARCHAR]
+[2020-12-09 16:43:14] DEBUG 134 statementLog - {conn-10006, pstmt-20005} executed. 10.8471 millis. SELECT
+            m.menu_id, m.menu_name,m. menu_url,m.parent_id
+        FROM
+            `user` u,
+            role r,
+            user_role ur,
+            menu m,
+            role_menu rm
+        WHERE
+            u.username=?
+          AND u.user_id = ur.user_id
+          AND ur.role_id = r.role_id
+          AND r.role_id = rm.role_id
+          AND rm.menu_id = m.menu_id
+          AND m.menu_url IS NOT NULL
+[2020-12-09 16:43:42] DEBUG 134 statementLog - {conn-10006, pstmt-20006} created. SELECT user_id,username,password,headurl,create_time,update_time,del,version FROM user  WHERE username = ? 
+
+
+ AND del=0
+[2020-12-09 16:43:42] DEBUG 134 statementLog - {conn-10006, pstmt-20006} Parameters : [1873461847@qq.com]
+[2020-12-09 16:43:42] DEBUG 134 statementLog - {conn-10006, pstmt-20006} Types : [VARCHAR]
+[2020-12-09 16:43:42] DEBUG 134 statementLog - {conn-10006, pstmt-20006} executed. 4.596 millis. SELECT user_id,username,password,headurl,create_time,update_time,del,version FROM user  WHERE username = ? 
+
+
+ AND del=0
+[2020-12-09 16:43:42] DEBUG 134 statementLog - {conn-10006, pstmt-20007} created. SELECT  r.role_id,r.role_name
+        FROM `user` u,role r,user_role ur
+        WHERE u.user_id=? and  u.user_id=ur.user_id  and r.role_id=ur.role_id
+[2020-12-09 16:43:42] DEBUG 134 statementLog - {conn-10006, pstmt-20007} Parameters : [30]
+[2020-12-09 16:43:42] DEBUG 134 statementLog - {conn-10006, pstmt-20007} Types : [BIGINT]
+[2020-12-09 16:43:42] DEBUG 134 statementLog - {conn-10006, pstmt-20007} executed. 4.0995 millis. SELECT  r.role_id,r.role_name
+        FROM `user` u,role r,user_role ur
+        WHERE u.user_id=? and  u.user_id=ur.user_id  and r.role_id=ur.role_id
+[2020-12-09 16:43:42] DEBUG 134 statementLog - {conn-10006, pstmt-20008} created. SELECT user_id,username,password,headurl,create_time,update_time,del,version FROM user  WHERE username = ? 
+
+
+ AND del=0
+[2020-12-09 16:43:42] DEBUG 134 statementLog - {conn-10006, pstmt-20008} Parameters : [1873461847@qq.com]
+[2020-12-09 16:43:42] DEBUG 134 statementLog - {conn-10006, pstmt-20008} Types : [VARCHAR]
+[2020-12-09 16:43:42] DEBUG 134 statementLog - {conn-10006, pstmt-20008} executed. 4.4675 millis. SELECT user_id,username,password,headurl,create_time,update_time,del,version FROM user  WHERE username = ? 
+
+
+ AND del=0
+[2020-12-09 16:43:43] DEBUG 134 statementLog - {conn-10006, pstmt-20009} created. SELECT user_id,username,password,headurl,create_time,update_time,del,version FROM user  WHERE username = ? 
+
+
+ AND del=0
+[2020-12-09 16:43:43] DEBUG 134 statementLog - {conn-10006, pstmt-20009} Parameters : [1873461847@qq.com]
+[2020-12-09 16:43:43] DEBUG 134 statementLog - {conn-10006, pstmt-20009} Types : [VARCHAR]
+[2020-12-09 16:43:43] DEBUG 134 statementLog - {conn-10006, pstmt-20009} executed. 4.0744 millis. SELECT user_id,username,password,headurl,create_time,update_time,del,version FROM user  WHERE username = ? 
+
+
+ AND del=0
+[2020-12-09 16:43:43] DEBUG 134 statementLog - {conn-10006, pstmt-20010} created. SELECT  r.role_id,r.role_name
+        FROM `user` u,role r,user_role ur
+        WHERE u.user_id=? and  u.user_id=ur.user_id  and r.role_id=ur.role_id
+[2020-12-09 16:43:43] DEBUG 134 statementLog - {conn-10006, pstmt-20010} Parameters : [30]
+[2020-12-09 16:43:43] DEBUG 134 statementLog - {conn-10006, pstmt-20010} Types : [BIGINT]
+[2020-12-09 16:43:43] DEBUG 134 statementLog - {conn-10006, pstmt-20010} executed. 4.4154 millis. SELECT  r.role_id,r.role_name
+        FROM `user` u,role r,user_role ur
+        WHERE u.user_id=? and  u.user_id=ur.user_id  and r.role_id=ur.role_id
+[2020-12-09 16:43:43] DEBUG 134 statementLog - {conn-10006, pstmt-20011} created. SELECT
+            m.menu_id, m.menu_name,m. menu_url,m.parent_id
+        FROM
+            `user` u,
+            role r,
+            user_role ur,
+            menu m,
+            role_menu rm
+        WHERE
+            u.username=?
+          AND u.user_id = ur.user_id
+          AND ur.role_id = r.role_id
+          AND r.role_id = rm.role_id
+          AND rm.menu_id = m.menu_id
+          AND m.menu_url IS NOT NULL
+[2020-12-09 16:43:43] DEBUG 134 statementLog - {conn-10006, pstmt-20011} Parameters : [1873461847@qq.com]
+[2020-12-09 16:43:43] DEBUG 134 statementLog - {conn-10006, pstmt-20011} Types : [VARCHAR]
+[2020-12-09 16:43:43] DEBUG 134 statementLog - {conn-10006, pstmt-20011} executed. 4.595 millis. SELECT
+            m.menu_id, m.menu_name,m. menu_url,m.parent_id
+        FROM
+            `user` u,
+            role r,
+            user_role ur,
+            menu m,
+            role_menu rm
+        WHERE
+            u.username=?
+          AND u.user_id = ur.user_id
+          AND ur.role_id = r.role_id
+          AND r.role_id = rm.role_id
+          AND rm.menu_id = m.menu_id
+          AND m.menu_url IS NOT NULL

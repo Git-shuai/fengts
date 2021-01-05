@@ -1,25 +1,32 @@
 package tian.web.bean.blog;
 
-import java.io.Serializable;
+import com.baomidou.mybatisplus.annotation.IdType;
 import java.util.Date;
-
-import com.baomidou.mybatisplus.annotation.TableName;
-import lombok.AllArgsConstructor;
+import com.baomidou.mybatisplus.annotation.TableId;
+import com.baomidou.mybatisplus.annotation.FieldFill;
+import com.baomidou.mybatisplus.annotation.TableField;
+import java.io.Serializable;
 import lombok.Data;
-import lombok.NoArgsConstructor;
-
+import lombok.EqualsAndHashCode;
 
 /**
- * @author FTS36
+ * <p>
+ * 
+ * </p>
+ *
+ * @author FTS
+ * @since 2021-01-05
  */
 @Data
-@AllArgsConstructor
-@NoArgsConstructor
-@TableName("blog")
+@EqualsAndHashCode(callSuper = false)
 public class Blog implements Serializable {
+
+    private static final long serialVersionUID = 1L;
+
     /**
      * 博客文章id
      */
+    @TableId(value = "id", type = IdType.AUTO)
     private Long id;
 
     /**
@@ -35,11 +42,13 @@ public class Blog implements Serializable {
     /**
      * 博客创建时间
      */
+    @TableField(fill = FieldFill.INSERT)
     private Date createTime;
 
     /**
      * 博客更新时间
      */
+    @TableField(fill = FieldFill.INSERT_UPDATE)
     private Date updateTime;
 
     /**
@@ -67,5 +76,5 @@ public class Blog implements Serializable {
      */
     private Integer isComment;
 
-    private static final long serialVersionUID = 1L;
+
 }
