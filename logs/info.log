@@ -1,135 +1,526 @@
-[2020-12-09 09:37:15] INFO  org.springframework.boot.StartupInfoLogger 55 logStarting - Starting FengtsApplication on DESKTOP-7017LEC with PID 10784 (D:\IDEAWORK\fengts\fengts-service\target\classes started by FTS36 in D:\IDEAWORK\fengts)
-[2020-12-09 09:37:15] INFO  org.springframework.boot.SpringApplication 655 logStartupProfileInfo - The following profiles are active: dev
-[2020-12-09 09:37:16] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer 108 initialize - Tomcat initialized with port(s): 9000 (http)
-[2020-12-09 09:37:16] INFO  org.apache.juli.logging.DirectJDKLog 173 log - Starting service [Tomcat]
-[2020-12-09 09:37:16] INFO  org.apache.juli.logging.DirectJDKLog 173 log - Starting Servlet engine: [Apache Tomcat/9.0.36]
-[2020-12-09 09:37:16] INFO  org.apache.juli.logging.DirectJDKLog 173 log - Initializing Spring embedded WebApplicationContext
-[2020-12-09 09:37:16] INFO  org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext 285 prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 1349 ms
-[2020-12-09 09:37:16] INFO  com.alibaba.druid.spring.boot.autoconfigure.DruidDataSourceAutoConfigure 56 dataSource - Init DruidDataSource
-[2020-12-09 09:37:17] INFO  com.alibaba.druid.pool.DruidDataSource 985 init - {dataSource-1} inited
-[2020-12-09 09:37:18] INFO  org.springframework.scheduling.concurrent.ExecutorConfigurationSupport 181 initialize - Initializing ExecutorService 'applicationTaskExecutor'
-[2020-12-09 09:37:18] INFO  org.springframework.security.web.DefaultSecurityFilterChain 43 <init> - Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@4fa0ee7e, org.springframework.security.web.context.SecurityContextPersistenceFilter@25cde5bb, org.springframework.security.web.header.HeaderWriterFilter@5ee77baf, org.springframework.security.web.authentication.logout.LogoutFilter@218df7d6, tian.web.config.auth.MyOncePerRequestFilter@7c71c889, tian.web.config.auth.MyUsernamePasswordAuthenticationFilter@14b8a751, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@18989e0, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@38a96593, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@243c4346, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@202f054f, org.springframework.security.web.session.SessionManagementFilter@485deee1, org.springframework.security.web.access.ExceptionTranslationFilter@d120d7c, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@2bfa17b0]
-[2020-12-09 09:37:18] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer 220 start - Tomcat started on port(s): 9000 (http) with context path ''
-[2020-12-09 09:37:18] INFO  org.springframework.boot.StartupInfoLogger 61 logStarted - Started FengtsApplication in 3.964 seconds (JVM running for 6.061)
-[2020-12-09 10:06:55] INFO  org.apache.juli.logging.DirectJDKLog 173 log - Initializing Spring DispatcherServlet 'dispatcherServlet'
-[2020-12-09 10:06:55] INFO  org.springframework.web.servlet.FrameworkServlet 525 initServletBean - Initializing Servlet 'dispatcherServlet'
-[2020-12-09 10:06:55] INFO  org.springframework.web.servlet.FrameworkServlet 547 initServletBean - Completed initialization in 34 ms
-[2020-12-09 10:06:55] INFO  tian.web.config.auth.MyOncePerRequestFilter 43 doFilterInternal - headerToken = null
-[2020-12-09 10:06:55] INFO  tian.web.config.auth.MyOncePerRequestFilter 44 doFilterInternal - request getMethod = POST
-[2020-12-09 10:18:15] INFO  tian.web.config.auth.MyOncePerRequestFilter 43 doFilterInternal - headerToken = undefined
-[2020-12-09 10:18:15] INFO  tian.web.config.auth.MyOncePerRequestFilter 44 doFilterInternal - request getMethod = POST
-[2020-12-09 10:20:32] INFO  tian.web.config.auth.MyOncePerRequestFilter 43 doFilterInternal - headerToken = undefined
-[2020-12-09 10:20:32] INFO  tian.web.config.auth.MyOncePerRequestFilter 44 doFilterInternal - request getMethod = POST
-[2020-12-09 10:20:44] INFO  tian.web.config.auth.MyOncePerRequestFilter 43 doFilterInternal - headerToken = undefined
-[2020-12-09 10:20:44] INFO  tian.web.config.auth.MyOncePerRequestFilter 44 doFilterInternal - request getMethod = POST
-[2020-12-09 10:21:35] INFO  tian.web.config.auth.MyOncePerRequestFilter 43 doFilterInternal - headerToken = undefined
-[2020-12-09 10:21:35] INFO  tian.web.config.auth.MyOncePerRequestFilter 44 doFilterInternal - request getMethod = POST
-[2020-12-09 10:22:52] INFO  tian.web.config.auth.MyOncePerRequestFilter 43 doFilterInternal - headerToken = undefined
-[2020-12-09 10:22:52] INFO  tian.web.config.auth.MyOncePerRequestFilter 44 doFilterInternal - request getMethod = POST
-[2020-12-09 10:23:31] INFO  tian.web.config.auth.MyOncePerRequestFilter 43 doFilterInternal - headerToken = undefined
-[2020-12-09 10:23:31] INFO  tian.web.config.auth.MyOncePerRequestFilter 44 doFilterInternal - request getMethod = POST
-[2020-12-09 10:24:37] INFO  tian.web.config.auth.MyOncePerRequestFilter 43 doFilterInternal - headerToken = undefined
-[2020-12-09 10:24:37] INFO  tian.web.config.auth.MyOncePerRequestFilter 44 doFilterInternal - request getMethod = POST
-[2020-12-09 10:24:45] INFO  tian.web.config.auth.MyOncePerRequestFilter 43 doFilterInternal - headerToken = undefined
-[2020-12-09 10:24:45] INFO  tian.web.config.auth.MyOncePerRequestFilter 44 doFilterInternal - request getMethod = POST
-[2020-12-09 10:25:59] INFO  tian.web.config.auth.MyOncePerRequestFilter 43 doFilterInternal - headerToken = undefined
-[2020-12-09 10:25:59] INFO  tian.web.config.auth.MyOncePerRequestFilter 44 doFilterInternal - request getMethod = POST
-[2020-12-09 10:26:48] INFO  tian.web.config.auth.MyOncePerRequestFilter 43 doFilterInternal - headerToken = undefined
-[2020-12-09 10:26:48] INFO  tian.web.config.auth.MyOncePerRequestFilter 44 doFilterInternal - request getMethod = POST
-[2020-12-09 10:27:47] INFO  tian.web.config.auth.MyOncePerRequestFilter 43 doFilterInternal - headerToken = undefined
-[2020-12-09 10:27:47] INFO  tian.web.config.auth.MyOncePerRequestFilter 44 doFilterInternal - request getMethod = POST
-[2020-12-09 10:37:03] INFO  tian.web.config.auth.MyOncePerRequestFilter 43 doFilterInternal - headerToken = undefined
-[2020-12-09 10:37:03] INFO  tian.web.config.auth.MyOncePerRequestFilter 44 doFilterInternal - request getMethod = POST
-[2020-12-09 10:38:50] INFO  tian.web.config.auth.MyOncePerRequestFilter 43 doFilterInternal - headerToken = undefined
-[2020-12-09 10:38:50] INFO  tian.web.config.auth.MyOncePerRequestFilter 44 doFilterInternal - request getMethod = POST
-[2020-12-09 10:41:05] INFO  org.springframework.scheduling.concurrent.ExecutorConfigurationSupport 218 shutdown - Shutting down ExecutorService 'applicationTaskExecutor'
-[2020-12-09 10:41:05] INFO  com.alibaba.druid.pool.DruidDataSource 2032 close - {dataSource-1} closing ...
-[2020-12-09 10:41:05] INFO  com.alibaba.druid.pool.DruidDataSource 2104 close - {dataSource-1} closed
-[2020-12-09 10:46:39] INFO  org.springframework.boot.StartupInfoLogger 55 logStarting - Starting FengtsApplication on DESKTOP-7017LEC with PID 7296 (D:\IDEAWORK\fengts\fengts-service\target\classes started by FTS36 in D:\IDEAWORK\fengts)
-[2020-12-09 10:46:39] INFO  org.springframework.boot.SpringApplication 655 logStartupProfileInfo - The following profiles are active: dev
-[2020-12-09 10:46:40] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer 108 initialize - Tomcat initialized with port(s): 9000 (http)
-[2020-12-09 10:46:40] INFO  org.apache.juli.logging.DirectJDKLog 173 log - Starting service [Tomcat]
-[2020-12-09 10:46:40] INFO  org.apache.juli.logging.DirectJDKLog 173 log - Starting Servlet engine: [Apache Tomcat/9.0.36]
-[2020-12-09 10:46:40] INFO  org.apache.juli.logging.DirectJDKLog 173 log - Initializing Spring embedded WebApplicationContext
-[2020-12-09 10:46:40] INFO  org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext 285 prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 1158 ms
-[2020-12-09 10:46:40] INFO  com.alibaba.druid.spring.boot.autoconfigure.DruidDataSourceAutoConfigure 56 dataSource - Init DruidDataSource
-[2020-12-09 10:46:41] INFO  com.alibaba.druid.pool.DruidDataSource 985 init - {dataSource-1} inited
-[2020-12-09 10:46:42] INFO  org.springframework.scheduling.concurrent.ExecutorConfigurationSupport 181 initialize - Initializing ExecutorService 'applicationTaskExecutor'
-[2020-12-09 10:46:42] INFO  org.springframework.security.web.DefaultSecurityFilterChain 43 <init> - Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@790654d5, org.springframework.security.web.context.SecurityContextPersistenceFilter@5eeee124, org.springframework.security.web.header.HeaderWriterFilter@38c10190, org.springframework.security.web.authentication.logout.LogoutFilter@6f0a4e30, tian.web.config.auth.MyOncePerRequestFilter@4f3c7808, tian.web.config.auth.MyUsernamePasswordAuthenticationFilter@4d7cac24, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@1da75dde, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@3d1c52f5, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@33a47707, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@5f935d49, org.springframework.security.web.session.SessionManagementFilter@2a7ebe07, org.springframework.security.web.access.ExceptionTranslationFilter@43deba42, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@36f6d25c]
-[2020-12-09 10:46:42] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer 220 start - Tomcat started on port(s): 9000 (http) with context path ''
-[2020-12-09 10:46:42] INFO  org.springframework.boot.StartupInfoLogger 61 logStarted - Started FengtsApplication in 3.726 seconds (JVM running for 5.004)
-[2020-12-09 10:47:34] INFO  org.apache.juli.logging.DirectJDKLog 173 log - Initializing Spring DispatcherServlet 'dispatcherServlet'
-[2020-12-09 10:47:34] INFO  org.springframework.web.servlet.FrameworkServlet 525 initServletBean - Initializing Servlet 'dispatcherServlet'
-[2020-12-09 10:47:34] INFO  org.springframework.web.servlet.FrameworkServlet 547 initServletBean - Completed initialization in 5 ms
-[2020-12-09 10:47:34] INFO  tian.web.config.auth.MyOncePerRequestFilter 43 doFilterInternal - headerToken = null
-[2020-12-09 10:47:34] INFO  tian.web.config.auth.MyOncePerRequestFilter 44 doFilterInternal - request getMethod = POST
-[2020-12-09 10:53:19] INFO  org.springframework.scheduling.concurrent.ExecutorConfigurationSupport 218 shutdown - Shutting down ExecutorService 'applicationTaskExecutor'
-[2020-12-09 10:53:19] INFO  com.alibaba.druid.pool.DruidDataSource 2032 close - {dataSource-1} closing ...
-[2020-12-09 10:53:19] INFO  com.alibaba.druid.pool.DruidDataSource 2104 close - {dataSource-1} closed
-[2020-12-09 10:53:26] INFO  org.springframework.boot.StartupInfoLogger 55 logStarting - Starting FengtsApplication on DESKTOP-7017LEC with PID 10452 (D:\IDEAWORK\fengts\fengts-service\target\classes started by FTS36 in D:\IDEAWORK\fengts)
-[2020-12-09 10:53:26] INFO  org.springframework.boot.SpringApplication 655 logStartupProfileInfo - The following profiles are active: dev
-[2020-12-09 10:53:27] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer 108 initialize - Tomcat initialized with port(s): 9000 (http)
-[2020-12-09 10:53:27] INFO  org.apache.juli.logging.DirectJDKLog 173 log - Starting service [Tomcat]
-[2020-12-09 10:53:27] INFO  org.apache.juli.logging.DirectJDKLog 173 log - Starting Servlet engine: [Apache Tomcat/9.0.36]
-[2020-12-09 10:53:27] INFO  org.apache.juli.logging.DirectJDKLog 173 log - Initializing Spring embedded WebApplicationContext
-[2020-12-09 10:53:27] INFO  org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext 285 prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 934 ms
-[2020-12-09 10:53:27] INFO  com.alibaba.druid.spring.boot.autoconfigure.DruidDataSourceAutoConfigure 56 dataSource - Init DruidDataSource
-[2020-12-09 10:53:28] INFO  com.alibaba.druid.pool.DruidDataSource 985 init - {dataSource-1} inited
-[2020-12-09 10:53:29] INFO  org.springframework.scheduling.concurrent.ExecutorConfigurationSupport 181 initialize - Initializing ExecutorService 'applicationTaskExecutor'
-[2020-12-09 10:53:29] INFO  org.springframework.security.web.DefaultSecurityFilterChain 43 <init> - Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@5d92e8e2, org.springframework.security.web.context.SecurityContextPersistenceFilter@12209826, org.springframework.security.web.header.HeaderWriterFilter@5e3d2765, org.springframework.security.web.authentication.logout.LogoutFilter@774f2992, tian.web.config.auth.MyOncePerRequestFilter@5a30722c, tian.web.config.auth.MyUsernamePasswordAuthenticationFilter@2becfd4c, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@8383a14, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@3a5b7d7e, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@ee2ae9a, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@542c65d9, org.springframework.security.web.session.SessionManagementFilter@34ab26a, org.springframework.security.web.access.ExceptionTranslationFilter@4597e6e3, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@5353dd09]
-[2020-12-09 10:53:29] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer 220 start - Tomcat started on port(s): 9000 (http) with context path ''
-[2020-12-09 10:53:29] INFO  org.springframework.boot.StartupInfoLogger 61 logStarted - Started FengtsApplication in 3.294 seconds (JVM running for 4.525)
-[2020-12-09 10:54:04] INFO  org.apache.juli.logging.DirectJDKLog 173 log - Initializing Spring DispatcherServlet 'dispatcherServlet'
-[2020-12-09 10:54:04] INFO  org.springframework.web.servlet.FrameworkServlet 525 initServletBean - Initializing Servlet 'dispatcherServlet'
-[2020-12-09 10:54:04] INFO  org.springframework.web.servlet.FrameworkServlet 547 initServletBean - Completed initialization in 5 ms
-[2020-12-09 10:54:04] INFO  tian.web.config.auth.MyOncePerRequestFilter 43 doFilterInternal - headerToken = null
-[2020-12-09 10:54:04] INFO  tian.web.config.auth.MyOncePerRequestFilter 44 doFilterInternal - request getMethod = POST
-[2020-12-09 10:58:55] INFO  tian.web.config.auth.MyOncePerRequestFilter 43 doFilterInternal - headerToken = undefined
-[2020-12-09 10:58:55] INFO  tian.web.config.auth.MyOncePerRequestFilter 44 doFilterInternal - request getMethod = POST
-[2020-12-09 11:02:14] INFO  org.springframework.scheduling.concurrent.ExecutorConfigurationSupport 218 shutdown - Shutting down ExecutorService 'applicationTaskExecutor'
-[2020-12-09 11:02:14] INFO  com.alibaba.druid.pool.DruidDataSource 2032 close - {dataSource-1} closing ...
-[2020-12-09 11:02:14] INFO  com.alibaba.druid.pool.DruidDataSource 2104 close - {dataSource-1} closed
-[2020-12-09 11:02:19] INFO  org.springframework.boot.StartupInfoLogger 55 logStarting - Starting FengtsApplication on DESKTOP-7017LEC with PID 16780 (D:\IDEAWORK\fengts\fengts-service\target\classes started by FTS36 in D:\IDEAWORK\fengts)
-[2020-12-09 11:02:19] INFO  org.springframework.boot.SpringApplication 655 logStartupProfileInfo - The following profiles are active: dev
-[2020-12-09 11:02:20] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer 108 initialize - Tomcat initialized with port(s): 9000 (http)
-[2020-12-09 11:02:20] INFO  org.apache.juli.logging.DirectJDKLog 173 log - Starting service [Tomcat]
-[2020-12-09 11:02:20] INFO  org.apache.juli.logging.DirectJDKLog 173 log - Starting Servlet engine: [Apache Tomcat/9.0.36]
-[2020-12-09 11:02:20] INFO  org.apache.juli.logging.DirectJDKLog 173 log - Initializing Spring embedded WebApplicationContext
-[2020-12-09 11:02:20] INFO  org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext 285 prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 1077 ms
-[2020-12-09 11:02:20] INFO  com.alibaba.druid.spring.boot.autoconfigure.DruidDataSourceAutoConfigure 56 dataSource - Init DruidDataSource
-[2020-12-09 11:02:21] INFO  com.alibaba.druid.pool.DruidDataSource 985 init - {dataSource-1} inited
-[2020-12-09 11:02:22] INFO  org.springframework.scheduling.concurrent.ExecutorConfigurationSupport 181 initialize - Initializing ExecutorService 'applicationTaskExecutor'
-[2020-12-09 11:02:22] INFO  org.springframework.security.web.DefaultSecurityFilterChain 43 <init> - Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@1186374c, org.springframework.security.web.context.SecurityContextPersistenceFilter@6ce9771c, org.springframework.security.web.header.HeaderWriterFilter@1231a1be, org.springframework.security.web.authentication.logout.LogoutFilter@3313463c, tian.web.config.auth.MyOncePerRequestFilter@39c87b42, tian.web.config.auth.MyUsernamePasswordAuthenticationFilter@2315052d, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@278fe428, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@6eed46e9, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@1da75dde, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@42cc5460, org.springframework.security.web.session.SessionManagementFilter@4ced17f3, org.springframework.security.web.access.ExceptionTranslationFilter@6bd7439d, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@333d44f6]
-[2020-12-09 11:02:22] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer 220 start - Tomcat started on port(s): 9000 (http) with context path ''
-[2020-12-09 11:02:22] INFO  org.springframework.boot.StartupInfoLogger 61 logStarted - Started FengtsApplication in 3.539 seconds (JVM running for 4.747)
-[2020-12-09 11:03:54] INFO  org.apache.juli.logging.DirectJDKLog 173 log - Initializing Spring DispatcherServlet 'dispatcherServlet'
-[2020-12-09 11:03:54] INFO  org.springframework.web.servlet.FrameworkServlet 525 initServletBean - Initializing Servlet 'dispatcherServlet'
-[2020-12-09 11:03:54] INFO  org.springframework.web.servlet.FrameworkServlet 547 initServletBean - Completed initialization in 4 ms
-[2020-12-09 11:03:54] INFO  tian.web.config.auth.MyOncePerRequestFilter 43 doFilterInternal - headerToken = undefined
-[2020-12-09 11:03:54] INFO  tian.web.config.auth.MyOncePerRequestFilter 44 doFilterInternal - request getMethod = POST
-[2020-12-09 11:05:57] INFO  org.springframework.scheduling.concurrent.ExecutorConfigurationSupport 218 shutdown - Shutting down ExecutorService 'applicationTaskExecutor'
-[2020-12-09 11:05:57] INFO  com.alibaba.druid.pool.DruidDataSource 2032 close - {dataSource-1} closing ...
-[2020-12-09 11:05:57] INFO  com.alibaba.druid.pool.DruidDataSource 2104 close - {dataSource-1} closed
-[2020-12-09 16:41:39] INFO  org.springframework.boot.StartupInfoLogger 55 logStarting - Starting FengtsApplication on DESKTOP-7017LEC with PID 12796 (D:\IDEAWORK\fengts\fengts-service\target\classes started by FTS36 in D:\IDEAWORK\fengts)
-[2020-12-09 16:41:39] INFO  org.springframework.boot.SpringApplication 655 logStartupProfileInfo - The following profiles are active: dev
-[2020-12-09 16:41:42] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer 108 initialize - Tomcat initialized with port(s): 9000 (http)
-[2020-12-09 16:41:42] INFO  org.apache.juli.logging.DirectJDKLog 173 log - Starting service [Tomcat]
-[2020-12-09 16:41:42] INFO  org.apache.juli.logging.DirectJDKLog 173 log - Starting Servlet engine: [Apache Tomcat/9.0.36]
-[2020-12-09 16:41:42] INFO  org.apache.juli.logging.DirectJDKLog 173 log - Initializing Spring embedded WebApplicationContext
-[2020-12-09 16:41:42] INFO  org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext 285 prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 2953 ms
-[2020-12-09 16:41:42] INFO  com.alibaba.druid.spring.boot.autoconfigure.DruidDataSourceAutoConfigure 56 dataSource - Init DruidDataSource
-[2020-12-09 16:41:44] INFO  com.alibaba.druid.pool.DruidDataSource 985 init - {dataSource-1} inited
-[2020-12-09 16:41:46] INFO  org.springframework.scheduling.concurrent.ExecutorConfigurationSupport 181 initialize - Initializing ExecutorService 'applicationTaskExecutor'
-[2020-12-09 16:41:47] INFO  org.springframework.security.web.DefaultSecurityFilterChain 43 <init> - Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@1182d1df, org.springframework.security.web.context.SecurityContextPersistenceFilter@6182ffef, org.springframework.security.web.header.HeaderWriterFilter@58739e5e, org.springframework.security.web.authentication.logout.LogoutFilter@6ad6ae45, tian.web.config.auth.MyOncePerRequestFilter@28ee882c, tian.web.config.auth.MyUsernamePasswordAuthenticationFilter@20bb85b4, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@15d88c10, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@2d24cdd9, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@75e0a54c, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@31c7c281, org.springframework.security.web.session.SessionManagementFilter@2969a9a6, org.springframework.security.web.access.ExceptionTranslationFilter@6a51ae7c, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@1d2def55]
-[2020-12-09 16:41:47] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer 220 start - Tomcat started on port(s): 9000 (http) with context path ''
-[2020-12-09 16:41:47] INFO  org.springframework.boot.StartupInfoLogger 61 logStarted - Started FengtsApplication in 9.661 seconds (JVM running for 12.771)
-[2020-12-09 16:43:12] INFO  org.apache.juli.logging.DirectJDKLog 173 log - Initializing Spring DispatcherServlet 'dispatcherServlet'
-[2020-12-09 16:43:12] INFO  org.springframework.web.servlet.FrameworkServlet 525 initServletBean - Initializing Servlet 'dispatcherServlet'
-[2020-12-09 16:43:12] INFO  org.springframework.web.servlet.FrameworkServlet 547 initServletBean - Completed initialization in 35 ms
-[2020-12-09 16:43:12] INFO  tian.web.config.auth.MyOncePerRequestFilter 43 doFilterInternal - headerToken = eyJhbGciOiJIUzUxMiJ9.eyJleHAiOjE2MDgwODc4MzQsInN1YiI6IjE4NzM0NjE4NDdAcXEuY29tIiwiaWF0IjoxNjA3NDgzMDM0NTA5fQ.TVCUVz_dQOIZyl3EYrB2be_eRNH7sEh4TVGrFJpd5qY_lyQmVJrSdbGXyvZn-ZjK3XyRkigGbBJ2Up3J_-4rpQ
-[2020-12-09 16:43:12] INFO  tian.web.config.auth.MyOncePerRequestFilter 44 doFilterInternal - request getMethod = POST
-[2020-12-09 16:43:42] INFO  tian.web.config.auth.MyOncePerRequestFilter 43 doFilterInternal - headerToken = eyJhbGciOiJIUzUxMiJ9.eyJleHAiOjE2MDgwODc4MzQsInN1YiI6IjE4NzM0NjE4NDdAcXEuY29tIiwiaWF0IjoxNjA3NDgzMDM0NTA5fQ.TVCUVz_dQOIZyl3EYrB2be_eRNH7sEh4TVGrFJpd5qY_lyQmVJrSdbGXyvZn-ZjK3XyRkigGbBJ2Up3J_-4rpQ
-[2020-12-09 16:43:42] INFO  tian.web.config.auth.MyOncePerRequestFilter 44 doFilterInternal - request getMethod = POST
-[2020-12-09 16:45:15] INFO  org.springframework.scheduling.concurrent.ExecutorConfigurationSupport 218 shutdown - Shutting down ExecutorService 'applicationTaskExecutor'
-[2020-12-09 16:45:15] INFO  com.alibaba.druid.pool.DruidDataSource 2032 close - {dataSource-1} closing ...
-[2020-12-09 16:45:15] INFO  com.alibaba.druid.pool.DruidDataSource 2104 close - {dataSource-1} closed
+[2021-01-06 14:12:59] INFO  org.springframework.boot.StartupInfoLogger 55 logStarting - Starting FengtsApplication on DESKTOP-7017LEC with PID 12132 (D:\IDEAWORK\fengts\fengts-service\target\classes started by FTS36 in D:\IDEAWORK\fengts)
+[2021-01-06 14:12:59] INFO  org.springframework.boot.SpringApplication 655 logStartupProfileInfo - The following profiles are active: dev
+[2021-01-06 14:13:01] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer 108 initialize - Tomcat initialized with port(s): 9000 (http)
+[2021-01-06 14:13:01] INFO  org.apache.juli.logging.DirectJDKLog 173 log - Starting service [Tomcat]
+[2021-01-06 14:13:01] INFO  org.apache.juli.logging.DirectJDKLog 173 log - Starting Servlet engine: [Apache Tomcat/9.0.36]
+[2021-01-06 14:13:01] INFO  org.apache.juli.logging.DirectJDKLog 173 log - Initializing Spring embedded WebApplicationContext
+[2021-01-06 14:13:01] INFO  org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext 285 prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 1335 ms
+[2021-01-06 14:13:01] INFO  com.alibaba.druid.spring.boot.autoconfigure.DruidDataSourceAutoConfigure 56 dataSource - Init DruidDataSource
+[2021-01-06 14:13:02] INFO  com.alibaba.druid.pool.DruidDataSource 985 init - {dataSource-1} inited
+[2021-01-06 14:13:03] INFO  org.springframework.scheduling.concurrent.ExecutorConfigurationSupport 181 initialize - Initializing ExecutorService 'applicationTaskExecutor'
+[2021-01-06 14:13:03] INFO  org.springframework.security.web.DefaultSecurityFilterChain 43 <init> - Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@41a23470, org.springframework.security.web.context.SecurityContextPersistenceFilter@5c8ab9de, org.springframework.security.web.header.HeaderWriterFilter@18dd7767, org.springframework.security.web.authentication.logout.LogoutFilter@7a2a7492, tian.web.config.auth.MyOncePerRequestFilter@16f7f59f, tian.web.config.auth.MyUsernamePasswordAuthenticationFilter@33bdd01, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@30afb481, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@2e7bb00e, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@26a45089, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@30c01c37, org.springframework.security.web.session.SessionManagementFilter@bfe47a8, org.springframework.security.web.access.ExceptionTranslationFilter@74eec640, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@1209a0f]
+[2021-01-06 14:13:03] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer 220 start - Tomcat started on port(s): 9000 (http) with context path ''
+[2021-01-06 14:13:03] INFO  org.springframework.boot.StartupInfoLogger 61 logStarted - Started FengtsApplication in 4.242 seconds (JVM running for 5.796)
+[2021-01-06 14:28:02] INFO  org.springframework.scheduling.concurrent.ExecutorConfigurationSupport 218 shutdown - Shutting down ExecutorService 'applicationTaskExecutor'
+[2021-01-06 14:28:02] INFO  com.alibaba.druid.pool.DruidDataSource 2032 close - {dataSource-1} closing ...
+[2021-01-06 14:28:02] INFO  com.alibaba.druid.pool.DruidDataSource 2104 close - {dataSource-1} closed
+[2021-01-06 14:28:07] INFO  org.springframework.boot.StartupInfoLogger 55 logStarting - Starting FengtsApplication on DESKTOP-7017LEC with PID 18300 (D:\IDEAWORK\fengts\fengts-service\target\classes started by FTS36 in D:\IDEAWORK\fengts)
+[2021-01-06 14:28:07] INFO  org.springframework.boot.SpringApplication 655 logStartupProfileInfo - The following profiles are active: dev
+[2021-01-06 14:28:08] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer 108 initialize - Tomcat initialized with port(s): 9000 (http)
+[2021-01-06 14:28:08] INFO  org.apache.juli.logging.DirectJDKLog 173 log - Starting service [Tomcat]
+[2021-01-06 14:28:08] INFO  org.apache.juli.logging.DirectJDKLog 173 log - Starting Servlet engine: [Apache Tomcat/9.0.36]
+[2021-01-06 14:28:08] INFO  org.apache.juli.logging.DirectJDKLog 173 log - Initializing Spring embedded WebApplicationContext
+[2021-01-06 14:28:08] INFO  org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext 285 prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 1168 ms
+[2021-01-06 14:28:08] INFO  com.alibaba.druid.spring.boot.autoconfigure.DruidDataSourceAutoConfigure 56 dataSource - Init DruidDataSource
+[2021-01-06 14:28:09] INFO  com.alibaba.druid.pool.DruidDataSource 985 init - {dataSource-1} inited
+[2021-01-06 14:28:10] INFO  org.springframework.scheduling.concurrent.ExecutorConfigurationSupport 181 initialize - Initializing ExecutorService 'applicationTaskExecutor'
+[2021-01-06 14:28:11] INFO  org.springframework.security.web.DefaultSecurityFilterChain 43 <init> - Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@efe49ab, org.springframework.security.web.context.SecurityContextPersistenceFilter@7e5e6573, org.springframework.security.web.header.HeaderWriterFilter@156cfa20, org.springframework.security.web.authentication.logout.LogoutFilter@2e3cd732, tian.web.config.auth.MyOncePerRequestFilter@50cbcca7, tian.web.config.auth.MyUsernamePasswordAuthenticationFilter@4861cca9, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@77bb916f, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@58aa5c94, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@467af68c, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@6dcf7b6a, org.springframework.security.web.session.SessionManagementFilter@23396fc0, org.springframework.security.web.access.ExceptionTranslationFilter@39a7eca5, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@76b305e1]
+[2021-01-06 14:28:11] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer 220 start - Tomcat started on port(s): 9000 (http) with context path ''
+[2021-01-06 14:28:11] INFO  org.springframework.boot.StartupInfoLogger 61 logStarted - Started FengtsApplication in 3.995 seconds (JVM running for 5.254)
+[2021-01-06 14:29:13] INFO  org.apache.juli.logging.DirectJDKLog 173 log - Initializing Spring DispatcherServlet 'dispatcherServlet'
+[2021-01-06 14:29:13] INFO  org.springframework.web.servlet.FrameworkServlet 525 initServletBean - Initializing Servlet 'dispatcherServlet'
+[2021-01-06 14:29:13] INFO  org.springframework.web.servlet.FrameworkServlet 547 initServletBean - Completed initialization in 6 ms
+[2021-01-06 14:29:13] INFO  tian.web.config.auth.MyOncePerRequestFilter 43 doFilterInternal - headerToken = null
+[2021-01-06 14:29:13] INFO  tian.web.config.auth.MyOncePerRequestFilter 44 doFilterInternal - request getMethod = POST
+[2021-01-06 14:29:22] INFO  tian.web.config.auth.MyOncePerRequestFilter 43 doFilterInternal - headerToken = null
+[2021-01-06 14:29:22] INFO  tian.web.config.auth.MyOncePerRequestFilter 44 doFilterInternal - request getMethod = POST
+[2021-01-06 14:29:52] INFO  tian.web.config.auth.MyOncePerRequestFilter 43 doFilterInternal - headerToken = null
+[2021-01-06 14:29:52] INFO  tian.web.config.auth.MyOncePerRequestFilter 44 doFilterInternal - request getMethod = POST
+[2021-01-06 14:31:21] INFO  tian.web.config.auth.MyOncePerRequestFilter 43 doFilterInternal - headerToken = eyJhbGciOiJIUzUxMiJ9.eyJleHAiOjE2MTA1MTkzOTMsInN1YiI6IjE4NzM0NjFAcXEuY29tIiwiaWF0IjoxNjA5OTE0NTkzMjI2fQ.YnLI2UcLldzRQ28x54zk59siIkbmRBxU6bpHn7j_J9OGNYiDCBsXuIS3EyNjng16U_ZQvXGbNUV45Z5bCVksMQ
+[2021-01-06 14:31:21] INFO  tian.web.config.auth.MyOncePerRequestFilter 44 doFilterInternal - request getMethod = POST
+[2021-01-06 14:33:04] INFO  org.springframework.scheduling.concurrent.ExecutorConfigurationSupport 218 shutdown - Shutting down ExecutorService 'applicationTaskExecutor'
+[2021-01-06 14:33:04] INFO  com.alibaba.druid.pool.DruidDataSource 2032 close - {dataSource-1} closing ...
+[2021-01-06 14:33:04] INFO  com.alibaba.druid.pool.DruidDataSource 2104 close - {dataSource-1} closed
+[2021-01-06 14:33:09] INFO  org.springframework.boot.StartupInfoLogger 55 logStarting - Starting FengtsApplication on DESKTOP-7017LEC with PID 17824 (D:\IDEAWORK\fengts\fengts-service\target\classes started by FTS36 in D:\IDEAWORK\fengts)
+[2021-01-06 14:33:09] INFO  org.springframework.boot.SpringApplication 655 logStartupProfileInfo - The following profiles are active: dev
+[2021-01-06 14:33:09] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer 108 initialize - Tomcat initialized with port(s): 9000 (http)
+[2021-01-06 14:33:09] INFO  org.apache.juli.logging.DirectJDKLog 173 log - Starting service [Tomcat]
+[2021-01-06 14:33:09] INFO  org.apache.juli.logging.DirectJDKLog 173 log - Starting Servlet engine: [Apache Tomcat/9.0.36]
+[2021-01-06 14:33:10] INFO  org.apache.juli.logging.DirectJDKLog 173 log - Initializing Spring embedded WebApplicationContext
+[2021-01-06 14:33:10] INFO  org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext 285 prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 920 ms
+[2021-01-06 14:33:10] INFO  com.alibaba.druid.spring.boot.autoconfigure.DruidDataSourceAutoConfigure 56 dataSource - Init DruidDataSource
+[2021-01-06 14:33:10] INFO  com.alibaba.druid.pool.DruidDataSource 985 init - {dataSource-1} inited
+[2021-01-06 14:33:12] INFO  org.springframework.scheduling.concurrent.ExecutorConfigurationSupport 181 initialize - Initializing ExecutorService 'applicationTaskExecutor'
+[2021-01-06 14:33:12] INFO  org.springframework.scheduling.concurrent.ExecutorConfigurationSupport 218 shutdown - Shutting down ExecutorService 'applicationTaskExecutor'
+[2021-01-06 14:33:12] INFO  com.alibaba.druid.pool.DruidDataSource 2032 close - {dataSource-1} closing ...
+[2021-01-06 14:33:12] INFO  com.alibaba.druid.pool.DruidDataSource 2104 close - {dataSource-1} closed
+[2021-01-06 14:33:12] INFO  org.apache.juli.logging.DirectJDKLog 173 log - Stopping service [Tomcat]
+[2021-01-06 14:33:52] INFO  org.springframework.boot.StartupInfoLogger 55 logStarting - Starting FengtsApplication on DESKTOP-7017LEC with PID 14912 (D:\IDEAWORK\fengts\fengts-service\target\classes started by FTS36 in D:\IDEAWORK\fengts)
+[2021-01-06 14:33:52] INFO  org.springframework.boot.SpringApplication 655 logStartupProfileInfo - The following profiles are active: dev
+[2021-01-06 14:33:53] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer 108 initialize - Tomcat initialized with port(s): 9000 (http)
+[2021-01-06 14:33:53] INFO  org.apache.juli.logging.DirectJDKLog 173 log - Starting service [Tomcat]
+[2021-01-06 14:33:53] INFO  org.apache.juli.logging.DirectJDKLog 173 log - Starting Servlet engine: [Apache Tomcat/9.0.36]
+[2021-01-06 14:33:53] INFO  org.apache.juli.logging.DirectJDKLog 173 log - Initializing Spring embedded WebApplicationContext
+[2021-01-06 14:33:53] INFO  org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext 285 prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 1021 ms
+[2021-01-06 14:33:53] INFO  com.alibaba.druid.spring.boot.autoconfigure.DruidDataSourceAutoConfigure 56 dataSource - Init DruidDataSource
+[2021-01-06 14:33:53] INFO  com.alibaba.druid.pool.DruidDataSource 985 init - {dataSource-1} inited
+[2021-01-06 14:33:55] INFO  org.springframework.scheduling.concurrent.ExecutorConfigurationSupport 181 initialize - Initializing ExecutorService 'applicationTaskExecutor'
+[2021-01-06 14:33:55] INFO  org.springframework.security.web.DefaultSecurityFilterChain 43 <init> - Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@7ea3839e, org.springframework.security.web.context.SecurityContextPersistenceFilter@45796b2a, org.springframework.security.web.header.HeaderWriterFilter@1a345298, org.springframework.security.web.authentication.logout.LogoutFilter@78128dd0, tian.web.config.auth.MyOncePerRequestFilter@149aa7b2, tian.web.config.auth.MyUsernamePasswordAuthenticationFilter@7ae590f6, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@27bb74e1, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@4beae1e3, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@655621fd, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@16b76858, org.springframework.security.web.session.SessionManagementFilter@c318864, org.springframework.security.web.access.ExceptionTranslationFilter@3e8b8f0, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@74707df8]
+[2021-01-06 14:33:55] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer 220 start - Tomcat started on port(s): 9000 (http) with context path ''
+[2021-01-06 14:33:55] INFO  org.springframework.boot.StartupInfoLogger 61 logStarted - Started FengtsApplication in 3.622 seconds (JVM running for 4.89)
+[2021-01-06 14:34:29] INFO  org.apache.juli.logging.DirectJDKLog 173 log - Initializing Spring DispatcherServlet 'dispatcherServlet'
+[2021-01-06 14:34:29] INFO  org.springframework.web.servlet.FrameworkServlet 525 initServletBean - Initializing Servlet 'dispatcherServlet'
+[2021-01-06 14:34:29] INFO  org.springframework.web.servlet.FrameworkServlet 547 initServletBean - Completed initialization in 5 ms
+[2021-01-06 14:34:29] INFO  tian.web.config.auth.MyOncePerRequestFilter 43 doFilterInternal - headerToken = eyJhbGciOiJIUzUxMiJ9.eyJleHAiOjE2MTA1MTkzOTMsInN1YiI6IjE4NzM0NjFAcXEuY29tIiwiaWF0IjoxNjA5OTE0NTkzMjI2fQ.YnLI2UcLldzRQ28x54zk59siIkbmRBxU6bpHn7j_J9OGNYiDCBsXuIS3EyNjng16U_ZQvXGbNUV45Z5bCVksMQ
+[2021-01-06 14:34:29] INFO  tian.web.config.auth.MyOncePerRequestFilter 44 doFilterInternal - request getMethod = POST
+[2021-01-06 14:35:59] INFO  tian.web.config.auth.MyOncePerRequestFilter 43 doFilterInternal - headerToken = eyJhbGciOiJIUzUxMiJ9.eyJleHAiOjE2MTA1MTkzOTMsInN1YiI6IjE4NzM0NjFAcXEuY29tIiwiaWF0IjoxNjA5OTE0NTkzMjI2fQ.YnLI2UcLldzRQ28x54zk59siIkbmRBxU6bpHn7j_J9OGNYiDCBsXuIS3EyNjng16U_ZQvXGbNUV45Z5bCVksMQ
+[2021-01-06 14:35:59] INFO  tian.web.config.auth.MyOncePerRequestFilter 44 doFilterInternal - request getMethod = POST
+[2021-01-06 14:39:12] INFO  org.springframework.scheduling.concurrent.ExecutorConfigurationSupport 218 shutdown - Shutting down ExecutorService 'applicationTaskExecutor'
+[2021-01-06 14:39:12] INFO  com.alibaba.druid.pool.DruidDataSource 2032 close - {dataSource-1} closing ...
+[2021-01-06 14:39:12] INFO  com.alibaba.druid.pool.DruidDataSource 2104 close - {dataSource-1} closed
+[2021-01-06 14:43:13] INFO  org.springframework.boot.StartupInfoLogger 55 logStarting - Starting FengtsApplication on DESKTOP-7017LEC with PID 3492 (D:\IDEAWORK\fengts\fengts-service\target\classes started by FTS36 in D:\IDEAWORK\fengts)
+[2021-01-06 14:43:13] INFO  org.springframework.boot.SpringApplication 655 logStartupProfileInfo - The following profiles are active: dev
+[2021-01-06 14:43:14] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer 108 initialize - Tomcat initialized with port(s): 9000 (http)
+[2021-01-06 14:43:14] INFO  org.apache.juli.logging.DirectJDKLog 173 log - Starting service [Tomcat]
+[2021-01-06 14:43:14] INFO  org.apache.juli.logging.DirectJDKLog 173 log - Starting Servlet engine: [Apache Tomcat/9.0.36]
+[2021-01-06 14:43:14] INFO  org.apache.juli.logging.DirectJDKLog 173 log - Initializing Spring embedded WebApplicationContext
+[2021-01-06 14:43:14] INFO  org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext 285 prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 953 ms
+[2021-01-06 14:43:14] INFO  com.alibaba.druid.spring.boot.autoconfigure.DruidDataSourceAutoConfigure 56 dataSource - Init DruidDataSource
+[2021-01-06 14:43:15] INFO  com.alibaba.druid.pool.DruidDataSource 985 init - {dataSource-1} inited
+[2021-01-06 14:43:16] INFO  org.springframework.scheduling.concurrent.ExecutorConfigurationSupport 181 initialize - Initializing ExecutorService 'applicationTaskExecutor'
+[2021-01-06 14:43:16] INFO  org.springframework.security.web.DefaultSecurityFilterChain 43 <init> - Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@38a96593, org.springframework.security.web.context.SecurityContextPersistenceFilter@2bb0e277, org.springframework.security.web.header.HeaderWriterFilter@55044b34, org.springframework.security.web.authentication.logout.LogoutFilter@7de5871d, tian.web.config.auth.MyOncePerRequestFilter@71166348, tian.web.config.auth.MyUsernamePasswordAuthenticationFilter@59e7564b, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@2d2fc130, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@e881e46, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@7de3206d, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@5df64b2a, org.springframework.security.web.session.SessionManagementFilter@300a38e7, org.springframework.security.web.access.ExceptionTranslationFilter@bd273b2, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@4ecd8ab1]
+[2021-01-06 14:43:16] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer 220 start - Tomcat started on port(s): 9000 (http) with context path ''
+[2021-01-06 14:43:16] INFO  org.springframework.boot.StartupInfoLogger 61 logStarted - Started FengtsApplication in 3.436 seconds (JVM running for 4.658)
+[2021-01-06 14:43:23] INFO  org.apache.juli.logging.DirectJDKLog 173 log - Initializing Spring DispatcherServlet 'dispatcherServlet'
+[2021-01-06 14:43:23] INFO  org.springframework.web.servlet.FrameworkServlet 525 initServletBean - Initializing Servlet 'dispatcherServlet'
+[2021-01-06 14:43:23] INFO  org.springframework.web.servlet.FrameworkServlet 547 initServletBean - Completed initialization in 4 ms
+[2021-01-06 14:43:23] INFO  tian.web.config.auth.MyOncePerRequestFilter 43 doFilterInternal - headerToken = eyJhbGciOiJIUzUxMiJ9.eyJleHAiOjE2MTA1MTkzOTMsInN1YiI6IjE4NzM0NjFAcXEuY29tIiwiaWF0IjoxNjA5OTE0NTkzMjI2fQ.YnLI2UcLldzRQ28x54zk59siIkbmRBxU6bpHn7j_J9OGNYiDCBsXuIS3EyNjng16U_ZQvXGbNUV45Z5bCVksMQ
+[2021-01-06 14:43:23] INFO  tian.web.config.auth.MyOncePerRequestFilter 44 doFilterInternal - request getMethod = POST
+[2021-01-06 14:44:27] INFO  org.springframework.scheduling.concurrent.ExecutorConfigurationSupport 218 shutdown - Shutting down ExecutorService 'applicationTaskExecutor'
+[2021-01-06 14:44:27] INFO  com.alibaba.druid.pool.DruidDataSource 2032 close - {dataSource-1} closing ...
+[2021-01-06 14:44:27] INFO  com.alibaba.druid.pool.DruidDataSource 2104 close - {dataSource-1} closed
+[2021-01-06 14:46:45] INFO  org.springframework.boot.StartupInfoLogger 55 logStarting - Starting FengtsApplication on DESKTOP-7017LEC with PID 15096 (D:\IDEAWORK\fengts\fengts-service\target\classes started by FTS36 in D:\IDEAWORK\fengts)
+[2021-01-06 14:46:45] INFO  org.springframework.boot.SpringApplication 655 logStartupProfileInfo - The following profiles are active: dev
+[2021-01-06 14:46:45] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer 108 initialize - Tomcat initialized with port(s): 9000 (http)
+[2021-01-06 14:46:45] INFO  org.apache.juli.logging.DirectJDKLog 173 log - Starting service [Tomcat]
+[2021-01-06 14:46:45] INFO  org.apache.juli.logging.DirectJDKLog 173 log - Starting Servlet engine: [Apache Tomcat/9.0.36]
+[2021-01-06 14:46:46] INFO  org.apache.juli.logging.DirectJDKLog 173 log - Initializing Spring embedded WebApplicationContext
+[2021-01-06 14:46:46] INFO  org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext 285 prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 981 ms
+[2021-01-06 14:46:46] INFO  com.alibaba.druid.spring.boot.autoconfigure.DruidDataSourceAutoConfigure 56 dataSource - Init DruidDataSource
+[2021-01-06 14:46:46] INFO  com.alibaba.druid.pool.DruidDataSource 985 init - {dataSource-1} inited
+[2021-01-06 14:46:47] INFO  org.springframework.scheduling.concurrent.ExecutorConfigurationSupport 181 initialize - Initializing ExecutorService 'applicationTaskExecutor'
+[2021-01-06 14:46:48] INFO  org.springframework.security.web.DefaultSecurityFilterChain 43 <init> - Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@5ef2cbe6, org.springframework.security.web.context.SecurityContextPersistenceFilter@1a10c47e, org.springframework.security.web.header.HeaderWriterFilter@774f2992, org.springframework.security.web.authentication.logout.LogoutFilter@2d6a0766, tian.web.config.auth.MyOncePerRequestFilter@255d9277, tian.web.config.auth.MyUsernamePasswordAuthenticationFilter@74fb5b59, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@726a8729, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@2712e8f4, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@2b9b17ce, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@266da047, org.springframework.security.web.session.SessionManagementFilter@1fb6b8fb, org.springframework.security.web.access.ExceptionTranslationFilter@77cddc0c, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@3688baab]
+[2021-01-06 14:46:48] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer 220 start - Tomcat started on port(s): 9000 (http) with context path ''
+[2021-01-06 14:46:48] INFO  org.springframework.boot.StartupInfoLogger 61 logStarted - Started FengtsApplication in 3.56 seconds (JVM running for 4.778)
+[2021-01-06 14:47:11] INFO  org.apache.juli.logging.DirectJDKLog 173 log - Initializing Spring DispatcherServlet 'dispatcherServlet'
+[2021-01-06 14:47:11] INFO  org.springframework.web.servlet.FrameworkServlet 525 initServletBean - Initializing Servlet 'dispatcherServlet'
+[2021-01-06 14:47:11] INFO  org.springframework.web.servlet.FrameworkServlet 547 initServletBean - Completed initialization in 4 ms
+[2021-01-06 14:47:11] INFO  tian.web.config.auth.MyOncePerRequestFilter 43 doFilterInternal - headerToken = eyJhbGciOiJIUzUxMiJ9.eyJleHAiOjE2MTA1MTkzOTMsInN1YiI6IjE4NzM0NjFAcXEuY29tIiwiaWF0IjoxNjA5OTE0NTkzMjI2fQ.YnLI2UcLldzRQ28x54zk59siIkbmRBxU6bpHn7j_J9OGNYiDCBsXuIS3EyNjng16U_ZQvXGbNUV45Z5bCVksMQ
+[2021-01-06 14:47:11] INFO  tian.web.config.auth.MyOncePerRequestFilter 44 doFilterInternal - request getMethod = POST
+[2021-01-06 14:47:46] INFO  org.springframework.scheduling.concurrent.ExecutorConfigurationSupport 218 shutdown - Shutting down ExecutorService 'applicationTaskExecutor'
+[2021-01-06 14:47:46] INFO  com.alibaba.druid.pool.DruidDataSource 2032 close - {dataSource-1} closing ...
+[2021-01-06 14:47:46] INFO  com.alibaba.druid.pool.DruidDataSource 2104 close - {dataSource-1} closed
+[2021-01-06 14:55:47] INFO  org.springframework.boot.StartupInfoLogger 55 logStarting - Starting FengtsApplication on DESKTOP-7017LEC with PID 14880 (D:\IDEAWORK\fengts\fengts-service\target\classes started by FTS36 in D:\IDEAWORK\fengts)
+[2021-01-06 14:55:47] INFO  org.springframework.boot.SpringApplication 655 logStartupProfileInfo - The following profiles are active: dev
+[2021-01-06 14:55:48] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer 108 initialize - Tomcat initialized with port(s): 9000 (http)
+[2021-01-06 14:55:48] INFO  org.apache.juli.logging.DirectJDKLog 173 log - Starting service [Tomcat]
+[2021-01-06 14:55:48] INFO  org.apache.juli.logging.DirectJDKLog 173 log - Starting Servlet engine: [Apache Tomcat/9.0.36]
+[2021-01-06 14:55:48] INFO  org.apache.juli.logging.DirectJDKLog 173 log - Initializing Spring embedded WebApplicationContext
+[2021-01-06 14:55:48] INFO  org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext 285 prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 964 ms
+[2021-01-06 14:55:48] INFO  com.alibaba.druid.spring.boot.autoconfigure.DruidDataSourceAutoConfigure 56 dataSource - Init DruidDataSource
+[2021-01-06 14:55:49] INFO  com.alibaba.druid.pool.DruidDataSource 985 init - {dataSource-1} inited
+[2021-01-06 14:55:50] INFO  org.springframework.scheduling.concurrent.ExecutorConfigurationSupport 181 initialize - Initializing ExecutorService 'applicationTaskExecutor'
+[2021-01-06 14:55:50] INFO  org.springframework.security.web.DefaultSecurityFilterChain 43 <init> - Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@3ef0e576, org.springframework.security.web.context.SecurityContextPersistenceFilter@3d3930fe, org.springframework.security.web.header.HeaderWriterFilter@7f6b57f2, org.springframework.security.web.authentication.logout.LogoutFilter@43a7203e, tian.web.config.auth.MyOncePerRequestFilter@2bba35ef, tian.web.config.auth.MyUsernamePasswordAuthenticationFilter@6d6039df, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@71b0289b, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@15f2a43f, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@145e958f, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@da34eb0, org.springframework.security.web.session.SessionManagementFilter@52b32b70, org.springframework.security.web.access.ExceptionTranslationFilter@30eedaa4, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@a2df0d5]
+[2021-01-06 14:55:51] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer 220 start - Tomcat started on port(s): 9000 (http) with context path ''
+[2021-01-06 14:55:51] INFO  org.springframework.boot.StartupInfoLogger 61 logStarted - Started FengtsApplication in 3.493 seconds (JVM running for 4.769)
+[2021-01-06 14:56:06] INFO  org.apache.juli.logging.DirectJDKLog 173 log - Initializing Spring DispatcherServlet 'dispatcherServlet'
+[2021-01-06 14:56:06] INFO  org.springframework.web.servlet.FrameworkServlet 525 initServletBean - Initializing Servlet 'dispatcherServlet'
+[2021-01-06 14:56:06] INFO  org.springframework.web.servlet.FrameworkServlet 547 initServletBean - Completed initialization in 5 ms
+[2021-01-06 14:56:06] INFO  tian.web.config.auth.MyOncePerRequestFilter 43 doFilterInternal - headerToken = eyJhbGciOiJIUzUxMiJ9.eyJleHAiOjE2MTA1MTkzOTMsInN1YiI6IjE4NzM0NjFAcXEuY29tIiwiaWF0IjoxNjA5OTE0NTkzMjI2fQ.YnLI2UcLldzRQ28x54zk59siIkbmRBxU6bpHn7j_J9OGNYiDCBsXuIS3EyNjng16U_ZQvXGbNUV45Z5bCVksMQ
+[2021-01-06 14:56:06] INFO  tian.web.config.auth.MyOncePerRequestFilter 44 doFilterInternal - request getMethod = POST
+[2021-01-06 14:57:16] INFO  tian.web.config.auth.MyOncePerRequestFilter 43 doFilterInternal - headerToken = eyJhbGciOiJIUzUxMiJ9.eyJleHAiOjE2MTA1MTkzOTMsInN1YiI6IjE4NzM0NjFAcXEuY29tIiwiaWF0IjoxNjA5OTE0NTkzMjI2fQ.YnLI2UcLldzRQ28x54zk59siIkbmRBxU6bpHn7j_J9OGNYiDCBsXuIS3EyNjng16U_ZQvXGbNUV45Z5bCVksMQ
+[2021-01-06 14:57:16] INFO  tian.web.config.auth.MyOncePerRequestFilter 44 doFilterInternal - request getMethod = POST
+[2021-01-06 15:03:08] INFO  org.springframework.scheduling.concurrent.ExecutorConfigurationSupport 218 shutdown - Shutting down ExecutorService 'applicationTaskExecutor'
+[2021-01-06 15:03:08] INFO  com.alibaba.druid.pool.DruidDataSource 2032 close - {dataSource-1} closing ...
+[2021-01-06 15:03:08] INFO  com.alibaba.druid.pool.DruidDataSource 2104 close - {dataSource-1} closed
+[2021-01-06 15:03:13] INFO  org.springframework.boot.StartupInfoLogger 55 logStarting - Starting FengtsApplication on DESKTOP-7017LEC with PID 9592 (D:\IDEAWORK\fengts\fengts-service\target\classes started by FTS36 in D:\IDEAWORK\fengts)
+[2021-01-06 15:03:13] INFO  org.springframework.boot.SpringApplication 655 logStartupProfileInfo - The following profiles are active: dev
+[2021-01-06 15:03:13] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer 108 initialize - Tomcat initialized with port(s): 9000 (http)
+[2021-01-06 15:03:13] INFO  org.apache.juli.logging.DirectJDKLog 173 log - Starting service [Tomcat]
+[2021-01-06 15:03:13] INFO  org.apache.juli.logging.DirectJDKLog 173 log - Starting Servlet engine: [Apache Tomcat/9.0.36]
+[2021-01-06 15:03:14] INFO  org.apache.juli.logging.DirectJDKLog 173 log - Initializing Spring embedded WebApplicationContext
+[2021-01-06 15:03:14] INFO  org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext 285 prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 996 ms
+[2021-01-06 15:03:14] INFO  com.alibaba.druid.spring.boot.autoconfigure.DruidDataSourceAutoConfigure 56 dataSource - Init DruidDataSource
+[2021-01-06 15:03:14] INFO  com.alibaba.druid.pool.DruidDataSource 985 init - {dataSource-1} inited
+[2021-01-06 15:03:15] INFO  org.springframework.scheduling.concurrent.ExecutorConfigurationSupport 181 initialize - Initializing ExecutorService 'applicationTaskExecutor'
+[2021-01-06 15:03:16] INFO  org.springframework.security.web.DefaultSecurityFilterChain 43 <init> - Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@184de357, org.springframework.security.web.context.SecurityContextPersistenceFilter@58aa5c94, org.springframework.security.web.header.HeaderWriterFilter@23396fc0, org.springframework.security.web.authentication.logout.LogoutFilter@2ab8589a, tian.web.config.auth.MyOncePerRequestFilter@3404e5c4, tian.web.config.auth.MyUsernamePasswordAuthenticationFilter@781dbe44, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@273aaab7, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@50df37eb, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@1d6f77d7, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@efe49ab, org.springframework.security.web.session.SessionManagementFilter@7e5e6573, org.springframework.security.web.access.ExceptionTranslationFilter@156cfa20, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@e07b4db]
+[2021-01-06 15:03:16] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer 220 start - Tomcat started on port(s): 9000 (http) with context path ''
+[2021-01-06 15:03:16] INFO  org.springframework.boot.StartupInfoLogger 61 logStarted - Started FengtsApplication in 3.593 seconds (JVM running for 4.824)
+[2021-01-06 15:03:41] INFO  org.apache.juli.logging.DirectJDKLog 173 log - Initializing Spring DispatcherServlet 'dispatcherServlet'
+[2021-01-06 15:03:41] INFO  org.springframework.web.servlet.FrameworkServlet 525 initServletBean - Initializing Servlet 'dispatcherServlet'
+[2021-01-06 15:03:41] INFO  org.springframework.web.servlet.FrameworkServlet 547 initServletBean - Completed initialization in 4 ms
+[2021-01-06 15:03:41] INFO  tian.web.config.auth.MyOncePerRequestFilter 43 doFilterInternal - headerToken = eyJhbGciOiJIUzUxMiJ9.eyJleHAiOjE2MTA1MTkzOTMsInN1YiI6IjE4NzM0NjFAcXEuY29tIiwiaWF0IjoxNjA5OTE0NTkzMjI2fQ.YnLI2UcLldzRQ28x54zk59siIkbmRBxU6bpHn7j_J9OGNYiDCBsXuIS3EyNjng16U_ZQvXGbNUV45Z5bCVksMQ
+[2021-01-06 15:03:41] INFO  tian.web.config.auth.MyOncePerRequestFilter 44 doFilterInternal - request getMethod = POST
+[2021-01-06 15:05:29] INFO  org.springframework.scheduling.concurrent.ExecutorConfigurationSupport 218 shutdown - Shutting down ExecutorService 'applicationTaskExecutor'
+[2021-01-06 15:05:29] INFO  com.alibaba.druid.pool.DruidDataSource 2032 close - {dataSource-1} closing ...
+[2021-01-06 15:05:29] INFO  com.alibaba.druid.pool.DruidDataSource 2104 close - {dataSource-1} closed
+[2021-01-06 15:06:02] INFO  org.springframework.boot.StartupInfoLogger 55 logStarting - Starting FengtsApplication on DESKTOP-7017LEC with PID 17660 (D:\IDEAWORK\fengts\fengts-service\target\classes started by FTS36 in D:\IDEAWORK\fengts)
+[2021-01-06 15:06:02] INFO  org.springframework.boot.SpringApplication 655 logStartupProfileInfo - The following profiles are active: dev
+[2021-01-06 15:06:03] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer 108 initialize - Tomcat initialized with port(s): 9000 (http)
+[2021-01-06 15:06:03] INFO  org.apache.juli.logging.DirectJDKLog 173 log - Starting service [Tomcat]
+[2021-01-06 15:06:03] INFO  org.apache.juli.logging.DirectJDKLog 173 log - Starting Servlet engine: [Apache Tomcat/9.0.36]
+[2021-01-06 15:06:03] INFO  org.apache.juli.logging.DirectJDKLog 173 log - Initializing Spring embedded WebApplicationContext
+[2021-01-06 15:06:03] INFO  org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext 285 prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 918 ms
+[2021-01-06 15:06:03] INFO  com.alibaba.druid.spring.boot.autoconfigure.DruidDataSourceAutoConfigure 56 dataSource - Init DruidDataSource
+[2021-01-06 15:06:04] INFO  com.alibaba.druid.pool.DruidDataSource 985 init - {dataSource-1} inited
+[2021-01-06 15:06:05] INFO  org.springframework.scheduling.concurrent.ExecutorConfigurationSupport 181 initialize - Initializing ExecutorService 'applicationTaskExecutor'
+[2021-01-06 15:06:05] INFO  org.springframework.security.web.DefaultSecurityFilterChain 43 <init> - Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@5c839677, org.springframework.security.web.context.SecurityContextPersistenceFilter@502c2278, org.springframework.security.web.header.HeaderWriterFilter@595814a1, org.springframework.security.web.authentication.logout.LogoutFilter@5d27b4c1, tian.web.config.auth.MyOncePerRequestFilter@77c66a4f, tian.web.config.auth.MyUsernamePasswordAuthenticationFilter@29170a47, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@63553e9f, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@696174d3, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@48368a08, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@3193e21d, org.springframework.security.web.session.SessionManagementFilter@49d42faf, org.springframework.security.web.access.ExceptionTranslationFilter@1214d23c, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@59a2d756]
+[2021-01-06 15:06:05] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer 220 start - Tomcat started on port(s): 9000 (http) with context path ''
+[2021-01-06 15:06:05] INFO  org.springframework.boot.StartupInfoLogger 61 logStarted - Started FengtsApplication in 3.359 seconds (JVM running for 4.52)
+[2021-01-06 15:06:32] INFO  org.apache.juli.logging.DirectJDKLog 173 log - Initializing Spring DispatcherServlet 'dispatcherServlet'
+[2021-01-06 15:06:32] INFO  org.springframework.web.servlet.FrameworkServlet 525 initServletBean - Initializing Servlet 'dispatcherServlet'
+[2021-01-06 15:06:32] INFO  org.springframework.web.servlet.FrameworkServlet 547 initServletBean - Completed initialization in 6 ms
+[2021-01-06 15:06:32] INFO  tian.web.config.auth.MyOncePerRequestFilter 43 doFilterInternal - headerToken = eyJhbGciOiJIUzUxMiJ9.eyJleHAiOjE2MTA1MTkzOTMsInN1YiI6IjE4NzM0NjFAcXEuY29tIiwiaWF0IjoxNjA5OTE0NTkzMjI2fQ.YnLI2UcLldzRQ28x54zk59siIkbmRBxU6bpHn7j_J9OGNYiDCBsXuIS3EyNjng16U_ZQvXGbNUV45Z5bCVksMQ
+[2021-01-06 15:06:32] INFO  tian.web.config.auth.MyOncePerRequestFilter 44 doFilterInternal - request getMethod = POST
+[2021-01-06 15:06:58] INFO  org.springframework.scheduling.concurrent.ExecutorConfigurationSupport 218 shutdown - Shutting down ExecutorService 'applicationTaskExecutor'
+[2021-01-06 15:06:58] INFO  com.alibaba.druid.pool.DruidDataSource 2032 close - {dataSource-1} closing ...
+[2021-01-06 15:06:58] INFO  com.alibaba.druid.pool.DruidDataSource 2104 close - {dataSource-1} closed
+[2021-01-06 15:08:12] INFO  org.springframework.boot.StartupInfoLogger 55 logStarting - Starting FengtsApplication on DESKTOP-7017LEC with PID 7560 (D:\IDEAWORK\fengts\fengts-service\target\classes started by FTS36 in D:\IDEAWORK\fengts)
+[2021-01-06 15:08:12] INFO  org.springframework.boot.SpringApplication 655 logStartupProfileInfo - The following profiles are active: dev
+[2021-01-06 15:08:13] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer 108 initialize - Tomcat initialized with port(s): 9000 (http)
+[2021-01-06 15:08:13] INFO  org.apache.juli.logging.DirectJDKLog 173 log - Starting service [Tomcat]
+[2021-01-06 15:08:13] INFO  org.apache.juli.logging.DirectJDKLog 173 log - Starting Servlet engine: [Apache Tomcat/9.0.36]
+[2021-01-06 15:08:13] INFO  org.apache.juli.logging.DirectJDKLog 173 log - Initializing Spring embedded WebApplicationContext
+[2021-01-06 15:08:13] INFO  org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext 285 prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 897 ms
+[2021-01-06 15:08:13] INFO  com.alibaba.druid.spring.boot.autoconfigure.DruidDataSourceAutoConfigure 56 dataSource - Init DruidDataSource
+[2021-01-06 15:08:13] INFO  com.alibaba.druid.pool.DruidDataSource 985 init - {dataSource-1} inited
+[2021-01-06 15:08:15] INFO  org.springframework.scheduling.concurrent.ExecutorConfigurationSupport 181 initialize - Initializing ExecutorService 'applicationTaskExecutor'
+[2021-01-06 15:08:15] INFO  org.springframework.security.web.DefaultSecurityFilterChain 43 <init> - Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@3d3930fe, org.springframework.security.web.context.SecurityContextPersistenceFilter@5408d4b3, org.springframework.security.web.header.HeaderWriterFilter@3866c96e, org.springframework.security.web.authentication.logout.LogoutFilter@2cea921a, tian.web.config.auth.MyOncePerRequestFilter@73e1ecd0, tian.web.config.auth.MyUsernamePasswordAuthenticationFilter@250967f1, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@d3cce46, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@65a48cab, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@77ab5214, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@5e51ec2e, org.springframework.security.web.session.SessionManagementFilter@5c76fce4, org.springframework.security.web.access.ExceptionTranslationFilter@3c488b34, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@2ab8589a]
+[2021-01-06 15:08:15] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer 220 start - Tomcat started on port(s): 9000 (http) with context path ''
+[2021-01-06 15:08:15] INFO  org.springframework.boot.StartupInfoLogger 61 logStarted - Started FengtsApplication in 3.457 seconds (JVM running for 4.762)
+[2021-01-06 15:08:37] INFO  org.apache.juli.logging.DirectJDKLog 173 log - Initializing Spring DispatcherServlet 'dispatcherServlet'
+[2021-01-06 15:08:37] INFO  org.springframework.web.servlet.FrameworkServlet 525 initServletBean - Initializing Servlet 'dispatcherServlet'
+[2021-01-06 15:08:37] INFO  org.springframework.web.servlet.FrameworkServlet 547 initServletBean - Completed initialization in 5 ms
+[2021-01-06 15:08:37] INFO  tian.web.config.auth.MyOncePerRequestFilter 43 doFilterInternal - headerToken = eyJhbGciOiJIUzUxMiJ9.eyJleHAiOjE2MTA1MTkzOTMsInN1YiI6IjE4NzM0NjFAcXEuY29tIiwiaWF0IjoxNjA5OTE0NTkzMjI2fQ.YnLI2UcLldzRQ28x54zk59siIkbmRBxU6bpHn7j_J9OGNYiDCBsXuIS3EyNjng16U_ZQvXGbNUV45Z5bCVksMQ
+[2021-01-06 15:08:37] INFO  tian.web.config.auth.MyOncePerRequestFilter 44 doFilterInternal - request getMethod = POST
+[2021-01-06 15:09:43] INFO  org.springframework.scheduling.concurrent.ExecutorConfigurationSupport 218 shutdown - Shutting down ExecutorService 'applicationTaskExecutor'
+[2021-01-06 15:09:43] INFO  com.alibaba.druid.pool.DruidDataSource 2032 close - {dataSource-1} closing ...
+[2021-01-06 15:09:43] INFO  com.alibaba.druid.pool.DruidDataSource 2104 close - {dataSource-1} closed
+[2021-01-06 15:12:08] INFO  org.springframework.boot.StartupInfoLogger 55 logStarting - Starting FengtsApplication on DESKTOP-7017LEC with PID 17804 (D:\IDEAWORK\fengts\fengts-service\target\classes started by FTS36 in D:\IDEAWORK\fengts)
+[2021-01-06 15:12:08] INFO  org.springframework.boot.SpringApplication 655 logStartupProfileInfo - The following profiles are active: dev
+[2021-01-06 15:12:09] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer 108 initialize - Tomcat initialized with port(s): 9000 (http)
+[2021-01-06 15:12:09] INFO  org.apache.juli.logging.DirectJDKLog 173 log - Starting service [Tomcat]
+[2021-01-06 15:12:09] INFO  org.apache.juli.logging.DirectJDKLog 173 log - Starting Servlet engine: [Apache Tomcat/9.0.36]
+[2021-01-06 15:12:09] INFO  org.apache.juli.logging.DirectJDKLog 173 log - Initializing Spring embedded WebApplicationContext
+[2021-01-06 15:12:09] INFO  org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext 285 prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 946 ms
+[2021-01-06 15:12:09] INFO  com.alibaba.druid.spring.boot.autoconfigure.DruidDataSourceAutoConfigure 56 dataSource - Init DruidDataSource
+[2021-01-06 15:12:10] INFO  com.alibaba.druid.pool.DruidDataSource 985 init - {dataSource-1} inited
+[2021-01-06 15:12:11] INFO  org.springframework.scheduling.concurrent.ExecutorConfigurationSupport 181 initialize - Initializing ExecutorService 'applicationTaskExecutor'
+[2021-01-06 15:12:11] INFO  org.springframework.security.web.DefaultSecurityFilterChain 43 <init> - Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@54bb1194, org.springframework.security.web.context.SecurityContextPersistenceFilter@2086d469, org.springframework.security.web.header.HeaderWriterFilter@273aaab7, org.springframework.security.web.authentication.logout.LogoutFilter@78eafad, tian.web.config.auth.MyOncePerRequestFilter@3e03046d, tian.web.config.auth.MyUsernamePasswordAuthenticationFilter@b01cb8d, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@1aac0a47, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@17c53dfb, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@41d20f06, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@1109730f, org.springframework.security.web.session.SessionManagementFilter@5a48d186, org.springframework.security.web.access.ExceptionTranslationFilter@7adae08e, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@72324965]
+[2021-01-06 15:12:11] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer 220 start - Tomcat started on port(s): 9000 (http) with context path ''
+[2021-01-06 15:12:11] INFO  org.springframework.boot.StartupInfoLogger 61 logStarted - Started FengtsApplication in 3.497 seconds (JVM running for 4.691)
+[2021-01-06 15:12:17] INFO  org.apache.juli.logging.DirectJDKLog 173 log - Initializing Spring DispatcherServlet 'dispatcherServlet'
+[2021-01-06 15:12:17] INFO  org.springframework.web.servlet.FrameworkServlet 525 initServletBean - Initializing Servlet 'dispatcherServlet'
+[2021-01-06 15:12:17] INFO  org.springframework.web.servlet.FrameworkServlet 547 initServletBean - Completed initialization in 5 ms
+[2021-01-06 15:12:17] INFO  tian.web.config.auth.MyOncePerRequestFilter 43 doFilterInternal - headerToken = eyJhbGciOiJIUzUxMiJ9.eyJleHAiOjE2MTA1MTkzOTMsInN1YiI6IjE4NzM0NjFAcXEuY29tIiwiaWF0IjoxNjA5OTE0NTkzMjI2fQ.YnLI2UcLldzRQ28x54zk59siIkbmRBxU6bpHn7j_J9OGNYiDCBsXuIS3EyNjng16U_ZQvXGbNUV45Z5bCVksMQ
+[2021-01-06 15:12:17] INFO  tian.web.config.auth.MyOncePerRequestFilter 44 doFilterInternal - request getMethod = POST
+[2021-01-06 15:12:46] INFO  org.springframework.scheduling.concurrent.ExecutorConfigurationSupport 218 shutdown - Shutting down ExecutorService 'applicationTaskExecutor'
+[2021-01-06 15:12:46] INFO  com.alibaba.druid.pool.DruidDataSource 2032 close - {dataSource-1} closing ...
+[2021-01-06 15:12:46] INFO  com.alibaba.druid.pool.DruidDataSource 2104 close - {dataSource-1} closed
+[2021-01-06 15:27:55] INFO  org.springframework.boot.StartupInfoLogger 55 logStarting - Starting FengtsApplication on DESKTOP-7017LEC with PID 12724 (D:\IDEAWORK\fengts\fengts-service\target\classes started by FTS36 in D:\IDEAWORK\fengts)
+[2021-01-06 15:27:55] INFO  org.springframework.boot.SpringApplication 655 logStartupProfileInfo - The following profiles are active: dev
+[2021-01-06 15:27:56] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer 108 initialize - Tomcat initialized with port(s): 9000 (http)
+[2021-01-06 15:27:56] INFO  org.apache.juli.logging.DirectJDKLog 173 log - Starting service [Tomcat]
+[2021-01-06 15:27:56] INFO  org.apache.juli.logging.DirectJDKLog 173 log - Starting Servlet engine: [Apache Tomcat/9.0.36]
+[2021-01-06 15:27:56] INFO  org.apache.juli.logging.DirectJDKLog 173 log - Initializing Spring embedded WebApplicationContext
+[2021-01-06 15:27:56] INFO  org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext 285 prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 993 ms
+[2021-01-06 15:27:56] INFO  com.alibaba.druid.spring.boot.autoconfigure.DruidDataSourceAutoConfigure 56 dataSource - Init DruidDataSource
+[2021-01-06 15:27:57] INFO  com.alibaba.druid.pool.DruidDataSource 985 init - {dataSource-1} inited
+[2021-01-06 15:27:58] INFO  org.springframework.scheduling.concurrent.ExecutorConfigurationSupport 181 initialize - Initializing ExecutorService 'applicationTaskExecutor'
+[2021-01-06 15:27:58] INFO  org.springframework.security.web.DefaultSecurityFilterChain 43 <init> - Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@3973b6d4, org.springframework.security.web.context.SecurityContextPersistenceFilter@5238896f, org.springframework.security.web.header.HeaderWriterFilter@44b9c7c4, org.springframework.security.web.authentication.logout.LogoutFilter@5a39e554, tian.web.config.auth.MyOncePerRequestFilter@788e3702, tian.web.config.auth.MyUsernamePasswordAuthenticationFilter@6ef4cbe1, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@266da047, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@4a2e1e52, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@54b44879, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@18dd7767, org.springframework.security.web.session.SessionManagementFilter@3611153f, org.springframework.security.web.access.ExceptionTranslationFilter@2712e8f4, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@1c2dd89b]
+[2021-01-06 15:27:58] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer 220 start - Tomcat started on port(s): 9000 (http) with context path ''
+[2021-01-06 15:27:58] INFO  org.springframework.boot.StartupInfoLogger 61 logStarted - Started FengtsApplication in 3.641 seconds (JVM running for 4.869)
+[2021-01-06 15:28:06] INFO  org.apache.juli.logging.DirectJDKLog 173 log - Initializing Spring DispatcherServlet 'dispatcherServlet'
+[2021-01-06 15:28:06] INFO  org.springframework.web.servlet.FrameworkServlet 525 initServletBean - Initializing Servlet 'dispatcherServlet'
+[2021-01-06 15:28:06] INFO  org.springframework.web.servlet.FrameworkServlet 547 initServletBean - Completed initialization in 5 ms
+[2021-01-06 15:28:06] INFO  tian.web.config.auth.MyOncePerRequestFilter 43 doFilterInternal - headerToken = eyJhbGciOiJIUzUxMiJ9.eyJleHAiOjE2MTA1MTkzOTMsInN1YiI6IjE4NzM0NjFAcXEuY29tIiwiaWF0IjoxNjA5OTE0NTkzMjI2fQ.YnLI2UcLldzRQ28x54zk59siIkbmRBxU6bpHn7j_J9OGNYiDCBsXuIS3EyNjng16U_ZQvXGbNUV45Z5bCVksMQ
+[2021-01-06 15:28:06] INFO  tian.web.config.auth.MyOncePerRequestFilter 44 doFilterInternal - request getMethod = POST
+[2021-01-06 15:30:32] INFO  tian.web.config.auth.MyOncePerRequestFilter 43 doFilterInternal - headerToken = eyJhbGciOiJIUzUxMiJ9.eyJleHAiOjE2MTA1MTkzOTMsInN1YiI6IjE4NzM0NjFAcXEuY29tIiwiaWF0IjoxNjA5OTE0NTkzMjI2fQ.YnLI2UcLldzRQ28x54zk59siIkbmRBxU6bpHn7j_J9OGNYiDCBsXuIS3EyNjng16U_ZQvXGbNUV45Z5bCVksMQ
+[2021-01-06 15:30:32] INFO  tian.web.config.auth.MyOncePerRequestFilter 44 doFilterInternal - request getMethod = POST
+[2021-01-06 15:32:16] INFO  org.springframework.scheduling.concurrent.ExecutorConfigurationSupport 218 shutdown - Shutting down ExecutorService 'applicationTaskExecutor'
+[2021-01-06 15:32:16] INFO  com.alibaba.druid.pool.DruidDataSource 2032 close - {dataSource-1} closing ...
+[2021-01-06 15:32:16] INFO  com.alibaba.druid.pool.DruidDataSource 2104 close - {dataSource-1} closed
+[2021-01-06 15:32:21] INFO  org.springframework.boot.StartupInfoLogger 55 logStarting - Starting FengtsApplication on DESKTOP-7017LEC with PID 18124 (D:\IDEAWORK\fengts\fengts-service\target\classes started by FTS36 in D:\IDEAWORK\fengts)
+[2021-01-06 15:32:21] INFO  org.springframework.boot.SpringApplication 655 logStartupProfileInfo - The following profiles are active: dev
+[2021-01-06 15:32:22] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer 108 initialize - Tomcat initialized with port(s): 9000 (http)
+[2021-01-06 15:32:22] INFO  org.apache.juli.logging.DirectJDKLog 173 log - Starting service [Tomcat]
+[2021-01-06 15:32:22] INFO  org.apache.juli.logging.DirectJDKLog 173 log - Starting Servlet engine: [Apache Tomcat/9.0.36]
+[2021-01-06 15:32:22] INFO  org.apache.juli.logging.DirectJDKLog 173 log - Initializing Spring embedded WebApplicationContext
+[2021-01-06 15:32:22] INFO  org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext 285 prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 936 ms
+[2021-01-06 15:32:22] INFO  com.alibaba.druid.spring.boot.autoconfigure.DruidDataSourceAutoConfigure 56 dataSource - Init DruidDataSource
+[2021-01-06 15:32:23] INFO  com.alibaba.druid.pool.DruidDataSource 985 init - {dataSource-1} inited
+[2021-01-06 15:32:24] INFO  org.springframework.scheduling.concurrent.ExecutorConfigurationSupport 181 initialize - Initializing ExecutorService 'applicationTaskExecutor'
+[2021-01-06 15:32:24] INFO  org.springframework.security.web.DefaultSecurityFilterChain 43 <init> - Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@2e3cd732, org.springframework.security.web.context.SecurityContextPersistenceFilter@5ad57e90, org.springframework.security.web.header.HeaderWriterFilter@5731caaf, org.springframework.security.web.authentication.logout.LogoutFilter@62108cd3, tian.web.config.auth.MyOncePerRequestFilter@11e71181, tian.web.config.auth.MyUsernamePasswordAuthenticationFilter@681de87f, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@74707df8, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@4ad896f7, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@5c76fce4, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@56d822dc, org.springframework.security.web.session.SessionManagementFilter@67e6eb52, org.springframework.security.web.access.ExceptionTranslationFilter@ce655b9, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@467af68c]
+[2021-01-06 15:32:24] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer 220 start - Tomcat started on port(s): 9000 (http) with context path ''
+[2021-01-06 15:32:24] INFO  org.springframework.boot.StartupInfoLogger 61 logStarted - Started FengtsApplication in 3.413 seconds (JVM running for 4.55)
+[2021-01-06 15:33:35] INFO  org.apache.juli.logging.DirectJDKLog 173 log - Initializing Spring DispatcherServlet 'dispatcherServlet'
+[2021-01-06 15:33:35] INFO  org.springframework.web.servlet.FrameworkServlet 525 initServletBean - Initializing Servlet 'dispatcherServlet'
+[2021-01-06 15:33:35] INFO  org.springframework.web.servlet.FrameworkServlet 547 initServletBean - Completed initialization in 5 ms
+[2021-01-06 15:33:35] INFO  tian.web.config.auth.MyOncePerRequestFilter 43 doFilterInternal - headerToken = eyJhbGciOiJIUzUxMiJ9.eyJleHAiOjE2MTA1MTkzOTMsInN1YiI6IjE4NzM0NjFAcXEuY29tIiwiaWF0IjoxNjA5OTE0NTkzMjI2fQ.YnLI2UcLldzRQ28x54zk59siIkbmRBxU6bpHn7j_J9OGNYiDCBsXuIS3EyNjng16U_ZQvXGbNUV45Z5bCVksMQ
+[2021-01-06 15:33:35] INFO  tian.web.config.auth.MyOncePerRequestFilter 44 doFilterInternal - request getMethod = POST
+[2021-01-06 15:34:17] INFO  org.springframework.scheduling.concurrent.ExecutorConfigurationSupport 218 shutdown - Shutting down ExecutorService 'applicationTaskExecutor'
+[2021-01-06 15:34:17] INFO  com.alibaba.druid.pool.DruidDataSource 2032 close - {dataSource-1} closing ...
+[2021-01-06 15:34:17] INFO  com.alibaba.druid.pool.DruidDataSource 2104 close - {dataSource-1} closed
+[2021-01-06 15:34:59] INFO  org.springframework.boot.StartupInfoLogger 55 logStarting - Starting FengtsApplication on DESKTOP-7017LEC with PID 14780 (D:\IDEAWORK\fengts\fengts-service\target\classes started by FTS36 in D:\IDEAWORK\fengts)
+[2021-01-06 15:34:59] INFO  org.springframework.boot.SpringApplication 655 logStartupProfileInfo - The following profiles are active: dev
+[2021-01-06 15:35:00] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer 108 initialize - Tomcat initialized with port(s): 9000 (http)
+[2021-01-06 15:35:00] INFO  org.apache.juli.logging.DirectJDKLog 173 log - Starting service [Tomcat]
+[2021-01-06 15:35:00] INFO  org.apache.juli.logging.DirectJDKLog 173 log - Starting Servlet engine: [Apache Tomcat/9.0.36]
+[2021-01-06 15:35:00] INFO  org.apache.juli.logging.DirectJDKLog 173 log - Initializing Spring embedded WebApplicationContext
+[2021-01-06 15:35:00] INFO  org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext 285 prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 931 ms
+[2021-01-06 15:35:00] INFO  com.alibaba.druid.spring.boot.autoconfigure.DruidDataSourceAutoConfigure 56 dataSource - Init DruidDataSource
+[2021-01-06 15:35:01] INFO  com.alibaba.druid.pool.DruidDataSource 985 init - {dataSource-1} inited
+[2021-01-06 15:35:02] INFO  org.springframework.scheduling.concurrent.ExecutorConfigurationSupport 181 initialize - Initializing ExecutorService 'applicationTaskExecutor'
+[2021-01-06 15:35:02] INFO  org.springframework.security.web.DefaultSecurityFilterChain 43 <init> - Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@38a96593, org.springframework.security.web.context.SecurityContextPersistenceFilter@2bb0e277, org.springframework.security.web.header.HeaderWriterFilter@55044b34, org.springframework.security.web.authentication.logout.LogoutFilter@7de5871d, tian.web.config.auth.MyOncePerRequestFilter@71166348, tian.web.config.auth.MyUsernamePasswordAuthenticationFilter@59e7564b, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@2d2fc130, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@e881e46, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@7de3206d, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@5df64b2a, org.springframework.security.web.session.SessionManagementFilter@300a38e7, org.springframework.security.web.access.ExceptionTranslationFilter@bd273b2, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@4ecd8ab1]
+[2021-01-06 15:35:02] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer 220 start - Tomcat started on port(s): 9000 (http) with context path ''
+[2021-01-06 15:35:02] INFO  org.springframework.boot.StartupInfoLogger 61 logStarted - Started FengtsApplication in 3.373 seconds (JVM running for 4.555)
+[2021-01-06 15:35:25] INFO  org.apache.juli.logging.DirectJDKLog 173 log - Initializing Spring DispatcherServlet 'dispatcherServlet'
+[2021-01-06 15:35:25] INFO  org.springframework.web.servlet.FrameworkServlet 525 initServletBean - Initializing Servlet 'dispatcherServlet'
+[2021-01-06 15:35:25] INFO  org.springframework.web.servlet.FrameworkServlet 547 initServletBean - Completed initialization in 4 ms
+[2021-01-06 15:35:25] INFO  tian.web.config.auth.MyOncePerRequestFilter 43 doFilterInternal - headerToken = eyJhbGciOiJIUzUxMiJ9.eyJleHAiOjE2MTA1MTkzOTMsInN1YiI6IjE4NzM0NjFAcXEuY29tIiwiaWF0IjoxNjA5OTE0NTkzMjI2fQ.YnLI2UcLldzRQ28x54zk59siIkbmRBxU6bpHn7j_J9OGNYiDCBsXuIS3EyNjng16U_ZQvXGbNUV45Z5bCVksMQ
+[2021-01-06 15:35:25] INFO  tian.web.config.auth.MyOncePerRequestFilter 44 doFilterInternal - request getMethod = POST
+[2021-01-06 15:37:51] INFO  org.springframework.scheduling.concurrent.ExecutorConfigurationSupport 218 shutdown - Shutting down ExecutorService 'applicationTaskExecutor'
+[2021-01-06 15:37:51] INFO  com.alibaba.druid.pool.DruidDataSource 2032 close - {dataSource-1} closing ...
+[2021-01-06 15:37:51] INFO  com.alibaba.druid.pool.DruidDataSource 2104 close - {dataSource-1} closed
+[2021-01-06 15:38:14] INFO  org.springframework.boot.StartupInfoLogger 55 logStarting - Starting FengtsApplication on DESKTOP-7017LEC with PID 3512 (D:\IDEAWORK\fengts\fengts-service\target\classes started by FTS36 in D:\IDEAWORK\fengts)
+[2021-01-06 15:38:14] INFO  org.springframework.boot.SpringApplication 655 logStartupProfileInfo - The following profiles are active: dev
+[2021-01-06 15:38:15] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer 108 initialize - Tomcat initialized with port(s): 9000 (http)
+[2021-01-06 15:38:15] INFO  org.apache.juli.logging.DirectJDKLog 173 log - Starting service [Tomcat]
+[2021-01-06 15:38:15] INFO  org.apache.juli.logging.DirectJDKLog 173 log - Starting Servlet engine: [Apache Tomcat/9.0.36]
+[2021-01-06 15:38:15] INFO  org.apache.juli.logging.DirectJDKLog 173 log - Initializing Spring embedded WebApplicationContext
+[2021-01-06 15:38:15] INFO  org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext 285 prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 998 ms
+[2021-01-06 15:38:15] INFO  com.alibaba.druid.spring.boot.autoconfigure.DruidDataSourceAutoConfigure 56 dataSource - Init DruidDataSource
+[2021-01-06 15:38:16] INFO  com.alibaba.druid.pool.DruidDataSource 985 init - {dataSource-1} inited
+[2021-01-06 15:38:17] INFO  org.springframework.scheduling.concurrent.ExecutorConfigurationSupport 181 initialize - Initializing ExecutorService 'applicationTaskExecutor'
+[2021-01-06 15:38:17] INFO  org.springframework.security.web.DefaultSecurityFilterChain 43 <init> - Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@16b76858, org.springframework.security.web.context.SecurityContextPersistenceFilter@4b98225c, org.springframework.security.web.header.HeaderWriterFilter@4ad896f7, org.springframework.security.web.authentication.logout.LogoutFilter@55044b34, tian.web.config.auth.MyOncePerRequestFilter@3ca3648, tian.web.config.auth.MyUsernamePasswordAuthenticationFilter@7ab63838, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@606d6d2c, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@3c488b34, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@77e9dca8, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@d3cce46, org.springframework.security.web.session.SessionManagementFilter@7d61468c, org.springframework.security.web.access.ExceptionTranslationFilter@5ad57e90, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@12c76d6e]
+[2021-01-06 15:38:18] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer 220 start - Tomcat started on port(s): 9000 (http) with context path ''
+[2021-01-06 15:38:18] INFO  org.springframework.boot.StartupInfoLogger 61 logStarted - Started FengtsApplication in 3.625 seconds (JVM running for 4.889)
+[2021-01-06 15:38:32] INFO  org.apache.juli.logging.DirectJDKLog 173 log - Initializing Spring DispatcherServlet 'dispatcherServlet'
+[2021-01-06 15:38:32] INFO  org.springframework.web.servlet.FrameworkServlet 525 initServletBean - Initializing Servlet 'dispatcherServlet'
+[2021-01-06 15:38:32] INFO  org.springframework.web.servlet.FrameworkServlet 547 initServletBean - Completed initialization in 5 ms
+[2021-01-06 15:38:32] INFO  tian.web.config.auth.MyOncePerRequestFilter 43 doFilterInternal - headerToken = eyJhbGciOiJIUzUxMiJ9.eyJleHAiOjE2MTA1MTkzOTMsInN1YiI6IjE4NzM0NjFAcXEuY29tIiwiaWF0IjoxNjA5OTE0NTkzMjI2fQ.YnLI2UcLldzRQ28x54zk59siIkbmRBxU6bpHn7j_J9OGNYiDCBsXuIS3EyNjng16U_ZQvXGbNUV45Z5bCVksMQ
+[2021-01-06 15:38:32] INFO  tian.web.config.auth.MyOncePerRequestFilter 44 doFilterInternal - request getMethod = POST
+[2021-01-06 15:39:36] INFO  org.springframework.scheduling.concurrent.ExecutorConfigurationSupport 218 shutdown - Shutting down ExecutorService 'applicationTaskExecutor'
+[2021-01-06 15:39:36] INFO  com.alibaba.druid.pool.DruidDataSource 2032 close - {dataSource-1} closing ...
+[2021-01-06 15:39:36] INFO  com.alibaba.druid.pool.DruidDataSource 2104 close - {dataSource-1} closed
+[2021-01-06 15:39:39] INFO  org.springframework.boot.StartupInfoLogger 55 logStarting - Starting FengtsApplication on DESKTOP-7017LEC with PID 14332 (D:\IDEAWORK\fengts\fengts-service\target\classes started by FTS36 in D:\IDEAWORK\fengts)
+[2021-01-06 15:39:39] INFO  org.springframework.boot.SpringApplication 655 logStartupProfileInfo - The following profiles are active: dev
+[2021-01-06 15:39:40] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer 108 initialize - Tomcat initialized with port(s): 9000 (http)
+[2021-01-06 15:39:40] INFO  org.apache.juli.logging.DirectJDKLog 173 log - Starting service [Tomcat]
+[2021-01-06 15:39:40] INFO  org.apache.juli.logging.DirectJDKLog 173 log - Starting Servlet engine: [Apache Tomcat/9.0.36]
+[2021-01-06 15:39:40] INFO  org.apache.juli.logging.DirectJDKLog 173 log - Initializing Spring embedded WebApplicationContext
+[2021-01-06 15:39:40] INFO  org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext 285 prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 958 ms
+[2021-01-06 15:39:40] INFO  com.alibaba.druid.spring.boot.autoconfigure.DruidDataSourceAutoConfigure 56 dataSource - Init DruidDataSource
+[2021-01-06 15:39:41] INFO  com.alibaba.druid.pool.DruidDataSource 985 init - {dataSource-1} inited
+[2021-01-06 15:39:42] INFO  org.springframework.scheduling.concurrent.ExecutorConfigurationSupport 181 initialize - Initializing ExecutorService 'applicationTaskExecutor'
+[2021-01-06 15:39:42] INFO  org.springframework.security.web.DefaultSecurityFilterChain 43 <init> - Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@a2df0d5, org.springframework.security.web.context.SecurityContextPersistenceFilter@2ab8589a, org.springframework.security.web.header.HeaderWriterFilter@27bb74e1, org.springframework.security.web.authentication.logout.LogoutFilter@145e958f, tian.web.config.auth.MyOncePerRequestFilter@101330ad, tian.web.config.auth.MyUsernamePasswordAuthenticationFilter@66020d69, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@79d4ff58, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@697a92af, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@3d3930fe, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@782cc5fa, org.springframework.security.web.session.SessionManagementFilter@2e3cd732, org.springframework.security.web.access.ExceptionTranslationFilter@7956f93a, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@38022758]
+[2021-01-06 15:39:42] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer 220 start - Tomcat started on port(s): 9000 (http) with context path ''
+[2021-01-06 15:39:42] INFO  org.springframework.boot.StartupInfoLogger 61 logStarted - Started FengtsApplication in 3.551 seconds (JVM running for 4.78)
+[2021-01-06 15:39:53] INFO  org.apache.juli.logging.DirectJDKLog 173 log - Initializing Spring DispatcherServlet 'dispatcherServlet'
+[2021-01-06 15:39:53] INFO  org.springframework.web.servlet.FrameworkServlet 525 initServletBean - Initializing Servlet 'dispatcherServlet'
+[2021-01-06 15:39:53] INFO  org.springframework.web.servlet.FrameworkServlet 547 initServletBean - Completed initialization in 4 ms
+[2021-01-06 15:39:53] INFO  tian.web.config.auth.MyOncePerRequestFilter 43 doFilterInternal - headerToken = eyJhbGciOiJIUzUxMiJ9.eyJleHAiOjE2MTA1MTkzOTMsInN1YiI6IjE4NzM0NjFAcXEuY29tIiwiaWF0IjoxNjA5OTE0NTkzMjI2fQ.YnLI2UcLldzRQ28x54zk59siIkbmRBxU6bpHn7j_J9OGNYiDCBsXuIS3EyNjng16U_ZQvXGbNUV45Z5bCVksMQ
+[2021-01-06 15:39:53] INFO  tian.web.config.auth.MyOncePerRequestFilter 44 doFilterInternal - request getMethod = POST
+[2021-01-06 15:43:46] INFO  org.springframework.scheduling.concurrent.ExecutorConfigurationSupport 218 shutdown - Shutting down ExecutorService 'applicationTaskExecutor'
+[2021-01-06 15:43:46] INFO  com.alibaba.druid.pool.DruidDataSource 2032 close - {dataSource-1} closing ...
+[2021-01-06 15:43:46] INFO  com.alibaba.druid.pool.DruidDataSource 2104 close - {dataSource-1} closed
+[2021-01-06 15:43:50] INFO  org.springframework.boot.StartupInfoLogger 55 logStarting - Starting FengtsApplication on DESKTOP-7017LEC with PID 14652 (D:\IDEAWORK\fengts\fengts-service\target\classes started by FTS36 in D:\IDEAWORK\fengts)
+[2021-01-06 15:43:50] INFO  org.springframework.boot.SpringApplication 655 logStartupProfileInfo - The following profiles are active: dev
+[2021-01-06 15:43:51] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer 108 initialize - Tomcat initialized with port(s): 9000 (http)
+[2021-01-06 15:43:51] INFO  org.apache.juli.logging.DirectJDKLog 173 log - Starting service [Tomcat]
+[2021-01-06 15:43:51] INFO  org.apache.juli.logging.DirectJDKLog 173 log - Starting Servlet engine: [Apache Tomcat/9.0.36]
+[2021-01-06 15:43:51] INFO  org.apache.juli.logging.DirectJDKLog 173 log - Initializing Spring embedded WebApplicationContext
+[2021-01-06 15:43:51] INFO  org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext 285 prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 901 ms
+[2021-01-06 15:43:51] INFO  com.alibaba.druid.spring.boot.autoconfigure.DruidDataSourceAutoConfigure 56 dataSource - Init DruidDataSource
+[2021-01-06 15:43:52] INFO  com.alibaba.druid.pool.DruidDataSource 985 init - {dataSource-1} inited
+[2021-01-06 15:43:53] INFO  org.springframework.scheduling.concurrent.ExecutorConfigurationSupport 181 initialize - Initializing ExecutorService 'applicationTaskExecutor'
+[2021-01-06 15:43:53] INFO  org.springframework.security.web.DefaultSecurityFilterChain 43 <init> - Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@30c7be6f, org.springframework.security.web.context.SecurityContextPersistenceFilter@d66502, org.springframework.security.web.header.HeaderWriterFilter@657b3b, org.springframework.security.web.authentication.logout.LogoutFilter@577f9dfd, tian.web.config.auth.MyOncePerRequestFilter@76e4212, tian.web.config.auth.MyUsernamePasswordAuthenticationFilter@1471b98d, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@38a96593, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@34549979, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@56b9d43f, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@4a9bce99, org.springframework.security.web.session.SessionManagementFilter@65753724, org.springframework.security.web.access.ExceptionTranslationFilter@6f24ce45, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@6d001fbe]
+[2021-01-06 15:43:53] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer 220 start - Tomcat started on port(s): 9000 (http) with context path ''
+[2021-01-06 15:43:53] INFO  org.springframework.boot.StartupInfoLogger 61 logStarted - Started FengtsApplication in 3.431 seconds (JVM running for 4.622)
+[2021-01-06 15:44:15] INFO  org.apache.juli.logging.DirectJDKLog 173 log - Initializing Spring DispatcherServlet 'dispatcherServlet'
+[2021-01-06 15:44:15] INFO  org.springframework.web.servlet.FrameworkServlet 525 initServletBean - Initializing Servlet 'dispatcherServlet'
+[2021-01-06 15:44:15] INFO  org.springframework.web.servlet.FrameworkServlet 547 initServletBean - Completed initialization in 5 ms
+[2021-01-06 15:44:15] INFO  tian.web.config.auth.MyOncePerRequestFilter 43 doFilterInternal - headerToken = eyJhbGciOiJIUzUxMiJ9.eyJleHAiOjE2MTA1MTkzOTMsInN1YiI6IjE4NzM0NjFAcXEuY29tIiwiaWF0IjoxNjA5OTE0NTkzMjI2fQ.YnLI2UcLldzRQ28x54zk59siIkbmRBxU6bpHn7j_J9OGNYiDCBsXuIS3EyNjng16U_ZQvXGbNUV45Z5bCVksMQ
+[2021-01-06 15:44:15] INFO  tian.web.config.auth.MyOncePerRequestFilter 44 doFilterInternal - request getMethod = POST
+[2021-01-06 15:46:24] INFO  org.springframework.scheduling.concurrent.ExecutorConfigurationSupport 218 shutdown - Shutting down ExecutorService 'applicationTaskExecutor'
+[2021-01-06 15:46:24] INFO  com.alibaba.druid.pool.DruidDataSource 2032 close - {dataSource-1} closing ...
+[2021-01-06 15:46:24] INFO  com.alibaba.druid.pool.DruidDataSource 2104 close - {dataSource-1} closed
+[2021-01-06 15:48:09] INFO  org.springframework.boot.StartupInfoLogger 55 logStarting - Starting FengtsApplication on DESKTOP-7017LEC with PID 14592 (D:\IDEAWORK\fengts\fengts-service\target\classes started by FTS36 in D:\IDEAWORK\fengts)
+[2021-01-06 15:48:09] INFO  org.springframework.boot.SpringApplication 655 logStartupProfileInfo - The following profiles are active: dev
+[2021-01-06 15:48:10] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer 108 initialize - Tomcat initialized with port(s): 9000 (http)
+[2021-01-06 15:48:10] INFO  org.apache.juli.logging.DirectJDKLog 173 log - Starting service [Tomcat]
+[2021-01-06 15:48:10] INFO  org.apache.juli.logging.DirectJDKLog 173 log - Starting Servlet engine: [Apache Tomcat/9.0.36]
+[2021-01-06 15:48:10] INFO  org.apache.juli.logging.DirectJDKLog 173 log - Initializing Spring embedded WebApplicationContext
+[2021-01-06 15:48:10] INFO  org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext 285 prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 1015 ms
+[2021-01-06 15:48:10] INFO  com.alibaba.druid.spring.boot.autoconfigure.DruidDataSourceAutoConfigure 56 dataSource - Init DruidDataSource
+[2021-01-06 15:48:11] INFO  com.alibaba.druid.pool.DruidDataSource 985 init - {dataSource-1} inited
+[2021-01-06 15:48:12] INFO  org.springframework.scheduling.concurrent.ExecutorConfigurationSupport 181 initialize - Initializing ExecutorService 'applicationTaskExecutor'
+[2021-01-06 15:48:12] INFO  org.springframework.security.web.DefaultSecurityFilterChain 43 <init> - Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@6be766d1, org.springframework.security.web.context.SecurityContextPersistenceFilter@41a23470, org.springframework.security.web.header.HeaderWriterFilter@714f1a44, org.springframework.security.web.authentication.logout.LogoutFilter@74b97416, tian.web.config.auth.MyOncePerRequestFilter@53a301f3, tian.web.config.auth.MyUsernamePasswordAuthenticationFilter@2094bf3d, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@7e81617a, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@39a7eca5, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@50df37eb, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@7adae08e, org.springframework.security.web.session.SessionManagementFilter@592a1882, org.springframework.security.web.access.ExceptionTranslationFilter@5c573229, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@3193e21d]
+[2021-01-06 15:48:12] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer 220 start - Tomcat started on port(s): 9000 (http) with context path ''
+[2021-01-06 15:48:12] INFO  org.springframework.boot.StartupInfoLogger 61 logStarted - Started FengtsApplication in 3.557 seconds (JVM running for 4.736)
+[2021-01-06 15:48:29] INFO  org.apache.juli.logging.DirectJDKLog 173 log - Initializing Spring DispatcherServlet 'dispatcherServlet'
+[2021-01-06 15:48:29] INFO  org.springframework.web.servlet.FrameworkServlet 525 initServletBean - Initializing Servlet 'dispatcherServlet'
+[2021-01-06 15:48:29] INFO  org.springframework.web.servlet.FrameworkServlet 547 initServletBean - Completed initialization in 5 ms
+[2021-01-06 15:48:29] INFO  tian.web.config.auth.MyOncePerRequestFilter 43 doFilterInternal - headerToken = eyJhbGciOiJIUzUxMiJ9.eyJleHAiOjE2MTA1MTkzOTMsInN1YiI6IjE4NzM0NjFAcXEuY29tIiwiaWF0IjoxNjA5OTE0NTkzMjI2fQ.YnLI2UcLldzRQ28x54zk59siIkbmRBxU6bpHn7j_J9OGNYiDCBsXuIS3EyNjng16U_ZQvXGbNUV45Z5bCVksMQ
+[2021-01-06 15:48:29] INFO  tian.web.config.auth.MyOncePerRequestFilter 44 doFilterInternal - request getMethod = POST
+[2021-01-06 15:51:02] INFO  org.springframework.scheduling.concurrent.ExecutorConfigurationSupport 218 shutdown - Shutting down ExecutorService 'applicationTaskExecutor'
+[2021-01-06 15:51:02] INFO  com.alibaba.druid.pool.DruidDataSource 2032 close - {dataSource-1} closing ...
+[2021-01-06 15:51:02] INFO  com.alibaba.druid.pool.DruidDataSource 2104 close - {dataSource-1} closed
+[2021-01-06 15:51:24] INFO  org.springframework.boot.StartupInfoLogger 55 logStarting - Starting FengtsApplication on DESKTOP-7017LEC with PID 11268 (D:\IDEAWORK\fengts\fengts-service\target\classes started by FTS36 in D:\IDEAWORK\fengts)
+[2021-01-06 15:51:24] INFO  org.springframework.boot.SpringApplication 655 logStartupProfileInfo - The following profiles are active: dev
+[2021-01-06 15:51:25] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer 108 initialize - Tomcat initialized with port(s): 9000 (http)
+[2021-01-06 15:51:25] INFO  org.apache.juli.logging.DirectJDKLog 173 log - Starting service [Tomcat]
+[2021-01-06 15:51:25] INFO  org.apache.juli.logging.DirectJDKLog 173 log - Starting Servlet engine: [Apache Tomcat/9.0.36]
+[2021-01-06 15:51:25] INFO  org.apache.juli.logging.DirectJDKLog 173 log - Initializing Spring embedded WebApplicationContext
+[2021-01-06 15:51:25] INFO  org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext 285 prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 924 ms
+[2021-01-06 15:51:25] INFO  com.alibaba.druid.spring.boot.autoconfigure.DruidDataSourceAutoConfigure 56 dataSource - Init DruidDataSource
+[2021-01-06 15:51:26] INFO  com.alibaba.druid.pool.DruidDataSource 985 init - {dataSource-1} inited
+[2021-01-06 15:51:27] INFO  org.springframework.scheduling.concurrent.ExecutorConfigurationSupport 181 initialize - Initializing ExecutorService 'applicationTaskExecutor'
+[2021-01-06 15:51:27] INFO  org.springframework.security.web.DefaultSecurityFilterChain 43 <init> - Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@77e9dca8, org.springframework.security.web.context.SecurityContextPersistenceFilter@73b74615, org.springframework.security.web.header.HeaderWriterFilter@7530090a, org.springframework.security.web.authentication.logout.LogoutFilter@cd5ff55, tian.web.config.auth.MyOncePerRequestFilter@22a4ca4a, tian.web.config.auth.MyUsernamePasswordAuthenticationFilter@61a87366, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@241fc278, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@2e29f28e, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@395a573c, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@fcd0e8d, org.springframework.security.web.session.SessionManagementFilter@55fb36de, org.springframework.security.web.access.ExceptionTranslationFilter@38d525aa, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@4b98225c]
+[2021-01-06 15:51:27] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer 220 start - Tomcat started on port(s): 9000 (http) with context path ''
+[2021-01-06 15:51:27] INFO  org.springframework.boot.StartupInfoLogger 61 logStarted - Started FengtsApplication in 3.556 seconds (JVM running for 4.743)
+[2021-01-06 15:51:37] INFO  org.apache.juli.logging.DirectJDKLog 173 log - Initializing Spring DispatcherServlet 'dispatcherServlet'
+[2021-01-06 15:51:37] INFO  org.springframework.web.servlet.FrameworkServlet 525 initServletBean - Initializing Servlet 'dispatcherServlet'
+[2021-01-06 15:51:37] INFO  org.springframework.web.servlet.FrameworkServlet 547 initServletBean - Completed initialization in 4 ms
+[2021-01-06 15:51:37] INFO  tian.web.config.auth.MyOncePerRequestFilter 43 doFilterInternal - headerToken = eyJhbGciOiJIUzUxMiJ9.eyJleHAiOjE2MTA1MTkzOTMsInN1YiI6IjE4NzM0NjFAcXEuY29tIiwiaWF0IjoxNjA5OTE0NTkzMjI2fQ.YnLI2UcLldzRQ28x54zk59siIkbmRBxU6bpHn7j_J9OGNYiDCBsXuIS3EyNjng16U_ZQvXGbNUV45Z5bCVksMQ
+[2021-01-06 15:51:37] INFO  tian.web.config.auth.MyOncePerRequestFilter 44 doFilterInternal - request getMethod = POST
+[2021-01-06 16:06:58] INFO  org.springframework.scheduling.concurrent.ExecutorConfigurationSupport 218 shutdown - Shutting down ExecutorService 'applicationTaskExecutor'
+[2021-01-06 16:06:58] INFO  com.alibaba.druid.pool.DruidDataSource 2032 close - {dataSource-1} closing ...
+[2021-01-06 16:06:58] INFO  com.alibaba.druid.pool.DruidDataSource 2104 close - {dataSource-1} closed
+[2021-01-06 16:07:03] INFO  org.springframework.boot.StartupInfoLogger 55 logStarting - Starting FengtsApplication on DESKTOP-7017LEC with PID 11456 (D:\IDEAWORK\fengts\fengts-service\target\classes started by FTS36 in D:\IDEAWORK\fengts)
+[2021-01-06 16:07:03] INFO  org.springframework.boot.SpringApplication 655 logStartupProfileInfo - The following profiles are active: dev
+[2021-01-06 16:07:04] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer 108 initialize - Tomcat initialized with port(s): 9000 (http)
+[2021-01-06 16:07:04] INFO  org.apache.juli.logging.DirectJDKLog 173 log - Starting service [Tomcat]
+[2021-01-06 16:07:04] INFO  org.apache.juli.logging.DirectJDKLog 173 log - Starting Servlet engine: [Apache Tomcat/9.0.36]
+[2021-01-06 16:07:05] INFO  org.apache.juli.logging.DirectJDKLog 173 log - Initializing Spring embedded WebApplicationContext
+[2021-01-06 16:07:05] INFO  org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext 285 prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 1068 ms
+[2021-01-06 16:07:05] INFO  com.alibaba.druid.spring.boot.autoconfigure.DruidDataSourceAutoConfigure 56 dataSource - Init DruidDataSource
+[2021-01-06 16:07:05] INFO  com.alibaba.druid.pool.DruidDataSource 985 init - {dataSource-1} inited
+[2021-01-06 16:07:06] INFO  org.springframework.scheduling.concurrent.ExecutorConfigurationSupport 181 initialize - Initializing ExecutorService 'applicationTaskExecutor'
+[2021-01-06 16:07:07] INFO  org.springframework.security.web.DefaultSecurityFilterChain 43 <init> - Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@2707c790, org.springframework.security.web.context.SecurityContextPersistenceFilter@1584c019, org.springframework.security.web.header.HeaderWriterFilter@53ba1175, org.springframework.security.web.authentication.logout.LogoutFilter@bfe47a8, tian.web.config.auth.MyOncePerRequestFilter@597d48ca, tian.web.config.auth.MyUsernamePasswordAuthenticationFilter@2b441e56, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@2cea921a, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@4fe2dd02, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@2c6927f0, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@7de3206d, org.springframework.security.web.session.SessionManagementFilter@6003220a, org.springframework.security.web.access.ExceptionTranslationFilter@374b6e33, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@5c9a4f3b]
+[2021-01-06 16:07:07] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer 220 start - Tomcat started on port(s): 9000 (http) with context path ''
+[2021-01-06 16:07:07] INFO  org.springframework.boot.StartupInfoLogger 61 logStarted - Started FengtsApplication in 3.583 seconds (JVM running for 4.793)
+[2021-01-06 16:08:42] INFO  org.apache.juli.logging.DirectJDKLog 173 log - Initializing Spring DispatcherServlet 'dispatcherServlet'
+[2021-01-06 16:08:42] INFO  org.springframework.web.servlet.FrameworkServlet 525 initServletBean - Initializing Servlet 'dispatcherServlet'
+[2021-01-06 16:08:42] INFO  org.springframework.web.servlet.FrameworkServlet 547 initServletBean - Completed initialization in 5 ms
+[2021-01-06 16:08:42] INFO  tian.web.config.auth.MyOncePerRequestFilter 43 doFilterInternal - headerToken = null
+[2021-01-06 16:08:42] INFO  tian.web.config.auth.MyOncePerRequestFilter 44 doFilterInternal - request getMethod = GET
+[2021-01-06 16:08:59] INFO  tian.web.config.auth.MyOncePerRequestFilter 43 doFilterInternal - headerToken = null
+[2021-01-06 16:08:59] INFO  tian.web.config.auth.MyOncePerRequestFilter 44 doFilterInternal - request getMethod = GET
+[2021-01-06 16:09:20] INFO  tian.web.config.auth.MyOncePerRequestFilter 43 doFilterInternal - headerToken = null
+[2021-01-06 16:09:20] INFO  tian.web.config.auth.MyOncePerRequestFilter 44 doFilterInternal - request getMethod = GET
+[2021-01-06 16:09:34] INFO  org.springframework.scheduling.concurrent.ExecutorConfigurationSupport 218 shutdown - Shutting down ExecutorService 'applicationTaskExecutor'
+[2021-01-06 16:09:34] INFO  com.alibaba.druid.pool.DruidDataSource 2032 close - {dataSource-1} closing ...
+[2021-01-06 16:09:34] INFO  com.alibaba.druid.pool.DruidDataSource 2104 close - {dataSource-1} closed
+[2021-01-06 16:09:59] INFO  org.springframework.boot.StartupInfoLogger 55 logStarting - Starting FengtsApplication on DESKTOP-7017LEC with PID 11244 (D:\IDEAWORK\fengts\fengts-service\target\classes started by FTS36 in D:\IDEAWORK\fengts)
+[2021-01-06 16:09:59] INFO  org.springframework.boot.SpringApplication 655 logStartupProfileInfo - The following profiles are active: dev
+[2021-01-06 16:10:00] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer 108 initialize - Tomcat initialized with port(s): 9000 (http)
+[2021-01-06 16:10:00] INFO  org.apache.juli.logging.DirectJDKLog 173 log - Starting service [Tomcat]
+[2021-01-06 16:10:00] INFO  org.apache.juli.logging.DirectJDKLog 173 log - Starting Servlet engine: [Apache Tomcat/9.0.36]
+[2021-01-06 16:10:00] INFO  org.apache.juli.logging.DirectJDKLog 173 log - Initializing Spring embedded WebApplicationContext
+[2021-01-06 16:10:00] INFO  org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext 285 prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 920 ms
+[2021-01-06 16:10:00] INFO  com.alibaba.druid.spring.boot.autoconfigure.DruidDataSourceAutoConfigure 56 dataSource - Init DruidDataSource
+[2021-01-06 16:10:01] INFO  com.alibaba.druid.pool.DruidDataSource 985 init - {dataSource-1} inited
+[2021-01-06 16:10:02] INFO  org.springframework.scheduling.concurrent.ExecutorConfigurationSupport 181 initialize - Initializing ExecutorService 'applicationTaskExecutor'
+[2021-01-06 16:10:02] INFO  org.springframework.security.web.DefaultSecurityFilterChain 43 <init> - Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@d3cce46, org.springframework.security.web.context.SecurityContextPersistenceFilter@4beae1e3, org.springframework.security.web.header.HeaderWriterFilter@c318864, org.springframework.security.web.authentication.logout.LogoutFilter@28dd81ad, tian.web.config.auth.MyOncePerRequestFilter@2a99ca99, tian.web.config.auth.MyUsernamePasswordAuthenticationFilter@4e974b9e, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@2e3cd732, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@32e697ac, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@fcd0e8d, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@30eedaa4, org.springframework.security.web.session.SessionManagementFilter@45796b2a, org.springframework.security.web.access.ExceptionTranslationFilter@1a345298, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@46702c26]
+[2021-01-06 16:10:02] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer 220 start - Tomcat started on port(s): 9000 (http) with context path ''
+[2021-01-06 16:10:02] INFO  org.springframework.boot.StartupInfoLogger 61 logStarted - Started FengtsApplication in 3.422 seconds (JVM running for 4.589)
+[2021-01-06 16:10:06] INFO  org.apache.juli.logging.DirectJDKLog 173 log - Initializing Spring DispatcherServlet 'dispatcherServlet'
+[2021-01-06 16:10:06] INFO  org.springframework.web.servlet.FrameworkServlet 525 initServletBean - Initializing Servlet 'dispatcherServlet'
+[2021-01-06 16:10:06] INFO  org.springframework.web.servlet.FrameworkServlet 547 initServletBean - Completed initialization in 4 ms
+[2021-01-06 16:10:06] INFO  tian.web.config.auth.MyOncePerRequestFilter 43 doFilterInternal - headerToken = null
+[2021-01-06 16:10:06] INFO  tian.web.config.auth.MyOncePerRequestFilter 44 doFilterInternal - request getMethod = GET
+[2021-01-06 16:10:27] INFO  org.springframework.scheduling.concurrent.ExecutorConfigurationSupport 218 shutdown - Shutting down ExecutorService 'applicationTaskExecutor'
+[2021-01-06 16:10:27] INFO  com.alibaba.druid.pool.DruidDataSource 2032 close - {dataSource-1} closing ...
+[2021-01-06 16:10:27] INFO  com.alibaba.druid.pool.DruidDataSource 2104 close - {dataSource-1} closed
+[2021-01-06 16:10:31] INFO  org.springframework.boot.StartupInfoLogger 55 logStarting - Starting FengtsApplication on DESKTOP-7017LEC with PID 18076 (D:\IDEAWORK\fengts\fengts-service\target\classes started by FTS36 in D:\IDEAWORK\fengts)
+[2021-01-06 16:10:31] INFO  org.springframework.boot.SpringApplication 655 logStartupProfileInfo - The following profiles are active: dev
+[2021-01-06 16:10:32] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer 108 initialize - Tomcat initialized with port(s): 9000 (http)
+[2021-01-06 16:10:32] INFO  org.apache.juli.logging.DirectJDKLog 173 log - Starting service [Tomcat]
+[2021-01-06 16:10:32] INFO  org.apache.juli.logging.DirectJDKLog 173 log - Starting Servlet engine: [Apache Tomcat/9.0.36]
+[2021-01-06 16:10:32] INFO  org.apache.juli.logging.DirectJDKLog 173 log - Initializing Spring embedded WebApplicationContext
+[2021-01-06 16:10:32] INFO  org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext 285 prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 934 ms
+[2021-01-06 16:10:32] INFO  com.alibaba.druid.spring.boot.autoconfigure.DruidDataSourceAutoConfigure 56 dataSource - Init DruidDataSource
+[2021-01-06 16:10:33] INFO  com.alibaba.druid.pool.DruidDataSource 985 init - {dataSource-1} inited
+[2021-01-06 16:10:34] INFO  org.springframework.scheduling.concurrent.ExecutorConfigurationSupport 181 initialize - Initializing ExecutorService 'applicationTaskExecutor'
+[2021-01-06 16:10:34] INFO  org.springframework.security.web.DefaultSecurityFilterChain 43 <init> - Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@485deee1, org.springframework.security.web.context.SecurityContextPersistenceFilter@300a38e7, org.springframework.security.web.header.HeaderWriterFilter@bd273b2, org.springframework.security.web.authentication.logout.LogoutFilter@41582899, tian.web.config.auth.MyOncePerRequestFilter@2f8c4fae, tian.web.config.auth.MyUsernamePasswordAuthenticationFilter@6793f752, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@36e409e0, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@2bb0e277, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@144a5e6e, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@25cde5bb, org.springframework.security.web.session.SessionManagementFilter@55044b34, org.springframework.security.web.access.ExceptionTranslationFilter@77ab5214, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@699d96bc]
+[2021-01-06 16:10:34] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer 220 start - Tomcat started on port(s): 9000 (http) with context path ''
+[2021-01-06 16:10:34] INFO  org.springframework.boot.StartupInfoLogger 61 logStarted - Started FengtsApplication in 3.561 seconds (JVM running for 4.8)
+[2021-01-06 16:10:41] INFO  org.springframework.scheduling.concurrent.ExecutorConfigurationSupport 218 shutdown - Shutting down ExecutorService 'applicationTaskExecutor'
+[2021-01-06 16:10:41] INFO  com.alibaba.druid.pool.DruidDataSource 2032 close - {dataSource-1} closing ...
+[2021-01-06 16:10:41] INFO  com.alibaba.druid.pool.DruidDataSource 2104 close - {dataSource-1} closed
+[2021-01-06 16:10:45] INFO  org.springframework.boot.StartupInfoLogger 55 logStarting - Starting FengtsApplication on DESKTOP-7017LEC with PID 16100 (D:\IDEAWORK\fengts\fengts-service\target\classes started by FTS36 in D:\IDEAWORK\fengts)
+[2021-01-06 16:10:45] INFO  org.springframework.boot.SpringApplication 655 logStartupProfileInfo - The following profiles are active: dev
+[2021-01-06 16:10:46] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer 108 initialize - Tomcat initialized with port(s): 9000 (http)
+[2021-01-06 16:10:46] INFO  org.apache.juli.logging.DirectJDKLog 173 log - Starting service [Tomcat]
+[2021-01-06 16:10:46] INFO  org.apache.juli.logging.DirectJDKLog 173 log - Starting Servlet engine: [Apache Tomcat/9.0.36]
+[2021-01-06 16:10:46] INFO  org.apache.juli.logging.DirectJDKLog 173 log - Initializing Spring embedded WebApplicationContext
+[2021-01-06 16:10:46] INFO  org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext 285 prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 939 ms
+[2021-01-06 16:10:46] INFO  com.alibaba.druid.spring.boot.autoconfigure.DruidDataSourceAutoConfigure 56 dataSource - Init DruidDataSource
+[2021-01-06 16:10:47] INFO  com.alibaba.druid.pool.DruidDataSource 985 init - {dataSource-1} inited
+[2021-01-06 16:10:48] INFO  org.springframework.scheduling.concurrent.ExecutorConfigurationSupport 181 initialize - Initializing ExecutorService 'applicationTaskExecutor'
+[2021-01-06 16:10:48] INFO  org.springframework.security.web.DefaultSecurityFilterChain 43 <init> - Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@2ab8589a, org.springframework.security.web.context.SecurityContextPersistenceFilter@4ad896f7, org.springframework.security.web.header.HeaderWriterFilter@67e6eb52, org.springframework.security.web.authentication.logout.LogoutFilter@77ab5214, tian.web.config.auth.MyOncePerRequestFilter@222acad, tian.web.config.auth.MyUsernamePasswordAuthenticationFilter@2674d4f6, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@46702c26, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@7d61468c, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@5408d4b3, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@21b744ec, org.springframework.security.web.session.SessionManagementFilter@5ad57e90, org.springframework.security.web.access.ExceptionTranslationFilter@5731caaf, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@1d6f77d7]
+[2021-01-06 16:10:48] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer 220 start - Tomcat started on port(s): 9000 (http) with context path ''
+[2021-01-06 16:10:48] INFO  org.springframework.boot.StartupInfoLogger 61 logStarted - Started FengtsApplication in 3.411 seconds (JVM running for 4.629)
+[2021-01-06 16:10:54] INFO  org.apache.juli.logging.DirectJDKLog 173 log - Initializing Spring DispatcherServlet 'dispatcherServlet'
+[2021-01-06 16:10:54] INFO  org.springframework.web.servlet.FrameworkServlet 525 initServletBean - Initializing Servlet 'dispatcherServlet'
+[2021-01-06 16:10:54] INFO  org.springframework.web.servlet.FrameworkServlet 547 initServletBean - Completed initialization in 5 ms
+[2021-01-06 16:10:54] INFO  tian.web.config.auth.MyOncePerRequestFilter 43 doFilterInternal - headerToken = null
+[2021-01-06 16:10:54] INFO  tian.web.config.auth.MyOncePerRequestFilter 44 doFilterInternal - request getMethod = GET
+[2021-01-06 16:18:34] INFO  org.springframework.scheduling.concurrent.ExecutorConfigurationSupport 218 shutdown - Shutting down ExecutorService 'applicationTaskExecutor'
+[2021-01-06 16:18:34] INFO  com.alibaba.druid.pool.DruidDataSource 2032 close - {dataSource-1} closing ...
+[2021-01-06 16:18:34] INFO  com.alibaba.druid.pool.DruidDataSource 2104 close - {dataSource-1} closed
+[2021-01-06 16:18:39] INFO  org.springframework.boot.StartupInfoLogger 55 logStarting - Starting FengtsApplication on DESKTOP-7017LEC with PID 3524 (D:\IDEAWORK\fengts\fengts-service\target\classes started by FTS36 in D:\IDEAWORK\fengts)
+[2021-01-06 16:18:39] INFO  org.springframework.boot.SpringApplication 655 logStartupProfileInfo - The following profiles are active: dev
+[2021-01-06 16:18:40] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer 108 initialize - Tomcat initialized with port(s): 9000 (http)
+[2021-01-06 16:18:40] INFO  org.apache.juli.logging.DirectJDKLog 173 log - Starting service [Tomcat]
+[2021-01-06 16:18:40] INFO  org.apache.juli.logging.DirectJDKLog 173 log - Starting Servlet engine: [Apache Tomcat/9.0.36]
+[2021-01-06 16:18:40] INFO  org.apache.juli.logging.DirectJDKLog 173 log - Initializing Spring embedded WebApplicationContext
+[2021-01-06 16:18:40] INFO  org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext 285 prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 945 ms
+[2021-01-06 16:18:40] INFO  com.alibaba.druid.spring.boot.autoconfigure.DruidDataSourceAutoConfigure 56 dataSource - Init DruidDataSource
+[2021-01-06 16:18:41] INFO  com.alibaba.druid.pool.DruidDataSource 985 init - {dataSource-1} inited
+[2021-01-06 16:18:42] INFO  org.springframework.scheduling.concurrent.ExecutorConfigurationSupport 181 initialize - Initializing ExecutorService 'applicationTaskExecutor'
+[2021-01-06 16:18:42] INFO  org.springframework.security.web.DefaultSecurityFilterChain 43 <init> - Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@5a39e554, org.springframework.security.web.context.SecurityContextPersistenceFilter@75e0a54c, org.springframework.security.web.header.HeaderWriterFilter@e162a35, org.springframework.security.web.authentication.logout.LogoutFilter@595fed99, tian.web.config.auth.MyOncePerRequestFilter@284990de, tian.web.config.auth.MyUsernamePasswordAuthenticationFilter@c97721b, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@1182d1df, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@6bd7439d, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@6ad6ae45, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@333d44f6, org.springframework.security.web.session.SessionManagementFilter@f849027, org.springframework.security.web.access.ExceptionTranslationFilter@27d73d22, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@54b44879]
+[2021-01-06 16:18:42] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer 220 start - Tomcat started on port(s): 9000 (http) with context path ''
+[2021-01-06 16:18:42] INFO  org.springframework.boot.StartupInfoLogger 61 logStarted - Started FengtsApplication in 3.589 seconds (JVM running for 4.75)
+[2021-01-06 16:19:14] INFO  org.apache.juli.logging.DirectJDKLog 173 log - Initializing Spring DispatcherServlet 'dispatcherServlet'
+[2021-01-06 16:19:14] INFO  org.springframework.web.servlet.FrameworkServlet 525 initServletBean - Initializing Servlet 'dispatcherServlet'
+[2021-01-06 16:19:14] INFO  org.springframework.web.servlet.FrameworkServlet 547 initServletBean - Completed initialization in 5 ms
+[2021-01-06 16:19:14] INFO  tian.web.config.auth.MyOncePerRequestFilter 43 doFilterInternal - headerToken = null
+[2021-01-06 16:19:14] INFO  tian.web.config.auth.MyOncePerRequestFilter 44 doFilterInternal - request getMethod = GET
+[2021-01-06 16:20:25] INFO  org.springframework.scheduling.concurrent.ExecutorConfigurationSupport 218 shutdown - Shutting down ExecutorService 'applicationTaskExecutor'
+[2021-01-06 16:20:25] INFO  com.alibaba.druid.pool.DruidDataSource 2032 close - {dataSource-1} closing ...
+[2021-01-06 16:20:25] INFO  com.alibaba.druid.pool.DruidDataSource 2104 close - {dataSource-1} closed
+[2021-01-06 16:20:30] INFO  org.springframework.boot.StartupInfoLogger 55 logStarting - Starting FengtsApplication on DESKTOP-7017LEC with PID 10712 (D:\IDEAWORK\fengts\fengts-service\target\classes started by FTS36 in D:\IDEAWORK\fengts)
+[2021-01-06 16:20:30] INFO  org.springframework.boot.SpringApplication 655 logStartupProfileInfo - The following profiles are active: dev
+[2021-01-06 16:20:31] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer 108 initialize - Tomcat initialized with port(s): 9000 (http)
+[2021-01-06 16:20:31] INFO  org.apache.juli.logging.DirectJDKLog 173 log - Starting service [Tomcat]
+[2021-01-06 16:20:31] INFO  org.apache.juli.logging.DirectJDKLog 173 log - Starting Servlet engine: [Apache Tomcat/9.0.36]
+[2021-01-06 16:20:31] INFO  org.apache.juli.logging.DirectJDKLog 173 log - Initializing Spring embedded WebApplicationContext
+[2021-01-06 16:20:31] INFO  org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext 285 prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 979 ms
+[2021-01-06 16:20:31] INFO  com.alibaba.druid.spring.boot.autoconfigure.DruidDataSourceAutoConfigure 56 dataSource - Init DruidDataSource
+[2021-01-06 16:20:32] INFO  com.alibaba.druid.pool.DruidDataSource 985 init - {dataSource-1} inited
+[2021-01-06 16:20:33] INFO  org.springframework.scheduling.concurrent.ExecutorConfigurationSupport 181 initialize - Initializing ExecutorService 'applicationTaskExecutor'
+[2021-01-06 16:20:33] INFO  org.springframework.security.web.DefaultSecurityFilterChain 43 <init> - Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@52b30054, org.springframework.security.web.context.SecurityContextPersistenceFilter@32e697ac, org.springframework.security.web.header.HeaderWriterFilter@45796b2a, org.springframework.security.web.authentication.logout.LogoutFilter@5c9a4f3b, tian.web.config.auth.MyOncePerRequestFilter@781654f8, tian.web.config.auth.MyUsernamePasswordAuthenticationFilter@61b838f2, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@2ab8589a, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@241fc278, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@1a4083f6, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@7f6b57f2, org.springframework.security.web.session.SessionManagementFilter@4beae1e3, org.springframework.security.web.access.ExceptionTranslationFilter@c318864, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@e3ed455]
+[2021-01-06 16:20:33] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer 220 start - Tomcat started on port(s): 9000 (http) with context path ''
+[2021-01-06 16:20:33] INFO  org.springframework.boot.StartupInfoLogger 61 logStarted - Started FengtsApplication in 3.9 seconds (JVM running for 5.08)
+[2021-01-06 16:20:49] INFO  org.apache.juli.logging.DirectJDKLog 173 log - Initializing Spring DispatcherServlet 'dispatcherServlet'
+[2021-01-06 16:20:49] INFO  org.springframework.web.servlet.FrameworkServlet 525 initServletBean - Initializing Servlet 'dispatcherServlet'
+[2021-01-06 16:20:49] INFO  org.springframework.web.servlet.FrameworkServlet 547 initServletBean - Completed initialization in 6 ms
+[2021-01-06 16:20:49] INFO  tian.web.config.auth.MyOncePerRequestFilter 43 doFilterInternal - headerToken = null
+[2021-01-06 16:20:49] INFO  tian.web.config.auth.MyOncePerRequestFilter 44 doFilterInternal - request getMethod = GET
+[2021-01-06 16:21:42] INFO  tian.web.config.auth.MyOncePerRequestFilter 43 doFilterInternal - headerToken = eyJhbGciOiJIUzUxMiJ9.eyJleHAiOjE2MTA1MTkzOTMsInN1YiI6IjE4NzM0NjFAcXEuY29tIiwiaWF0IjoxNjA5OTE0NTkzMjI2fQ.YnLI2UcLldzRQ28x54zk59siIkbmRBxU6bpHn7j_J9OGNYiDCBsXuIS3EyNjng16U_ZQvXGbNUV45Z5bCVksMQ
+[2021-01-06 16:21:42] INFO  tian.web.config.auth.MyOncePerRequestFilter 44 doFilterInternal - request getMethod = POST
+[2021-01-06 16:24:54] INFO  org.springframework.scheduling.concurrent.ExecutorConfigurationSupport 218 shutdown - Shutting down ExecutorService 'applicationTaskExecutor'
+[2021-01-06 16:24:54] INFO  com.alibaba.druid.pool.DruidDataSource 2032 close - {dataSource-1} closing ...
+[2021-01-06 16:24:54] INFO  com.alibaba.druid.pool.DruidDataSource 2104 close - {dataSource-1} closed
