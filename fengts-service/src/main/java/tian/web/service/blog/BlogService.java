@@ -48,6 +48,6 @@ public interface BlogService extends IService<Blog> {
      * @param map
      * @return
      */
-    public Result selectBlogList(Map<String,Object> map);
+    public Result selectBlogList(Long page,Long size);
 
 }

@@ -2,6 +2,7 @@ package tian.web.config;
 
 import com.baomidou.mybatisplus.annotation.DbType;
 import com.baomidou.mybatisplus.autoconfigure.ConfigurationCustomizer;
+import com.baomidou.mybatisplus.extension.MybatisMapWrapperFactory;
 import com.baomidou.mybatisplus.extension.plugins.MybatisPlusInterceptor;
 import com.baomidou.mybatisplus.extension.plugins.inner.PaginationInnerInterceptor;
 import org.mybatis.spring.annotation.MapperScan;
@@ -26,9 +27,13 @@ public class MybatisPlusConfig {
         return interceptor;
     }
 
+    /**
+     * 数据返回值  Map下划线自动转驼峰 分页返回值时会用到
+     * @return ConfigurationCustomizer
+     */
     @Bean
     public ConfigurationCustomizer configurationCustomizer() {
-        return configuration -> configuration.setUseDeprecatedExecutor(false);
+        return i -> i.setObjectWrapperFactory(new MybatisMapWrapperFactory());
     }
 
 //    @Bean

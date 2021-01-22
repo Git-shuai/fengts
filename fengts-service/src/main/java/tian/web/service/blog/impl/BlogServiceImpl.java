@@ -1,5 +1,6 @@
 package tian.web.service.blog.impl;
 
+import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -153,13 +154,23 @@ public class BlogServiceImpl extends ServiceImpl<BlogMapper, Blog> implements Bl
 
     /**
      * 查询列表
-     *
-     * @param map
+     * @param page
+     * @param size
      * @return
      */
     @Override
-    public Result selectBlogList(Map<String, Object> map) {
-        
-        return null;
+    public Result selectBlogList(Long page,Long size) {
+        Page<Blog> blogPage= new Page<>();;
+        //取到分页信息
+        if (!StringUtils.isEmpty(page)&&!StringUtils.isEmpty(size)){
+            //当前页码
+            //当前页的数量
+            blogPage.setCurrent(page);
+            blogPage.setSize(size);
+        }
+        //进行分页查询
+        Page<Blog> blogList = blogMapper.selectPage(blogPage, null);
+        //封装出参
+        return new Result(ResCode.SUCCESS_CODE,blogList);
     }
 }

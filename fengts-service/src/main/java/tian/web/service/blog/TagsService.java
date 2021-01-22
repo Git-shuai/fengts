@@ -1,7 +1,10 @@
 package tian.web.service.blog;
 
+import tian.web.Result;
 import tian.web.bean.blog.Tags;
 import com.baomidou.mybatisplus.extension.service.IService;
+
+import java.util.List;
 
 /**
  * <p>
@@ -13,4 +16,9 @@ import com.baomidou.mybatisplus.extension.service.IService;
  */
 public interface TagsService extends IService<Tags> {
 
+    public Result<Tags> addTags(Tags tags);
+    public Result<Tags> deleteTags(String tagsId);
+    public Result<Tags> editTags(Tags tags);
+    public Result selectTagsList(Long page,Long size);
+    public Result selectParentTag();
 }

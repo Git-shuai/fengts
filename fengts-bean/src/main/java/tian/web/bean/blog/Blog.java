@@ -1,13 +1,15 @@
 package tian.web.bean.blog;
 
-import com.baomidou.mybatisplus.annotation.IdType;
-import java.util.Date;
-import com.baomidou.mybatisplus.annotation.TableId;
+import com.alibaba.fastjson.annotation.JSONField;
 import com.baomidou.mybatisplus.annotation.FieldFill;
+import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableField;
-import java.io.Serializable;
+import com.baomidou.mybatisplus.annotation.TableId;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
+
+import java.io.Serializable;
+import java.util.Date;
 
 /**
  * <p>
@@ -43,12 +45,14 @@ public class Blog implements Serializable {
      * 博客创建时间
      */
     @TableField(fill = FieldFill.INSERT)
+    @JSONField(format = "yyyy-MM-dd HH:mm:ss")
     private Date createTime;
 
     /**
      * 博客更新时间
      */
     @TableField(fill = FieldFill.INSERT_UPDATE)
+    @JSONField(format = "yyyy-MM-dd HH:mm:ss")
     private Date updateTime;
 
     /**
