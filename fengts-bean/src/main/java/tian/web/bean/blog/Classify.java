@@ -1,6 +1,8 @@
 package tian.web.bean.blog;
 
+import com.baomidou.mybatisplus.annotation.FieldStrategy;
 import com.baomidou.mybatisplus.annotation.IdType;
+import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableId;
 import java.io.Serializable;
 import lombok.Data;
@@ -29,6 +31,7 @@ public class Classify implements Serializable {
     /**
      * 父分类
      */
+    @TableField(updateStrategy = FieldStrategy.IGNORED)
     private Long parentId;
 
     /**
