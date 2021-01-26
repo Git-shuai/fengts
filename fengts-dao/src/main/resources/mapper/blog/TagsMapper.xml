@@ -2,4 +2,19 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="tian.web.dao.blog.TagsMapper">
 
+    <select id="selectTagList" resultType="java.util.Map">
+        SELECT
+            t.id,
+            t.parent_id parentId,
+            tt.tag_name parentTagName,
+            t.tag_name tagName,
+            t.des,
+            COUNT( bt.tag_id ) sum
+        FROM
+            tags t
+                LEFT JOIN blog_tag bt ON t.id = bt.tag_id
+                LEFT JOIN tags tt ON t.parent_id = tt.id
+        GROUP BY
+            tagName
+    </select>
 </mapper>

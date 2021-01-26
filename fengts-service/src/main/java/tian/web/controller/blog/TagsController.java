@@ -1,6 +1,7 @@
 package tian.web.controller.blog;
 
 
+import org.apache.ibatis.annotations.Lang;
 import org.springframework.web.bind.annotation.*;
 import tian.web.Result;
 import tian.web.StringUtils;
@@ -80,6 +81,10 @@ public class TagsController {
         return tagsService.selectTagsList(pageL,sizeL);
     };
 
+    /**
+     * 查询父标签接口
+     * @return
+     */
     @GetMapping("/parentTag")
     public Result selectParentTag(){
         return tagsService.selectParentTag();

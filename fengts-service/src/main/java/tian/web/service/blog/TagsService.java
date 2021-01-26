@@ -19,6 +19,6 @@ public interface TagsService extends IService<Tags> {
     public Result<Tags> addTags(Tags tags);
     public Result<Tags> deleteTags(String tagsId);
     public Result<Tags> editTags(Tags tags);
-    public Result selectTagsList(Long page,Long size);
+    public Result selectTagsList(long page,long size);
     public Result selectParentTag();
 }

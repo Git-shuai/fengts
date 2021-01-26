@@ -1,6 +1,9 @@
 package tian.web.bean.blog;
 
+import com.alibaba.fastjson.annotation.JSONField;
+import com.baomidou.mybatisplus.annotation.FieldStrategy;
 import com.baomidou.mybatisplus.annotation.IdType;
+import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableId;
 import java.io.Serializable;
 import lombok.Data;
@@ -29,6 +32,8 @@ public class Tags implements Serializable {
     /**
      * 父标签
      */
+
+    @TableField(updateStrategy = FieldStrategy.IGNORED)
     private Long parentId;
 
     /**

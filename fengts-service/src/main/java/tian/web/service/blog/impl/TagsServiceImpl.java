@@ -1,5 +1,7 @@
 package tian.web.service.blog.impl;
 
+import com.baomidou.mybatisplus.core.conditions.update.UpdateWrapper;
+import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.fasterxml.jackson.databind.util.BeanUtil;
 import org.springframework.beans.BeanUtils;
@@ -42,7 +44,7 @@ public class TagsServiceImpl extends ServiceImpl<TagsMapper, Tags> implements Ta
         if (addTagStatus<=0){
             return new Result<>(ResCode.ERROR_CODE,null);
         }
-        return new Result<>(ResCode.SUCCESS_CODE,null);
+        return new Result<>(ResCode.SUCCESS_CODE,tags);
     }
 
     @Transactional
@@ -72,13 +74,9 @@ public class TagsServiceImpl extends ServiceImpl<TagsMapper, Tags> implements Ta
     }
 
     @Override
-    public Result selectTagsList(Long page, Long size) {
-        if (page==null||size==null){
-            page=0L;
-            size=10L;
-        }
-
-        Page<Map<String, Object>> tagPage = tagsMapper.selectMapsPage(new Page<>(page, size), null);
+    public Result selectTagsList(long page, long size) {
+//        Integer start=(page-1)*size;
+        IPage<Map<String, Object>> tagPage = tagsMapper.selectTagList(new Page<>(page, size));
         return new Result<>(ResCode.SUCCESS_CODE,tagPage);
     }
 
