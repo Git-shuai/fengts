@@ -1,0 +1,367 @@
+[2021-02-09 09:20:16] INFO  org.springframework.boot.StartupInfoLogger 55 logStarting - Starting FengtsApplication on DESKTOP-7017LEC with PID 16032 (D:\IDEAWORK\fengts\fengts-service\target\classes started by FTS36 in D:\IDEAWORK\fengts)
+[2021-02-09 09:20:16] INFO  org.springframework.boot.SpringApplication 655 logStartupProfileInfo - The following profiles are active: dev
+[2021-02-09 09:20:17] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer 108 initialize - Tomcat initialized with port(s): 9000 (http)
+[2021-02-09 09:20:17] INFO  org.apache.juli.logging.DirectJDKLog 173 log - Starting service [Tomcat]
+[2021-02-09 09:20:17] INFO  org.apache.juli.logging.DirectJDKLog 173 log - Starting Servlet engine: [Apache Tomcat/9.0.36]
+[2021-02-09 09:20:17] INFO  org.apache.juli.logging.DirectJDKLog 173 log - Initializing Spring embedded WebApplicationContext
+[2021-02-09 09:20:17] INFO  org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext 285 prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 1594 ms
+[2021-02-09 09:20:17] INFO  com.alibaba.druid.spring.boot.autoconfigure.DruidDataSourceAutoConfigure 56 dataSource - Init DruidDataSource
+[2021-02-09 09:20:19] INFO  com.alibaba.druid.pool.DruidDataSource 985 init - {dataSource-1} inited
+[2021-02-09 09:20:21] INFO  org.springframework.scheduling.concurrent.ExecutorConfigurationSupport 181 initialize - Initializing ExecutorService 'applicationTaskExecutor'
+[2021-02-09 09:20:22] INFO  org.springframework.security.web.DefaultSecurityFilterChain 43 <init> - Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@fb0a08c, org.springframework.security.web.context.SecurityContextPersistenceFilter@1642eeae, org.springframework.security.web.header.HeaderWriterFilter@441fbe89, org.springframework.security.web.authentication.logout.LogoutFilter@7d986d83, tian.web.config.auth.MyOncePerRequestFilter@67514bdd, tian.web.config.auth.MyUsernamePasswordAuthenticationFilter@44ed0a8f, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@6a1d526c, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@28a9494b, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@6a1ef65c, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@1faf386c, org.springframework.security.web.session.SessionManagementFilter@45ab3bdd, org.springframework.security.web.access.ExceptionTranslationFilter@3ba3d4b6, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@16736040]
+[2021-02-09 09:20:22] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer 220 start - Tomcat started on port(s): 9000 (http) with context path ''
+[2021-02-09 09:20:22] INFO  org.springframework.boot.StartupInfoLogger 61 logStarted - Started FengtsApplication in 6.537 seconds (JVM running for 8.572)
+[2021-02-09 09:25:50] INFO  org.apache.juli.logging.DirectJDKLog 173 log - Initializing Spring DispatcherServlet 'dispatcherServlet'
+[2021-02-09 09:25:50] INFO  org.springframework.web.servlet.FrameworkServlet 525 initServletBean - Initializing Servlet 'dispatcherServlet'
+[2021-02-09 09:25:50] INFO  org.springframework.web.servlet.FrameworkServlet 547 initServletBean - Completed initialization in 15 ms
+[2021-02-09 09:25:50] INFO  tian.web.config.auth.MyOncePerRequestFilter 43 doFilterInternal - headerToken = undefined
+[2021-02-09 09:25:50] INFO  tian.web.config.auth.MyOncePerRequestFilter 44 doFilterInternal - request getMethod = GET
+[2021-02-09 09:25:53] INFO  tian.web.config.auth.MyOncePerRequestFilter 43 doFilterInternal - headerToken = undefined
+[2021-02-09 09:25:53] INFO  tian.web.config.auth.MyOncePerRequestFilter 44 doFilterInternal - request getMethod = POST
+[2021-02-09 09:25:56] INFO  tian.web.config.auth.MyOncePerRequestFilter 43 doFilterInternal - headerToken = undefined
+[2021-02-09 09:25:56] INFO  tian.web.config.auth.MyOncePerRequestFilter 44 doFilterInternal - request getMethod = POST
+[2021-02-09 09:25:56] INFO  tian.web.config.auth.MyOncePerRequestFilter 43 doFilterInternal - headerToken = undefined
+[2021-02-09 09:25:56] INFO  tian.web.config.auth.MyOncePerRequestFilter 44 doFilterInternal - request getMethod = POST
+[2021-02-09 09:26:07] INFO  tian.web.config.auth.MyOncePerRequestFilter 43 doFilterInternal - headerToken = undefined
+[2021-02-09 09:26:07] INFO  tian.web.config.auth.MyOncePerRequestFilter 44 doFilterInternal - request getMethod = GET
+[2021-02-09 09:26:09] INFO  tian.web.config.auth.MyOncePerRequestFilter 43 doFilterInternal - headerToken = undefined
+[2021-02-09 09:26:09] INFO  tian.web.config.auth.MyOncePerRequestFilter 44 doFilterInternal - request getMethod = POST
+[2021-02-09 09:26:10] INFO  tian.web.config.auth.MyOncePerRequestFilter 43 doFilterInternal - headerToken = undefined
+[2021-02-09 09:26:10] INFO  tian.web.config.auth.MyOncePerRequestFilter 44 doFilterInternal - request getMethod = POST
+[2021-02-09 09:38:18] INFO  tian.web.config.auth.MyOncePerRequestFilter 43 doFilterInternal - headerToken = undefined
+[2021-02-09 09:38:18] INFO  tian.web.config.auth.MyOncePerRequestFilter 43 doFilterInternal - headerToken = undefined
+[2021-02-09 09:38:18] INFO  tian.web.config.auth.MyOncePerRequestFilter 44 doFilterInternal - request getMethod = POST
+[2021-02-09 09:38:18] INFO  tian.web.config.auth.MyOncePerRequestFilter 44 doFilterInternal - request getMethod = POST
+[2021-02-09 09:39:10] INFO  tian.web.config.auth.MyOncePerRequestFilter 43 doFilterInternal - headerToken = undefined
+[2021-02-09 09:39:10] INFO  tian.web.config.auth.MyOncePerRequestFilter 44 doFilterInternal - request getMethod = POST
+[2021-02-09 09:39:10] INFO  tian.web.config.auth.MyOncePerRequestFilter 43 doFilterInternal - headerToken = undefined
+[2021-02-09 09:39:10] INFO  tian.web.config.auth.MyOncePerRequestFilter 44 doFilterInternal - request getMethod = POST
+[2021-02-09 09:39:55] INFO  tian.web.config.auth.MyOncePerRequestFilter 43 doFilterInternal - headerToken = undefined
+[2021-02-09 09:39:55] INFO  tian.web.config.auth.MyOncePerRequestFilter 43 doFilterInternal - headerToken = undefined
+[2021-02-09 09:39:55] INFO  tian.web.config.auth.MyOncePerRequestFilter 44 doFilterInternal - request getMethod = POST
+[2021-02-09 09:39:55] INFO  tian.web.config.auth.MyOncePerRequestFilter 44 doFilterInternal - request getMethod = POST
+[2021-02-09 09:40:56] INFO  tian.web.config.auth.MyOncePerRequestFilter 43 doFilterInternal - headerToken = undefined
+[2021-02-09 09:40:56] INFO  tian.web.config.auth.MyOncePerRequestFilter 43 doFilterInternal - headerToken = undefined
+[2021-02-09 09:40:56] INFO  tian.web.config.auth.MyOncePerRequestFilter 44 doFilterInternal - request getMethod = POST
+[2021-02-09 09:40:56] INFO  tian.web.config.auth.MyOncePerRequestFilter 44 doFilterInternal - request getMethod = POST
+[2021-02-09 09:41:32] INFO  tian.web.config.auth.MyOncePerRequestFilter 43 doFilterInternal - headerToken = undefined
+[2021-02-09 09:41:32] INFO  tian.web.config.auth.MyOncePerRequestFilter 43 doFilterInternal - headerToken = undefined
+[2021-02-09 09:41:32] INFO  tian.web.config.auth.MyOncePerRequestFilter 44 doFilterInternal - request getMethod = POST
+[2021-02-09 09:41:32] INFO  tian.web.config.auth.MyOncePerRequestFilter 44 doFilterInternal - request getMethod = POST
+[2021-02-09 09:41:53] INFO  tian.web.config.auth.MyOncePerRequestFilter 43 doFilterInternal - headerToken = undefined
+[2021-02-09 09:41:53] INFO  tian.web.config.auth.MyOncePerRequestFilter 44 doFilterInternal - request getMethod = POST
+[2021-02-09 09:41:53] INFO  tian.web.config.auth.MyOncePerRequestFilter 43 doFilterInternal - headerToken = undefined
+[2021-02-09 09:41:53] INFO  tian.web.config.auth.MyOncePerRequestFilter 44 doFilterInternal - request getMethod = POST
+[2021-02-09 09:42:24] INFO  tian.web.config.auth.MyOncePerRequestFilter 43 doFilterInternal - headerToken = undefined
+[2021-02-09 09:42:24] INFO  tian.web.config.auth.MyOncePerRequestFilter 44 doFilterInternal - request getMethod = POST
+[2021-02-09 09:42:24] INFO  tian.web.config.auth.MyOncePerRequestFilter 43 doFilterInternal - headerToken = undefined
+[2021-02-09 09:42:24] INFO  tian.web.config.auth.MyOncePerRequestFilter 44 doFilterInternal - request getMethod = POST
+[2021-02-09 09:44:21] INFO  tian.web.config.auth.MyOncePerRequestFilter 43 doFilterInternal - headerToken = undefined
+[2021-02-09 09:44:21] INFO  tian.web.config.auth.MyOncePerRequestFilter 43 doFilterInternal - headerToken = undefined
+[2021-02-09 09:44:21] INFO  tian.web.config.auth.MyOncePerRequestFilter 44 doFilterInternal - request getMethod = POST
+[2021-02-09 09:44:21] INFO  tian.web.config.auth.MyOncePerRequestFilter 44 doFilterInternal - request getMethod = POST
+[2021-02-09 09:45:29] INFO  tian.web.config.auth.MyOncePerRequestFilter 43 doFilterInternal - headerToken = undefined
+[2021-02-09 09:45:29] INFO  tian.web.config.auth.MyOncePerRequestFilter 43 doFilterInternal - headerToken = undefined
+[2021-02-09 09:45:29] INFO  tian.web.config.auth.MyOncePerRequestFilter 44 doFilterInternal - request getMethod = POST
+[2021-02-09 09:45:29] INFO  tian.web.config.auth.MyOncePerRequestFilter 44 doFilterInternal - request getMethod = POST
+[2021-02-09 10:54:38] INFO  org.springframework.boot.StartupInfoLogger 55 logStarting - Starting FengtsApplication on DESKTOP-7017LEC with PID 4832 (D:\IDEAWORK\fengts\fengts-service\target\classes started by FTS36 in D:\IDEAWORK\fengts)
+[2021-02-09 10:54:38] INFO  org.springframework.boot.SpringApplication 655 logStartupProfileInfo - The following profiles are active: dev
+[2021-02-09 10:54:39] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer 108 initialize - Tomcat initialized with port(s): 9000 (http)
+[2021-02-09 10:54:39] INFO  org.apache.juli.logging.DirectJDKLog 173 log - Starting service [Tomcat]
+[2021-02-09 10:54:39] INFO  org.apache.juli.logging.DirectJDKLog 173 log - Starting Servlet engine: [Apache Tomcat/9.0.36]
+[2021-02-09 10:54:39] INFO  org.apache.juli.logging.DirectJDKLog 173 log - Initializing Spring embedded WebApplicationContext
+[2021-02-09 10:54:39] INFO  org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext 285 prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 1517 ms
+[2021-02-09 10:54:39] INFO  com.alibaba.druid.spring.boot.autoconfigure.DruidDataSourceAutoConfigure 56 dataSource - Init DruidDataSource
+[2021-02-09 10:54:40] INFO  com.alibaba.druid.pool.DruidDataSource 985 init - {dataSource-1} inited
+[2021-02-09 10:54:41] INFO  org.springframework.scheduling.concurrent.ExecutorConfigurationSupport 181 initialize - Initializing ExecutorService 'applicationTaskExecutor'
+[2021-02-09 10:54:42] INFO  org.springframework.security.web.DefaultSecurityFilterChain 43 <init> - Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@52909a97, org.springframework.security.web.context.SecurityContextPersistenceFilter@62108cd3, org.springframework.security.web.header.HeaderWriterFilter@4e4d0a0b, org.springframework.security.web.authentication.logout.LogoutFilter@2b936b04, tian.web.config.auth.MyOncePerRequestFilter@2f4d32bf, tian.web.config.auth.MyUsernamePasswordAuthenticationFilter@33d230ce, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@4c65d8e3, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@77ab5214, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@e881e46, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@36e409e0, org.springframework.security.web.session.SessionManagementFilter@23f5008a, org.springframework.security.web.access.ExceptionTranslationFilter@77e9dca8, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@52b32b70]
+[2021-02-09 10:54:42] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer 220 start - Tomcat started on port(s): 9000 (http) with context path ''
+[2021-02-09 10:54:42] INFO  org.springframework.boot.StartupInfoLogger 61 logStarted - Started FengtsApplication in 4.471 seconds (JVM running for 6.028)
+[2021-02-09 10:59:44] INFO  org.apache.juli.logging.DirectJDKLog 173 log - Initializing Spring DispatcherServlet 'dispatcherServlet'
+[2021-02-09 10:59:44] INFO  org.springframework.web.servlet.FrameworkServlet 525 initServletBean - Initializing Servlet 'dispatcherServlet'
+[2021-02-09 10:59:44] INFO  org.springframework.web.servlet.FrameworkServlet 547 initServletBean - Completed initialization in 8 ms
+[2021-02-09 10:59:44] INFO  tian.web.config.auth.MyOncePerRequestFilter 43 doFilterInternal - headerToken = undefined
+[2021-02-09 10:59:44] INFO  tian.web.config.auth.MyOncePerRequestFilter 43 doFilterInternal - headerToken = undefined
+[2021-02-09 10:59:44] INFO  tian.web.config.auth.MyOncePerRequestFilter 44 doFilterInternal - request getMethod = POST
+[2021-02-09 10:59:44] INFO  tian.web.config.auth.MyOncePerRequestFilter 44 doFilterInternal - request getMethod = POST
+[2021-02-09 11:00:01] INFO  tian.web.config.auth.MyOncePerRequestFilter 43 doFilterInternal - headerToken = undefined
+[2021-02-09 11:00:01] INFO  tian.web.config.auth.MyOncePerRequestFilter 44 doFilterInternal - request getMethod = POST
+[2021-02-09 11:00:01] INFO  tian.web.config.auth.MyOncePerRequestFilter 43 doFilterInternal - headerToken = undefined
+[2021-02-09 11:00:01] INFO  tian.web.config.auth.MyOncePerRequestFilter 44 doFilterInternal - request getMethod = POST
+[2021-02-09 11:02:07] INFO  tian.web.config.auth.MyOncePerRequestFilter 43 doFilterInternal - headerToken = undefined
+[2021-02-09 11:02:07] INFO  tian.web.config.auth.MyOncePerRequestFilter 44 doFilterInternal - request getMethod = POST
+[2021-02-09 11:02:07] INFO  tian.web.config.auth.MyOncePerRequestFilter 43 doFilterInternal - headerToken = undefined
+[2021-02-09 11:02:07] INFO  tian.web.config.auth.MyOncePerRequestFilter 44 doFilterInternal - request getMethod = POST
+[2021-02-09 11:07:52] INFO  tian.web.config.auth.MyOncePerRequestFilter 43 doFilterInternal - headerToken = undefined
+[2021-02-09 11:07:52] INFO  tian.web.config.auth.MyOncePerRequestFilter 43 doFilterInternal - headerToken = undefined
+[2021-02-09 11:07:52] INFO  tian.web.config.auth.MyOncePerRequestFilter 44 doFilterInternal - request getMethod = POST
+[2021-02-09 11:07:52] INFO  tian.web.config.auth.MyOncePerRequestFilter 44 doFilterInternal - request getMethod = POST
+[2021-02-09 11:09:33] INFO  tian.web.config.auth.MyOncePerRequestFilter 43 doFilterInternal - headerToken = undefined
+[2021-02-09 11:09:33] INFO  tian.web.config.auth.MyOncePerRequestFilter 43 doFilterInternal - headerToken = undefined
+[2021-02-09 11:09:33] INFO  tian.web.config.auth.MyOncePerRequestFilter 44 doFilterInternal - request getMethod = POST
+[2021-02-09 11:09:33] INFO  tian.web.config.auth.MyOncePerRequestFilter 44 doFilterInternal - request getMethod = POST
+[2021-02-09 11:09:55] INFO  tian.web.config.auth.MyOncePerRequestFilter 43 doFilterInternal - headerToken = undefined
+[2021-02-09 11:09:55] INFO  tian.web.config.auth.MyOncePerRequestFilter 44 doFilterInternal - request getMethod = POST
+[2021-02-09 11:09:55] INFO  tian.web.config.auth.MyOncePerRequestFilter 43 doFilterInternal - headerToken = undefined
+[2021-02-09 11:09:55] INFO  tian.web.config.auth.MyOncePerRequestFilter 44 doFilterInternal - request getMethod = POST
+[2021-02-09 11:11:11] INFO  tian.web.config.auth.MyOncePerRequestFilter 43 doFilterInternal - headerToken = undefined
+[2021-02-09 11:11:11] INFO  tian.web.config.auth.MyOncePerRequestFilter 44 doFilterInternal - request getMethod = POST
+[2021-02-09 11:11:11] INFO  tian.web.config.auth.MyOncePerRequestFilter 43 doFilterInternal - headerToken = undefined
+[2021-02-09 11:11:11] INFO  tian.web.config.auth.MyOncePerRequestFilter 44 doFilterInternal - request getMethod = POST
+[2021-02-09 11:11:58] INFO  tian.web.config.auth.MyOncePerRequestFilter 43 doFilterInternal - headerToken = undefined
+[2021-02-09 11:11:58] INFO  tian.web.config.auth.MyOncePerRequestFilter 43 doFilterInternal - headerToken = undefined
+[2021-02-09 11:11:58] INFO  tian.web.config.auth.MyOncePerRequestFilter 44 doFilterInternal - request getMethod = POST
+[2021-02-09 11:11:58] INFO  tian.web.config.auth.MyOncePerRequestFilter 44 doFilterInternal - request getMethod = POST
+[2021-02-09 11:13:43] INFO  tian.web.config.auth.MyOncePerRequestFilter 43 doFilterInternal - headerToken = undefined
+[2021-02-09 11:13:43] INFO  tian.web.config.auth.MyOncePerRequestFilter 44 doFilterInternal - request getMethod = POST
+[2021-02-09 11:13:43] INFO  tian.web.config.auth.MyOncePerRequestFilter 43 doFilterInternal - headerToken = undefined
+[2021-02-09 11:13:43] INFO  tian.web.config.auth.MyOncePerRequestFilter 44 doFilterInternal - request getMethod = POST
+[2021-02-09 11:14:38] INFO  tian.web.config.auth.MyOncePerRequestFilter 43 doFilterInternal - headerToken = undefined
+[2021-02-09 11:14:38] INFO  tian.web.config.auth.MyOncePerRequestFilter 44 doFilterInternal - request getMethod = POST
+[2021-02-09 11:14:38] INFO  tian.web.config.auth.MyOncePerRequestFilter 43 doFilterInternal - headerToken = undefined
+[2021-02-09 11:14:38] INFO  tian.web.config.auth.MyOncePerRequestFilter 44 doFilterInternal - request getMethod = POST
+[2021-02-09 11:15:49] INFO  tian.web.config.auth.MyOncePerRequestFilter 43 doFilterInternal - headerToken = undefined
+[2021-02-09 11:15:49] INFO  tian.web.config.auth.MyOncePerRequestFilter 44 doFilterInternal - request getMethod = POST
+[2021-02-09 11:15:49] INFO  tian.web.config.auth.MyOncePerRequestFilter 43 doFilterInternal - headerToken = undefined
+[2021-02-09 11:15:49] INFO  tian.web.config.auth.MyOncePerRequestFilter 44 doFilterInternal - request getMethod = POST
+[2021-02-09 11:16:04] INFO  tian.web.config.auth.MyOncePerRequestFilter 43 doFilterInternal - headerToken = undefined
+[2021-02-09 11:16:04] INFO  tian.web.config.auth.MyOncePerRequestFilter 43 doFilterInternal - headerToken = undefined
+[2021-02-09 11:16:04] INFO  tian.web.config.auth.MyOncePerRequestFilter 44 doFilterInternal - request getMethod = POST
+[2021-02-09 11:16:04] INFO  tian.web.config.auth.MyOncePerRequestFilter 44 doFilterInternal - request getMethod = POST
+[2021-02-09 11:17:45] INFO  tian.web.config.auth.MyOncePerRequestFilter 43 doFilterInternal - headerToken = undefined
+[2021-02-09 11:17:45] INFO  tian.web.config.auth.MyOncePerRequestFilter 43 doFilterInternal - headerToken = undefined
+[2021-02-09 11:17:45] INFO  tian.web.config.auth.MyOncePerRequestFilter 44 doFilterInternal - request getMethod = POST
+[2021-02-09 11:17:45] INFO  tian.web.config.auth.MyOncePerRequestFilter 44 doFilterInternal - request getMethod = POST
+[2021-02-09 11:18:52] INFO  tian.web.config.auth.MyOncePerRequestFilter 43 doFilterInternal - headerToken = undefined
+[2021-02-09 11:18:52] INFO  tian.web.config.auth.MyOncePerRequestFilter 44 doFilterInternal - request getMethod = POST
+[2021-02-09 11:18:52] INFO  tian.web.config.auth.MyOncePerRequestFilter 43 doFilterInternal - headerToken = undefined
+[2021-02-09 11:18:52] INFO  tian.web.config.auth.MyOncePerRequestFilter 44 doFilterInternal - request getMethod = POST
+[2021-02-09 11:19:10] INFO  tian.web.config.auth.MyOncePerRequestFilter 43 doFilterInternal - headerToken = undefined
+[2021-02-09 11:19:10] INFO  tian.web.config.auth.MyOncePerRequestFilter 43 doFilterInternal - headerToken = undefined
+[2021-02-09 11:19:10] INFO  tian.web.config.auth.MyOncePerRequestFilter 44 doFilterInternal - request getMethod = POST
+[2021-02-09 11:19:10] INFO  tian.web.config.auth.MyOncePerRequestFilter 44 doFilterInternal - request getMethod = POST
+[2021-02-09 11:19:52] INFO  tian.web.config.auth.MyOncePerRequestFilter 43 doFilterInternal - headerToken = undefined
+[2021-02-09 11:19:52] INFO  tian.web.config.auth.MyOncePerRequestFilter 44 doFilterInternal - request getMethod = POST
+[2021-02-09 11:19:52] INFO  tian.web.config.auth.MyOncePerRequestFilter 43 doFilterInternal - headerToken = undefined
+[2021-02-09 11:19:52] INFO  tian.web.config.auth.MyOncePerRequestFilter 44 doFilterInternal - request getMethod = POST
+[2021-02-09 11:20:09] INFO  tian.web.config.auth.MyOncePerRequestFilter 43 doFilterInternal - headerToken = undefined
+[2021-02-09 11:20:09] INFO  tian.web.config.auth.MyOncePerRequestFilter 43 doFilterInternal - headerToken = undefined
+[2021-02-09 11:20:09] INFO  tian.web.config.auth.MyOncePerRequestFilter 44 doFilterInternal - request getMethod = POST
+[2021-02-09 11:20:09] INFO  tian.web.config.auth.MyOncePerRequestFilter 44 doFilterInternal - request getMethod = POST
+[2021-02-09 11:20:52] INFO  tian.web.config.auth.MyOncePerRequestFilter 43 doFilterInternal - headerToken = undefined
+[2021-02-09 11:20:52] INFO  tian.web.config.auth.MyOncePerRequestFilter 44 doFilterInternal - request getMethod = POST
+[2021-02-09 11:20:52] INFO  tian.web.config.auth.MyOncePerRequestFilter 43 doFilterInternal - headerToken = undefined
+[2021-02-09 11:20:52] INFO  tian.web.config.auth.MyOncePerRequestFilter 44 doFilterInternal - request getMethod = POST
+[2021-02-09 11:21:42] INFO  tian.web.config.auth.MyOncePerRequestFilter 43 doFilterInternal - headerToken = undefined
+[2021-02-09 11:21:42] INFO  tian.web.config.auth.MyOncePerRequestFilter 43 doFilterInternal - headerToken = undefined
+[2021-02-09 11:21:42] INFO  tian.web.config.auth.MyOncePerRequestFilter 44 doFilterInternal - request getMethod = POST
+[2021-02-09 11:21:42] INFO  tian.web.config.auth.MyOncePerRequestFilter 44 doFilterInternal - request getMethod = POST
+[2021-02-09 11:32:00] INFO  tian.web.config.auth.MyOncePerRequestFilter 43 doFilterInternal - headerToken = undefined
+[2021-02-09 11:32:00] INFO  tian.web.config.auth.MyOncePerRequestFilter 43 doFilterInternal - headerToken = undefined
+[2021-02-09 11:32:00] INFO  tian.web.config.auth.MyOncePerRequestFilter 44 doFilterInternal - request getMethod = POST
+[2021-02-09 11:32:00] INFO  tian.web.config.auth.MyOncePerRequestFilter 44 doFilterInternal - request getMethod = POST
+[2021-02-09 11:32:07] INFO  tian.web.config.auth.MyOncePerRequestFilter 43 doFilterInternal - headerToken = undefined
+[2021-02-09 11:32:07] INFO  tian.web.config.auth.MyOncePerRequestFilter 44 doFilterInternal - request getMethod = GET
+[2021-02-09 11:32:15] INFO  tian.web.config.auth.MyOncePerRequestFilter 43 doFilterInternal - headerToken = undefined
+[2021-02-09 11:32:15] INFO  tian.web.config.auth.MyOncePerRequestFilter 44 doFilterInternal - request getMethod = POST
+[2021-02-09 11:32:18] INFO  tian.web.config.auth.MyOncePerRequestFilter 43 doFilterInternal - headerToken = undefined
+[2021-02-09 11:32:18] INFO  tian.web.config.auth.MyOncePerRequestFilter 44 doFilterInternal - request getMethod = POST
+[2021-02-09 11:32:18] INFO  tian.web.config.auth.MyOncePerRequestFilter 43 doFilterInternal - headerToken = undefined
+[2021-02-09 11:32:18] INFO  tian.web.config.auth.MyOncePerRequestFilter 44 doFilterInternal - request getMethod = POST
+[2021-02-09 11:32:45] INFO  tian.web.config.auth.MyOncePerRequestFilter 43 doFilterInternal - headerToken = undefined
+[2021-02-09 11:32:45] INFO  tian.web.config.auth.MyOncePerRequestFilter 44 doFilterInternal - request getMethod = POST
+[2021-02-09 11:32:46] INFO  tian.web.config.auth.MyOncePerRequestFilter 43 doFilterInternal - headerToken = undefined
+[2021-02-09 11:32:46] INFO  tian.web.config.auth.MyOncePerRequestFilter 44 doFilterInternal - request getMethod = POST
+[2021-02-09 11:32:48] INFO  tian.web.config.auth.MyOncePerRequestFilter 43 doFilterInternal - headerToken = undefined
+[2021-02-09 11:32:48] INFO  tian.web.config.auth.MyOncePerRequestFilter 44 doFilterInternal - request getMethod = POST
+[2021-02-09 11:32:48] INFO  tian.web.config.auth.MyOncePerRequestFilter 43 doFilterInternal - headerToken = undefined
+[2021-02-09 11:32:48] INFO  tian.web.config.auth.MyOncePerRequestFilter 44 doFilterInternal - request getMethod = POST
+[2021-02-09 11:33:11] INFO  tian.web.config.auth.MyOncePerRequestFilter 43 doFilterInternal - headerToken = undefined
+[2021-02-09 11:33:11] INFO  tian.web.config.auth.MyOncePerRequestFilter 44 doFilterInternal - request getMethod = POST
+[2021-02-09 11:33:13] INFO  tian.web.config.auth.MyOncePerRequestFilter 43 doFilterInternal - headerToken = undefined
+[2021-02-09 11:33:13] INFO  tian.web.config.auth.MyOncePerRequestFilter 44 doFilterInternal - request getMethod = POST
+[2021-02-09 11:33:14] INFO  tian.web.config.auth.MyOncePerRequestFilter 43 doFilterInternal - headerToken = undefined
+[2021-02-09 11:33:14] INFO  tian.web.config.auth.MyOncePerRequestFilter 43 doFilterInternal - headerToken = undefined
+[2021-02-09 11:33:14] INFO  tian.web.config.auth.MyOncePerRequestFilter 44 doFilterInternal - request getMethod = POST
+[2021-02-09 11:33:14] INFO  tian.web.config.auth.MyOncePerRequestFilter 44 doFilterInternal - request getMethod = POST
+[2021-02-09 11:34:22] INFO  tian.web.config.auth.MyOncePerRequestFilter 43 doFilterInternal - headerToken = undefined
+[2021-02-09 11:34:22] INFO  tian.web.config.auth.MyOncePerRequestFilter 44 doFilterInternal - request getMethod = POST
+[2021-02-09 11:34:23] INFO  tian.web.config.auth.MyOncePerRequestFilter 43 doFilterInternal - headerToken = undefined
+[2021-02-09 11:34:23] INFO  tian.web.config.auth.MyOncePerRequestFilter 44 doFilterInternal - request getMethod = POST
+[2021-02-09 11:34:24] INFO  tian.web.config.auth.MyOncePerRequestFilter 43 doFilterInternal - headerToken = undefined
+[2021-02-09 11:34:24] INFO  tian.web.config.auth.MyOncePerRequestFilter 43 doFilterInternal - headerToken = undefined
+[2021-02-09 11:34:24] INFO  tian.web.config.auth.MyOncePerRequestFilter 44 doFilterInternal - request getMethod = POST
+[2021-02-09 11:34:24] INFO  tian.web.config.auth.MyOncePerRequestFilter 44 doFilterInternal - request getMethod = POST
+[2021-02-09 11:34:55] INFO  tian.web.config.auth.MyOncePerRequestFilter 43 doFilterInternal - headerToken = undefined
+[2021-02-09 11:34:55] INFO  tian.web.config.auth.MyOncePerRequestFilter 44 doFilterInternal - request getMethod = POST
+[2021-02-09 11:34:56] INFO  tian.web.config.auth.MyOncePerRequestFilter 43 doFilterInternal - headerToken = undefined
+[2021-02-09 11:34:56] INFO  tian.web.config.auth.MyOncePerRequestFilter 44 doFilterInternal - request getMethod = POST
+[2021-02-09 11:34:57] INFO  tian.web.config.auth.MyOncePerRequestFilter 43 doFilterInternal - headerToken = undefined
+[2021-02-09 11:34:57] INFO  tian.web.config.auth.MyOncePerRequestFilter 44 doFilterInternal - request getMethod = POST
+[2021-02-09 11:34:57] INFO  tian.web.config.auth.MyOncePerRequestFilter 43 doFilterInternal - headerToken = undefined
+[2021-02-09 11:34:57] INFO  tian.web.config.auth.MyOncePerRequestFilter 44 doFilterInternal - request getMethod = POST
+[2021-02-09 11:38:16] INFO  tian.web.config.auth.MyOncePerRequestFilter 43 doFilterInternal - headerToken = undefined
+[2021-02-09 11:38:16] INFO  tian.web.config.auth.MyOncePerRequestFilter 44 doFilterInternal - request getMethod = POST
+[2021-02-09 11:38:18] INFO  tian.web.config.auth.MyOncePerRequestFilter 43 doFilterInternal - headerToken = undefined
+[2021-02-09 11:38:18] INFO  tian.web.config.auth.MyOncePerRequestFilter 44 doFilterInternal - request getMethod = POST
+[2021-02-09 11:38:19] INFO  tian.web.config.auth.MyOncePerRequestFilter 43 doFilterInternal - headerToken = undefined
+[2021-02-09 11:38:19] INFO  tian.web.config.auth.MyOncePerRequestFilter 43 doFilterInternal - headerToken = undefined
+[2021-02-09 11:38:19] INFO  tian.web.config.auth.MyOncePerRequestFilter 44 doFilterInternal - request getMethod = POST
+[2021-02-09 11:38:19] INFO  tian.web.config.auth.MyOncePerRequestFilter 44 doFilterInternal - request getMethod = POST
+[2021-02-09 11:43:02] INFO  tian.web.config.auth.MyOncePerRequestFilter 43 doFilterInternal - headerToken = undefined
+[2021-02-09 11:43:02] INFO  tian.web.config.auth.MyOncePerRequestFilter 44 doFilterInternal - request getMethod = POST
+[2021-02-09 11:43:03] INFO  tian.web.config.auth.MyOncePerRequestFilter 43 doFilterInternal - headerToken = undefined
+[2021-02-09 11:43:03] INFO  tian.web.config.auth.MyOncePerRequestFilter 44 doFilterInternal - request getMethod = POST
+[2021-02-09 11:43:04] INFO  tian.web.config.auth.MyOncePerRequestFilter 43 doFilterInternal - headerToken = undefined
+[2021-02-09 11:43:04] INFO  tian.web.config.auth.MyOncePerRequestFilter 43 doFilterInternal - headerToken = undefined
+[2021-02-09 11:43:04] INFO  tian.web.config.auth.MyOncePerRequestFilter 44 doFilterInternal - request getMethod = POST
+[2021-02-09 11:43:04] INFO  tian.web.config.auth.MyOncePerRequestFilter 44 doFilterInternal - request getMethod = POST
+[2021-02-09 11:44:22] INFO  tian.web.config.auth.MyOncePerRequestFilter 43 doFilterInternal - headerToken = undefined
+[2021-02-09 11:44:22] INFO  tian.web.config.auth.MyOncePerRequestFilter 44 doFilterInternal - request getMethod = POST
+[2021-02-09 11:44:23] INFO  tian.web.config.auth.MyOncePerRequestFilter 43 doFilterInternal - headerToken = undefined
+[2021-02-09 11:44:23] INFO  tian.web.config.auth.MyOncePerRequestFilter 44 doFilterInternal - request getMethod = POST
+[2021-02-09 11:44:24] INFO  tian.web.config.auth.MyOncePerRequestFilter 43 doFilterInternal - headerToken = undefined
+[2021-02-09 11:44:24] INFO  tian.web.config.auth.MyOncePerRequestFilter 43 doFilterInternal - headerToken = undefined
+[2021-02-09 11:44:24] INFO  tian.web.config.auth.MyOncePerRequestFilter 44 doFilterInternal - request getMethod = POST
+[2021-02-09 11:44:24] INFO  tian.web.config.auth.MyOncePerRequestFilter 44 doFilterInternal - request getMethod = POST
+[2021-02-09 11:45:07] INFO  tian.web.config.auth.MyOncePerRequestFilter 43 doFilterInternal - headerToken = undefined
+[2021-02-09 11:45:07] INFO  tian.web.config.auth.MyOncePerRequestFilter 44 doFilterInternal - request getMethod = POST
+[2021-02-09 11:45:08] INFO  tian.web.config.auth.MyOncePerRequestFilter 43 doFilterInternal - headerToken = undefined
+[2021-02-09 11:45:08] INFO  tian.web.config.auth.MyOncePerRequestFilter 44 doFilterInternal - request getMethod = POST
+[2021-02-09 11:45:10] INFO  tian.web.config.auth.MyOncePerRequestFilter 43 doFilterInternal - headerToken = undefined
+[2021-02-09 11:45:10] INFO  tian.web.config.auth.MyOncePerRequestFilter 44 doFilterInternal - request getMethod = POST
+[2021-02-09 11:45:10] INFO  tian.web.config.auth.MyOncePerRequestFilter 43 doFilterInternal - headerToken = undefined
+[2021-02-09 11:45:10] INFO  tian.web.config.auth.MyOncePerRequestFilter 44 doFilterInternal - request getMethod = POST
+[2021-02-09 11:45:40] INFO  tian.web.config.auth.MyOncePerRequestFilter 43 doFilterInternal - headerToken = undefined
+[2021-02-09 11:45:40] INFO  tian.web.config.auth.MyOncePerRequestFilter 44 doFilterInternal - request getMethod = POST
+[2021-02-09 11:45:41] INFO  tian.web.config.auth.MyOncePerRequestFilter 43 doFilterInternal - headerToken = undefined
+[2021-02-09 11:45:41] INFO  tian.web.config.auth.MyOncePerRequestFilter 44 doFilterInternal - request getMethod = POST
+[2021-02-09 11:45:42] INFO  tian.web.config.auth.MyOncePerRequestFilter 43 doFilterInternal - headerToken = undefined
+[2021-02-09 11:45:42] INFO  tian.web.config.auth.MyOncePerRequestFilter 43 doFilterInternal - headerToken = undefined
+[2021-02-09 11:45:42] INFO  tian.web.config.auth.MyOncePerRequestFilter 44 doFilterInternal - request getMethod = POST
+[2021-02-09 11:45:42] INFO  tian.web.config.auth.MyOncePerRequestFilter 44 doFilterInternal - request getMethod = POST
+[2021-02-09 11:46:19] INFO  tian.web.config.auth.MyOncePerRequestFilter 43 doFilterInternal - headerToken = undefined
+[2021-02-09 11:46:19] INFO  tian.web.config.auth.MyOncePerRequestFilter 44 doFilterInternal - request getMethod = POST
+[2021-02-09 11:46:20] INFO  tian.web.config.auth.MyOncePerRequestFilter 43 doFilterInternal - headerToken = undefined
+[2021-02-09 11:46:20] INFO  tian.web.config.auth.MyOncePerRequestFilter 44 doFilterInternal - request getMethod = POST
+[2021-02-09 11:46:22] INFO  tian.web.config.auth.MyOncePerRequestFilter 43 doFilterInternal - headerToken = undefined
+[2021-02-09 11:46:22] INFO  tian.web.config.auth.MyOncePerRequestFilter 44 doFilterInternal - request getMethod = POST
+[2021-02-09 11:46:22] INFO  tian.web.config.auth.MyOncePerRequestFilter 43 doFilterInternal - headerToken = undefined
+[2021-02-09 11:46:22] INFO  tian.web.config.auth.MyOncePerRequestFilter 44 doFilterInternal - request getMethod = POST
+[2021-02-09 11:46:26] INFO  tian.web.config.auth.MyOncePerRequestFilter 43 doFilterInternal - headerToken = undefined
+[2021-02-09 11:46:26] INFO  tian.web.config.auth.MyOncePerRequestFilter 44 doFilterInternal - request getMethod = GET
+[2021-02-09 11:46:28] INFO  tian.web.config.auth.MyOncePerRequestFilter 43 doFilterInternal - headerToken = undefined
+[2021-02-09 11:46:28] INFO  tian.web.config.auth.MyOncePerRequestFilter 44 doFilterInternal - request getMethod = POST
+[2021-02-09 11:46:30] INFO  tian.web.config.auth.MyOncePerRequestFilter 43 doFilterInternal - headerToken = undefined
+[2021-02-09 11:46:30] INFO  tian.web.config.auth.MyOncePerRequestFilter 43 doFilterInternal - headerToken = undefined
+[2021-02-09 11:46:30] INFO  tian.web.config.auth.MyOncePerRequestFilter 44 doFilterInternal - request getMethod = POST
+[2021-02-09 11:46:30] INFO  tian.web.config.auth.MyOncePerRequestFilter 44 doFilterInternal - request getMethod = POST
+[2021-02-09 11:46:35] INFO  tian.web.config.auth.MyOncePerRequestFilter 43 doFilterInternal - headerToken = undefined
+[2021-02-09 11:46:35] INFO  tian.web.config.auth.MyOncePerRequestFilter 44 doFilterInternal - request getMethod = GET
+[2021-02-09 11:46:43] INFO  tian.web.config.auth.MyOncePerRequestFilter 43 doFilterInternal - headerToken = undefined
+[2021-02-09 11:46:43] INFO  tian.web.config.auth.MyOncePerRequestFilter 44 doFilterInternal - request getMethod = GET
+[2021-02-09 11:46:45] INFO  tian.web.config.auth.MyOncePerRequestFilter 43 doFilterInternal - headerToken = undefined
+[2021-02-09 11:46:45] INFO  tian.web.config.auth.MyOncePerRequestFilter 44 doFilterInternal - request getMethod = POST
+[2021-02-09 11:46:47] INFO  tian.web.config.auth.MyOncePerRequestFilter 43 doFilterInternal - headerToken = undefined
+[2021-02-09 11:46:47] INFO  tian.web.config.auth.MyOncePerRequestFilter 43 doFilterInternal - headerToken = undefined
+[2021-02-09 11:46:47] INFO  tian.web.config.auth.MyOncePerRequestFilter 44 doFilterInternal - request getMethod = POST
+[2021-02-09 11:46:47] INFO  tian.web.config.auth.MyOncePerRequestFilter 44 doFilterInternal - request getMethod = POST
+[2021-02-09 11:46:52] INFO  tian.web.config.auth.MyOncePerRequestFilter 43 doFilterInternal - headerToken = undefined
+[2021-02-09 11:46:52] INFO  tian.web.config.auth.MyOncePerRequestFilter 44 doFilterInternal - request getMethod = GET
+[2021-02-09 11:46:55] INFO  tian.web.config.auth.MyOncePerRequestFilter 43 doFilterInternal - headerToken = undefined
+[2021-02-09 11:46:55] INFO  tian.web.config.auth.MyOncePerRequestFilter 44 doFilterInternal - request getMethod = GET
+[2021-02-09 11:50:35] INFO  tian.web.config.auth.MyOncePerRequestFilter 43 doFilterInternal - headerToken = undefined
+[2021-02-09 11:50:35] INFO  tian.web.config.auth.MyOncePerRequestFilter 44 doFilterInternal - request getMethod = GET
+[2021-02-09 11:50:41] INFO  tian.web.config.auth.MyOncePerRequestFilter 43 doFilterInternal - headerToken = undefined
+[2021-02-09 11:50:41] INFO  tian.web.config.auth.MyOncePerRequestFilter 44 doFilterInternal - request getMethod = POST
+[2021-02-09 11:50:42] INFO  tian.web.config.auth.MyOncePerRequestFilter 43 doFilterInternal - headerToken = undefined
+[2021-02-09 11:50:42] INFO  tian.web.config.auth.MyOncePerRequestFilter 43 doFilterInternal - headerToken = undefined
+[2021-02-09 11:50:42] INFO  tian.web.config.auth.MyOncePerRequestFilter 44 doFilterInternal - request getMethod = POST
+[2021-02-09 11:50:42] INFO  tian.web.config.auth.MyOncePerRequestFilter 44 doFilterInternal - request getMethod = POST
+[2021-02-09 11:51:29] INFO  tian.web.config.auth.MyOncePerRequestFilter 43 doFilterInternal - headerToken = undefined
+[2021-02-09 11:51:29] INFO  tian.web.config.auth.MyOncePerRequestFilter 44 doFilterInternal - request getMethod = POST
+[2021-02-09 11:51:31] INFO  tian.web.config.auth.MyOncePerRequestFilter 43 doFilterInternal - headerToken = undefined
+[2021-02-09 11:51:31] INFO  tian.web.config.auth.MyOncePerRequestFilter 44 doFilterInternal - request getMethod = POST
+[2021-02-09 11:51:32] INFO  tian.web.config.auth.MyOncePerRequestFilter 43 doFilterInternal - headerToken = undefined
+[2021-02-09 11:51:32] INFO  tian.web.config.auth.MyOncePerRequestFilter 43 doFilterInternal - headerToken = undefined
+[2021-02-09 11:51:32] INFO  tian.web.config.auth.MyOncePerRequestFilter 44 doFilterInternal - request getMethod = POST
+[2021-02-09 11:51:32] INFO  tian.web.config.auth.MyOncePerRequestFilter 44 doFilterInternal - request getMethod = POST
+[2021-02-09 11:51:50] INFO  tian.web.config.auth.MyOncePerRequestFilter 43 doFilterInternal - headerToken = undefined
+[2021-02-09 11:51:50] INFO  tian.web.config.auth.MyOncePerRequestFilter 44 doFilterInternal - request getMethod = POST
+[2021-02-09 11:51:51] INFO  tian.web.config.auth.MyOncePerRequestFilter 43 doFilterInternal - headerToken = undefined
+[2021-02-09 11:51:51] INFO  tian.web.config.auth.MyOncePerRequestFilter 44 doFilterInternal - request getMethod = POST
+[2021-02-09 11:51:52] INFO  tian.web.config.auth.MyOncePerRequestFilter 43 doFilterInternal - headerToken = undefined
+[2021-02-09 11:51:52] INFO  tian.web.config.auth.MyOncePerRequestFilter 43 doFilterInternal - headerToken = undefined
+[2021-02-09 11:51:52] INFO  tian.web.config.auth.MyOncePerRequestFilter 44 doFilterInternal - request getMethod = POST
+[2021-02-09 11:51:52] INFO  tian.web.config.auth.MyOncePerRequestFilter 44 doFilterInternal - request getMethod = POST
+[2021-02-09 11:52:57] INFO  tian.web.config.auth.MyOncePerRequestFilter 43 doFilterInternal - headerToken = undefined
+[2021-02-09 11:52:57] INFO  tian.web.config.auth.MyOncePerRequestFilter 44 doFilterInternal - request getMethod = POST
+[2021-02-09 11:52:58] INFO  tian.web.config.auth.MyOncePerRequestFilter 43 doFilterInternal - headerToken = undefined
+[2021-02-09 11:52:58] INFO  tian.web.config.auth.MyOncePerRequestFilter 44 doFilterInternal - request getMethod = POST
+[2021-02-09 11:53:00] INFO  tian.web.config.auth.MyOncePerRequestFilter 43 doFilterInternal - headerToken = undefined
+[2021-02-09 11:53:00] INFO  tian.web.config.auth.MyOncePerRequestFilter 43 doFilterInternal - headerToken = undefined
+[2021-02-09 11:53:00] INFO  tian.web.config.auth.MyOncePerRequestFilter 44 doFilterInternal - request getMethod = POST
+[2021-02-09 11:53:00] INFO  tian.web.config.auth.MyOncePerRequestFilter 44 doFilterInternal - request getMethod = POST
+[2021-02-09 11:53:23] INFO  tian.web.config.auth.MyOncePerRequestFilter 43 doFilterInternal - headerToken = undefined
+[2021-02-09 11:53:23] INFO  tian.web.config.auth.MyOncePerRequestFilter 44 doFilterInternal - request getMethod = POST
+[2021-02-09 11:53:27] INFO  tian.web.config.auth.MyOncePerRequestFilter 43 doFilterInternal - headerToken = undefined
+[2021-02-09 11:53:27] INFO  tian.web.config.auth.MyOncePerRequestFilter 44 doFilterInternal - request getMethod = GET
+[2021-02-09 11:53:32] INFO  tian.web.config.auth.MyOncePerRequestFilter 43 doFilterInternal - headerToken = undefined
+[2021-02-09 11:53:32] INFO  tian.web.config.auth.MyOncePerRequestFilter 44 doFilterInternal - request getMethod = POST
+[2021-02-09 11:53:33] INFO  tian.web.config.auth.MyOncePerRequestFilter 43 doFilterInternal - headerToken = undefined
+[2021-02-09 11:53:33] INFO  tian.web.config.auth.MyOncePerRequestFilter 44 doFilterInternal - request getMethod = POST
+[2021-02-09 11:53:33] INFO  tian.web.config.auth.MyOncePerRequestFilter 43 doFilterInternal - headerToken = undefined
+[2021-02-09 11:53:33] INFO  tian.web.config.auth.MyOncePerRequestFilter 44 doFilterInternal - request getMethod = POST
+[2021-02-09 11:53:37] INFO  tian.web.config.auth.MyOncePerRequestFilter 43 doFilterInternal - headerToken = undefined
+[2021-02-09 11:53:37] INFO  tian.web.config.auth.MyOncePerRequestFilter 44 doFilterInternal - request getMethod = POST
+[2021-02-09 11:53:37] INFO  tian.web.config.auth.MyOncePerRequestFilter 43 doFilterInternal - headerToken = undefined
+[2021-02-09 11:53:37] INFO  tian.web.config.auth.MyOncePerRequestFilter 44 doFilterInternal - request getMethod = GET
+[2021-02-09 11:54:21] INFO  tian.web.config.auth.MyOncePerRequestFilter 43 doFilterInternal - headerToken = undefined
+[2021-02-09 11:54:21] INFO  tian.web.config.auth.MyOncePerRequestFilter 44 doFilterInternal - request getMethod = POST
+[2021-02-09 11:54:25] INFO  tian.web.config.auth.MyOncePerRequestFilter 43 doFilterInternal - headerToken = undefined
+[2021-02-09 11:54:25] INFO  tian.web.config.auth.MyOncePerRequestFilter 44 doFilterInternal - request getMethod = GET
+[2021-02-09 11:54:33] INFO  tian.web.config.auth.MyOncePerRequestFilter 43 doFilterInternal - headerToken = undefined
+[2021-02-09 11:54:33] INFO  tian.web.config.auth.MyOncePerRequestFilter 44 doFilterInternal - request getMethod = POST
+[2021-02-09 11:54:34] INFO  tian.web.config.auth.MyOncePerRequestFilter 43 doFilterInternal - headerToken = undefined
+[2021-02-09 11:54:34] INFO  tian.web.config.auth.MyOncePerRequestFilter 44 doFilterInternal - request getMethod = POST
+[2021-02-09 11:54:35] INFO  tian.web.config.auth.MyOncePerRequestFilter 43 doFilterInternal - headerToken = undefined
+[2021-02-09 11:54:35] INFO  tian.web.config.auth.MyOncePerRequestFilter 44 doFilterInternal - request getMethod = POST
+[2021-02-09 11:54:54] INFO  tian.web.config.auth.MyOncePerRequestFilter 43 doFilterInternal - headerToken = undefined
+[2021-02-09 11:54:54] INFO  tian.web.config.auth.MyOncePerRequestFilter 44 doFilterInternal - request getMethod = POST
+[2021-02-09 11:54:54] INFO  tian.web.config.auth.MyOncePerRequestFilter 43 doFilterInternal - headerToken = undefined
+[2021-02-09 11:54:54] INFO  tian.web.config.auth.MyOncePerRequestFilter 44 doFilterInternal - request getMethod = GET
+[2021-02-09 13:35:10] INFO  org.springframework.scheduling.concurrent.ExecutorConfigurationSupport 218 shutdown - Shutting down ExecutorService 'applicationTaskExecutor'
+[2021-02-09 13:35:10] INFO  com.alibaba.druid.pool.DruidDataSource 2032 close - {dataSource-1} closing ...
+[2021-02-09 13:35:10] INFO  com.alibaba.druid.pool.DruidDataSource 2104 close - {dataSource-1} closed
+[2021-02-09 13:35:34] INFO  org.springframework.boot.StartupInfoLogger 55 logStarting - Starting FengtsApplication on DESKTOP-7017LEC with PID 9064 (D:\IDEAWORK\fengts\fengts-service\target\classes started by FTS36 in D:\IDEAWORK\fengts)
+[2021-02-09 13:35:34] INFO  org.springframework.boot.SpringApplication 655 logStartupProfileInfo - The following profiles are active: dev
+[2021-02-09 13:35:35] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer 108 initialize - Tomcat initialized with port(s): 9000 (http)
+[2021-02-09 13:35:35] INFO  org.apache.juli.logging.DirectJDKLog 173 log - Starting service [Tomcat]
+[2021-02-09 13:35:35] INFO  org.apache.juli.logging.DirectJDKLog 173 log - Starting Servlet engine: [Apache Tomcat/9.0.36]
+[2021-02-09 13:35:35] INFO  org.apache.juli.logging.DirectJDKLog 173 log - Initializing Spring embedded WebApplicationContext
+[2021-02-09 13:35:35] INFO  org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext 285 prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 1279 ms
+[2021-02-09 13:35:35] INFO  com.alibaba.druid.spring.boot.autoconfigure.DruidDataSourceAutoConfigure 56 dataSource - Init DruidDataSource
+[2021-02-09 13:35:36] INFO  com.alibaba.druid.pool.DruidDataSource 985 init - {dataSource-1} inited
+[2021-02-09 13:35:37] INFO  org.springframework.scheduling.concurrent.ExecutorConfigurationSupport 181 initialize - Initializing ExecutorService 'applicationTaskExecutor'
+[2021-02-09 13:35:37] INFO  org.springframework.security.web.DefaultSecurityFilterChain 43 <init> - Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@625264ed, org.springframework.security.web.context.SecurityContextPersistenceFilter@57bdceaa, org.springframework.security.web.header.HeaderWriterFilter@69ce14e6, org.springframework.security.web.authentication.logout.LogoutFilter@1be8c122, tian.web.config.auth.MyOncePerRequestFilter@73bb573d, tian.web.config.auth.MyUsernamePasswordAuthenticationFilter@20ffb8d5, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@785a4557, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@36e409e0, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@5df64b2a, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@559fd5ec, org.springframework.security.web.session.SessionManagementFilter@b5de9ac, org.springframework.security.web.access.ExceptionTranslationFilter@4c65d8e3, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@20027c44]
+[2021-02-09 13:35:37] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer 220 start - Tomcat started on port(s): 9000 (http) with context path ''
+[2021-02-09 13:35:37] INFO  org.springframework.boot.StartupInfoLogger 61 logStarted - Started FengtsApplication in 4.109 seconds (JVM running for 5.437)
+[2021-02-09 13:37:35] INFO  org.springframework.scheduling.concurrent.ExecutorConfigurationSupport 218 shutdown - Shutting down ExecutorService 'applicationTaskExecutor'
+[2021-02-09 13:37:35] INFO  com.alibaba.druid.pool.DruidDataSource 2032 close - {dataSource-1} closing ...
+[2021-02-09 13:37:35] INFO  com.alibaba.druid.pool.DruidDataSource 2104 close - {dataSource-1} closed
+[2021-02-09 13:37:38] INFO  org.springframework.boot.StartupInfoLogger 55 logStarting - Starting FengtsApplication on DESKTOP-7017LEC with PID 18056 (D:\IDEAWORK\fengts\fengts-service\target\classes started by FTS36 in D:\IDEAWORK\fengts)
+[2021-02-09 13:37:38] INFO  org.springframework.boot.SpringApplication 655 logStartupProfileInfo - The following profiles are active: dev
+[2021-02-09 13:37:39] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer 108 initialize - Tomcat initialized with port(s): 9000 (http)
+[2021-02-09 13:37:39] INFO  org.apache.juli.logging.DirectJDKLog 173 log - Starting service [Tomcat]
+[2021-02-09 13:37:39] INFO  org.apache.juli.logging.DirectJDKLog 173 log - Starting Servlet engine: [Apache Tomcat/9.0.36]
+[2021-02-09 13:37:39] INFO  org.apache.juli.logging.DirectJDKLog 173 log - Initializing Spring embedded WebApplicationContext
+[2021-02-09 13:37:39] INFO  org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext 285 prepareWebApplicationContext - Root WebApplicationContext: initialization completed in 942 ms
+[2021-02-09 13:37:39] INFO  com.alibaba.druid.spring.boot.autoconfigure.DruidDataSourceAutoConfigure 56 dataSource - Init DruidDataSource
+[2021-02-09 13:37:40] INFO  com.alibaba.druid.pool.DruidDataSource 985 init - {dataSource-1} inited
+[2021-02-09 13:37:41] INFO  org.springframework.scheduling.concurrent.ExecutorConfigurationSupport 181 initialize - Initializing ExecutorService 'applicationTaskExecutor'
+[2021-02-09 13:37:41] INFO  org.springframework.security.web.DefaultSecurityFilterChain 43 <init> - Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@40fe8fd5, org.springframework.security.web.context.SecurityContextPersistenceFilter@485deee1, org.springframework.security.web.header.HeaderWriterFilter@7bbdb220, org.springframework.security.web.authentication.logout.LogoutFilter@295b07e0, tian.web.config.auth.MyOncePerRequestFilter@1eb9bf60, tian.web.config.auth.MyUsernamePasswordAuthenticationFilter@5fb8dc01, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@bb12f41, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@38a96593, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@243c4346, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@37ffe4f3, org.springframework.security.web.session.SessionManagementFilter@d120d7c, org.springframework.security.web.access.ExceptionTranslationFilter@145e958f, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@6c6379c]
+[2021-02-09 13:37:41] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer 220 start - Tomcat started on port(s): 9000 (http) with context path ''
+[2021-02-09 13:37:41] INFO  org.springframework.boot.StartupInfoLogger 61 logStarted - Started FengtsApplication in 3.341 seconds (JVM running for 4.507)
+[2021-02-09 13:37:45] INFO  org.springframework.scheduling.concurrent.ExecutorConfigurationSupport 218 shutdown - Shutting down ExecutorService 'applicationTaskExecutor'
+[2021-02-09 13:37:45] INFO  com.alibaba.druid.pool.DruidDataSource 2032 close - {dataSource-1} closing ...
+[2021-02-09 13:37:45] INFO  com.alibaba.druid.pool.DruidDataSource 2104 close - {dataSource-1} closed

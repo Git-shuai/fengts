@@ -9,4 +9,6 @@ public class Constant {
      * 请求路径的header
      */
     public static final String HEADER_TOKEN="Authorization";
+
+    public static final String ISNULL="null";
 }
