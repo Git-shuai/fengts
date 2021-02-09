@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="tian.web.dao.blog.BlogTagMapper">
+
+    <insert id="addBlogTagBatch">
+        insert into fengts.blog_tag(blog_id, tag_id)
+        values
+        <foreach collection="list" item="blogTagList"  separator=",">
+            (#{blogTagList.blogId},#{blogTagList.tagId})
+        </foreach>
+        ;
+    </insert>
+</mapper>

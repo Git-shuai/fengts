@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="tian.web.dao.blog.ClassifyMapper">
+
+    <select id="selectClassifyList" resultType="java.util.Map">
+        SELECT
+            c.id,
+            c.parent_id parentId,
+            cc.classify_name classifyParentName,
+            c.classify_name classifyName,
+            c.des,
+            COUNT( bc.classify_id ) sum
+        FROM
+            classify c
+                LEFT JOIN blog_classify bc ON c.id = bc.classify_id
+                LEFT JOIN classify cc ON c.parent_id = cc.id
+        GROUP BY
+            classifyName
+    </select>
+</mapper>
