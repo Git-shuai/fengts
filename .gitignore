@@ -17,9 +17,8 @@ hs_err_pid*
 ######################
 # 解决maven产生的文件
 ######################
-/logs/
-target/
-**/target/
+logs/
+*/target/
 pom.xml.tag
 pom.xml.releaseBackup
 pom.xml.versionsBackup
