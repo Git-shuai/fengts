@@ -66,7 +66,26 @@ public class ClassifyController {
     @PostMapping("/selectClassifyList")
     public Result selectClassifyList(@RequestBody Map<String,Object> param){
         return classifyService.selectClassifyList(param);
-    };
+    }
+
+    /**
+     * 查询分类根据name
+     * @param param 当前页面
+     * @return Result
+     */
+    @PostMapping("/selectClassifyByName")
+    public Result selectClassifyByName(@RequestBody Map<String,Object> param){
+        return classifyService.selectClassifyByName(param);
+    }
+    /**
+     * 查询分类列表
+     * @param param 当前页面
+     * @return Result
+     */
+    @PostMapping("/selectClassify")
+    public Result selectClassifyList(){
+        return classifyService.selectClassifyList();
+    }
 
     /**
      * 查询父分类接口

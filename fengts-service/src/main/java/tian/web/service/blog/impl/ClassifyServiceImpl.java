@@ -94,4 +94,33 @@ public class ClassifyServiceImpl extends ServiceImpl<ClassifyMapper, Classify> i
         List<Classify> classifyList = classifyMapper.selectByMap(map);
         return new Result(ResCode.SUCCESS_CODE,classifyList);
     }
+
+    @Override
+    public Result selectClassifyList() {
+        Result<Object> result = new Result<>();
+        List<Classify> classifyList = classifyMapper.selectList(null);
+        result.setMessage("查询成功");
+        result.setCode(0);
+        result.setData(classifyList);
+        return result;
+    }
+
+    @Override
+    public Result selectClassifyByName(Map<String, Object> param) {
+
+        Result<Object> result = new Result<>();
+        if (StringUtils.isEmpty(param)|| StringUtils.isEmpty(param.get("classifyName"))){
+            result.setCode(-999);
+            result.setMessage("查询失败");
+            return result;
+        }
+        String classifyName = StringUtils.getString(param.get("classifyName"));
+        HashMap<String, Object> map = new HashMap<>();
+        map.put("classify_name",classifyName);
+        List<Classify> classifyList = classifyMapper.selectByMap(map);
+        result.setMessage("查询成功");
+        result.setCode(0);
+        result.setData(classifyList);
+        return result;
+    }
 }

@@ -41,7 +41,7 @@ public interface BlogService extends IService<Blog> {
      * @param map
      * @return
      */
-    public Result selectBlog(Map<String,Object> map);
+    public Result selectBlogById(Map<String,Object> map);
 
     /**
      * 查询列表
@@ -50,4 +50,10 @@ public interface BlogService extends IService<Blog> {
      */
     public Result selectBlogList(Long page,Long size);
 
+    /**
+     * 查询
+     * @param map
+     * @return
+     */
+    public Result selectBlogListByParam(Map<String,Object> map);
 }

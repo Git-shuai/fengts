@@ -36,7 +36,7 @@ public class BlogController {
     }
 
     /**
-     * 修改博客
+     * 删除博客
      * @param blogId 博客id
      * @return Result
      */
@@ -45,10 +45,46 @@ public class BlogController {
         return blogService.deleteBlog(blogId);
     }
 
-    @PostMapping("/selectBlogList/{page}/{size}")
+    /**
+     * 修改博客
+     * @param param
+     * @return
+     */
+    @PostMapping("editBlog")
+    public Result editBlog(@RequestBody Map<String,Object> param){
+        Result result = blogService.editBlog(param);
+        return  result;
+
+    }
+
+    /**
+     * 查询
+     * @param page
+     * @param size
+     * @return
+     */
+    @GetMapping("/selectBlogList/{page}/{size}")
     public Result selectBlogList( @PathVariable("page") Long page,@PathVariable("size") Long size){
         return blogService.selectBlogList(page,size);
     }
+
+    /**
+     * 分页查询
+     * @param param
+     * @return
+     */
+    @PostMapping("/selectBlog")
+    public Result selectBlog(@RequestBody Map<String,Object> param){
+        return blogService.selectBlogById(param);
+    }
+
+    @PostMapping("/selectBlogListByParam")
+    public Result selectBlogListByParam(@RequestBody Map<String,Object> param){
+        return  blogService.selectBlogListByParam(param);
+    }
+
+
+
 
 }
 

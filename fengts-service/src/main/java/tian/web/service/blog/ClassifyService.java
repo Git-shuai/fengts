@@ -20,4 +20,8 @@ public interface ClassifyService extends IService<Classify> {
     public Result<Classify> editClassify(Classify classify);
     public Result selectClassifyList(Map<String,Object> map);
     public Result selectParentClassify();
+
+    public Result selectClassifyList();
+
+    public Result selectClassifyByName(Map<String, Object> param);
 }

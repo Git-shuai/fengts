@@ -79,7 +79,28 @@ public class TagsController {
         }
 
         return tagsService.selectTagsList(pageL,sizeL);
-    };
+    }
+
+    /**
+     * 查询标签列表
+     * @param param 当前页面
+     * @return Result
+     */
+    @PostMapping("/selectTags")
+    public Result selectTagsList(){
+        return tagsService.selectTagsList();
+    }
+
+    /**
+     * 查询标签Tag根据Name
+     * @param param 当前页面
+     * @return Result
+     */
+    @PostMapping("/selectTagByName")
+    public Result selectTagByName(@RequestBody Map<String,Object> param){
+        return tagsService.selectTagByName(param);
+    }
+
 
     /**
      * 查询父标签接口

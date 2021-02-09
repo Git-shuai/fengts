@@ -5,6 +5,7 @@ import tian.web.bean.blog.Tags;
 import com.baomidou.mybatisplus.extension.service.IService;
 
 import java.util.List;
+import java.util.Map;
 
 /**
  * <p>
@@ -20,5 +21,8 @@ public interface TagsService extends IService<Tags> {
     public Result<Tags> deleteTags(String tagsId);
     public Result<Tags> editTags(Tags tags);
     public Result selectTagsList(long page,long size);
+    public Result selectTagsList();
     public Result selectParentTag();
+
+    public Result selectTagByName(Map<String, Object> param);
 }

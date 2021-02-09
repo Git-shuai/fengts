@@ -5,8 +5,10 @@ import com.baomidou.mybatisplus.annotation.FieldFill;
 import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableId;
+import lombok.AllArgsConstructor;
 import lombok.Data;
-import lombok.EqualsAndHashCode;
+import lombok.NoArgsConstructor;
+import tian.web.TimeUtil;
 
 import java.io.Serializable;
 import java.util.Date;
@@ -20,7 +22,8 @@ import java.util.Date;
  * @since 2021-01-05
  */
 @Data
-@EqualsAndHashCode(callSuper = false)
+@NoArgsConstructor
+@AllArgsConstructor
 public class Blog implements Serializable {
 
     private static final long serialVersionUID = 1L;
@@ -45,14 +48,14 @@ public class Blog implements Serializable {
      * 博客创建时间
      */
     @TableField(fill = FieldFill.INSERT)
-    @JSONField(format = "yyyy-MM-dd HH:mm:ss")
+    @JSONField(format = TimeUtil.DATE_PATTERN.YYYY_MM_DD_HH_MM)
     private Date createTime;
 
     /**
      * 博客更新时间
      */
     @TableField(fill = FieldFill.INSERT_UPDATE)
-    @JSONField(format = "yyyy-MM-dd HH:mm:ss")
+    @JSONField(format = TimeUtil.DATE_PATTERN.YYYY_MM_DD_HH_MM)
     private Date updateTime;
 
     /**
@@ -80,5 +83,9 @@ public class Blog implements Serializable {
      */
     private Integer isComment;
 
+    /**
+     * 回收站/发布/草稿
+     */
+    private String blogStatus;
 
 }
