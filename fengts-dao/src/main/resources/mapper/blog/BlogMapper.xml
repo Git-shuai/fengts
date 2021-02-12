@@ -34,7 +34,8 @@
             content= #{content},
             is_original= #{isOriginal},
             is_admire= #{isAdmire},
-            is_comment= #{isComment}
+            is_comment= #{isComment},
+            blog_status=#{blogStatus}
         where id=#{id};
     </update>
 

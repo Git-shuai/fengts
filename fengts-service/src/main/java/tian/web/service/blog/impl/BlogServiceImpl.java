@@ -152,6 +152,7 @@ public class BlogServiceImpl extends ServiceImpl<BlogMapper, Blog> implements Bl
         }
         long blogId = Long.parseLong(StringUtils.getString(map.get("id")));
         //更新博客内容
+        map.put("updateTime",new Date());
         int i = blogMapper.updateBlog(map);
         if (i <= 0) {
             throw new RuntimeException("更新失败");
@@ -277,7 +278,7 @@ public class BlogServiceImpl extends ServiceImpl<BlogMapper, Blog> implements Bl
         }
         IPage<Map<String, Object>> paramBlogList = blogMapper.selectBlogListByParam(new Page(pageL, sizeL), map);
         result.setMessage("查询成功");
-        result.setData(0);
+        result.setCode(0);
         result.setData(paramBlogList);
         return result;
     }

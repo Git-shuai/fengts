@@ -15,6 +15,6 @@
                 LEFT JOIN blog_classify bc ON c.id = bc.classify_id
                 LEFT JOIN classify cc ON c.parent_id = cc.id
         GROUP BY
-            classifyName
+            id
     </select>
 </mapper>

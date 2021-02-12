@@ -15,6 +15,6 @@
                 LEFT JOIN blog_tag bt ON t.id = bt.tag_id
                 LEFT JOIN tags tt ON t.parent_id = tt.id
         GROUP BY
-            tagName
+            id
     </select>
 </mapper>
