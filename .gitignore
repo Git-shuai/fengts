@@ -77,3 +77,8 @@ atlassian-ide-plugin.xml
 com_crashlytics_export_strings.xml
 crashlytics.properties
 crashlytics-build.properties
+
+# 忽略文件
+#git rm -r --cached .
+#git add .
+#git commit -m "fixed untracked files"
