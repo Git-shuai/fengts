@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="tian.web.dao.blog.BlogMapper">
+    <insert id="insertBlog" keyProperty="id" useGeneratedKeys="true">
+        insert into fengts.blog(
+                    title, auth,
+                    create_time,
+                    update_time,
+                    read_num,
+                    content,
+                    is_original,
+                    is_admire,
+                    is_comment,
+                    blog_status           )
+            values (#{title},
+                    #{auth},
+                    #{createTime},
+                    #{updateTime},
+                    #{readNum},
+                    #{content},
+                    #{isOriginal},
+                    #{isAdmire},
+                    #{isComment},
+                    #{blogStatus});
+    </insert>
+    <update id="updateBlog">
+        update blog
+        set
+            title= #{title},
+            auth= #{auth},
+            create_time= #{createTime},
+            update_time= #{updateTime},
+            read_num= #{readNum},
+            content= #{content},
+            is_original= #{isOriginal},
+            is_admire= #{isAdmire},
+            is_comment= #{isComment},
+            blog_status=#{blogStatus}
+        where id=#{id};
+    </update>
+
+
+    <select id="selectBlogList" resultType="java.util.Map">
+        SELECT
+            b.*,
+            GROUP_CONCAT( DISTINCT bt.tag_id ) tagId,
+            GROUP_CONCAT( DISTINCT ( SELECT ts.tag_name FROM tags ts WHERE ts.id = bt.tag_id ) ) tagName,
+            GROUP_CONCAT( DISTINCT bc.classify_id ) classifyId,
+            GROUP_CONCAT( DISTINCT ( SELECT cf.classify_name FROM classify cf WHERE cf.id = bc.classify_id ) ) classifyName
+        FROM
+            blog b
+                LEFT JOIN blog_tag bt ON bt.blog_id = b.id
+                LEFT JOIN blog_classify bc ON bc.blog_id = b.id
+        GROUP BY
+            b.id
+
+    </select>
+    <select id="selectBlogById" resultType="java.util.Map">
+        SELECT
+            b.*,
+            GROUP_CONCAT( DISTINCT bt.tag_id ) tagId,
+            GROUP_CONCAT( DISTINCT ( SELECT ts.tag_name FROM tags ts WHERE ts.id = bt.tag_id ) ) tagName,
+            GROUP_CONCAT( DISTINCT bc.classify_id ) classifyId,
+            GROUP_CONCAT( DISTINCT ( SELECT cf.classify_name FROM classify cf WHERE cf.id = bc.classify_id ) ) classifyName
+        FROM
+            blog b
+                LEFT JOIN blog_tag bt ON bt.blog_id = b.id
+                LEFT JOIN blog_classify bc ON bc.blog_id = b.id
+        WHERE
+            b.id = #{blogId}
+
+        GROUP BY
+            b.id
+    </select>
+    <select id="selectBlogListByParam" resultType="java.util.Map">
+        SELECT
+        b.*,
+        GROUP_CONCAT( DISTINCT bt.tag_id ) tagId,
+        GROUP_CONCAT( DISTINCT ( SELECT ts.tag_name FROM tags ts WHERE ts.id = bt.tag_id ) ) tagName,
+        GROUP_CONCAT( DISTINCT bc.classify_id ) classifyId,
+        GROUP_CONCAT( DISTINCT ( SELECT cf.classify_name FROM classify cf WHERE cf.id = bc.classify_id ) ) classifyName
+        FROM
+        blog b
+        LEFT JOIN blog_tag bt ON bt.blog_id = b.id
+        LEFT JOIN blog_classify bc ON bc.blog_id = b.id
+        WHERE 1=1
+            <if test="map.classifyId !=null and map.classifyId !=''">
+                and bc.classify_id LIKE #{map.classifyId}
+            </if>
+            <if test="map.blogStatus !=null and map.blogStatus !=''">
+                AND b.blog_status=#{map.blogStatus}
+            </if>
+            <if test="map.keyWord !=null and map.keyWord !=''">
+                and b.content like #{map.keyWord}
+            </if>
+        GROUP BY b.id
+    </select>
+</mapper>
