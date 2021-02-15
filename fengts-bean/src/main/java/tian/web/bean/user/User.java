@@ -42,6 +42,11 @@ public class User implements Serializable {
     private String headurl;
 
     /**
+     * 新加字段 说明
+     */
+    private String des;
+
+    /**
      * 创建时间
      */
     @JSONField(format = TimeUtil.DATE_PATTERN.YYYY_MM_DD_HH_MM_SS)

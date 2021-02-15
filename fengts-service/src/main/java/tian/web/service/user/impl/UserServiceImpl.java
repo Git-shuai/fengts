@@ -108,8 +108,10 @@ public class UserServiceImpl implements UserService {
         //设置更新时间
         user.setUpdateTime(new Date());
         //设置更新密码为密文
-        String newPassword = new BCryptPasswordEncoder().encode(user.getPassword());
-        user.setPassword(newPassword);
+        if (!StringUtils.isEmpty(user.getPassword())){
+            String newPassword = new BCryptPasswordEncoder().encode(user.getPassword());
+            user.setPassword(newPassword);
+        }
         int updateStatus = userDao.updateById(user);
         if (updateStatus<=0){
             result.setCode(-999);
@@ -152,13 +154,13 @@ public class UserServiceImpl implements UserService {
         }
         //取得查询条件
         String username = StringUtils.getString(param.get("username"));
-        String createTime = StringUtils.getString(param.get("createTime"));
+
         String createTimeStart="";
         String createTimeEnd="";
-        if (!StringUtils.isEmpty(createTime)){
-            String[] split = createTime.split("至");
-            createTimeStart=split[0];
-            createTimeEnd=split[1];
+        if (!StringUtils.isEmpty(param.get("createTime"))){
+            List<String> createTime =(List<String>) param.get("createTime");
+            createTimeStart=createTime.get(0);
+            createTimeEnd=createTime.get(1);
         }
         long page;
         long size;
@@ -171,7 +173,7 @@ public class UserServiceImpl implements UserService {
         page=Long.parseLong(pageString);
         size=Long.parseLong(sizeString);
         QueryWrapper<User> queryWrapper = new QueryWrapper<>();
-        if (StringUtils.isEmpty(createTime)){
+        if (StringUtils.isEmpty(param.get("createTime"))){
             queryWrapper.like("username",username);
         }else {
             queryWrapper.like("username",username)
