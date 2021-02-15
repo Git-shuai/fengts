@@ -1,10 +1,13 @@
 package tian.web.service.user.impl;
 
+import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
+import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
-import org.springframework.util.StringUtils;
+import org.springframework.transaction.annotation.Transactional;
 import tian.web.Result;
+import tian.web.StringUtils;
 import tian.web.bean.user.Menu;
 import tian.web.bean.user.Permission;
 import tian.web.bean.user.User;
@@ -18,6 +21,7 @@ import javax.annotation.Resource;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 /**
  * @author tian
@@ -35,6 +39,7 @@ public class UserServiceImpl implements UserService {
     @Autowired
     private JwtTokenUtil jwtTokenUtil;
 
+    @Transactional
     @Override
     public Result<Object> insertUser(User user) {
         //判断用户是否存在
@@ -70,6 +75,118 @@ public class UserServiceImpl implements UserService {
         result.setData(map);
         return result;
     }
+
+    @Transactional
+    @Override
+    public Result<Object> deleteUser(String userId) {
+        Result<Object> result = new Result<>();
+        if (StringUtils.isEmpty(userId)){
+            result.setCode(-999);
+            result.setMessage("不知道删除哪个用户");
+            return result;
+        }
+        int deleteStatus = userDao.deleteById(userId);
+        if (deleteStatus<=0){
+            result.setCode(-999);
+            result.setMessage("删除失败");
+            return result;
+        }
+        result.setCode(0);
+        result.setMessage("删除成功");
+        return result;
+    }
+
+    @Transactional
+    @Override
+    public Result<Object> updateUser(User user) {
+        Result<Object> result = new Result<>();
+        if (StringUtils.isEmpty(user)){
+            result.setCode(-999);
+            result.setMessage("不知道更新哪个用户");
+            return result;
+        }
+        //设置更新时间
+        user.setUpdateTime(new Date());
+        //设置更新密码为密文
+        String newPassword = new BCryptPasswordEncoder().encode(user.getPassword());
+        user.setPassword(newPassword);
+        int updateStatus = userDao.updateById(user);
+        if (updateStatus<=0){
+            result.setCode(-999);
+            result.setMessage("更新失败");
+            return result;
+        }
+        result.setCode(0);
+        result.setMessage("更新成功");
+        result.setData(user);
+        return result;
+    }
+
+    @Override
+    public Result<Object> selectUserList(Map<String, Object> param) {
+        Result<Object> result = new Result<>();
+        long page;
+        long size;
+        String pageString = StringUtils.getString(param.get("page"));
+        String sizeString = StringUtils.getString(param.get("size"));
+        if (StringUtils.isEmpty(pageString) || StringUtils.isEmpty(sizeString)){
+            page=1;
+            size=8;
+        }
+        page=Long.parseLong(pageString);
+        size=Long.parseLong(sizeString);
+        Page<User> userPage = userDao.selectPage(new Page<>(page, size), null);
+        result.setCode(0);
+        result.setMessage("查询成功");
+        result.setData(userPage);
+        return result;
+    }
+
+    @Override
+    public Result<Object> selectUserListByParam(Map<String, Object> param) {
+        Result<Object> result = new Result<>();
+        if (StringUtils.isEmpty(param)){
+            result.setCode(-999);
+            result.setMessage("查询条件为空");
+            return result;
+        }
+        //取得查询条件
+        String username = StringUtils.getString(param.get("username"));
+        String createTime = StringUtils.getString(param.get("createTime"));
+        String createTimeStart="";
+        String createTimeEnd="";
+        if (!StringUtils.isEmpty(createTime)){
+            String[] split = createTime.split("至");
+            createTimeStart=split[0];
+            createTimeEnd=split[1];
+        }
+        long page;
+        long size;
+        String pageString = StringUtils.getString(param.get("page"));
+        String sizeString = StringUtils.getString(param.get("size"));
+        if (StringUtils.isEmpty(pageString) || StringUtils.isEmpty(sizeString)){
+            page=1;
+            size=8;
+        }
+        page=Long.parseLong(pageString);
+        size=Long.parseLong(sizeString);
+        QueryWrapper<User> queryWrapper = new QueryWrapper<>();
+        if (StringUtils.isEmpty(createTime)){
+            queryWrapper.like("username",username);
+        }else {
+            queryWrapper.like("username",username)
+                    .between("create_time",createTimeStart,createTimeEnd);
+        }
+        Page<User> userPage = userDao.selectPage(new Page<>(page, size), queryWrapper);
+        result.setCode(0);
+        result.setMessage("查询成功");
+        result.setData(userPage);
+        return result;
+    }
+
+
+
+
 
     @Override
     public Boolean exitsUsername(User user){

@@ -1,16 +1,14 @@
 package tian.web.controller.user;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 import tian.web.Result;
 import tian.web.bean.user.User;
 import tian.web.enums.ResCode;
 import tian.web.service.user.UserService;
 
 import java.util.HashMap;
+import java.util.Map;
 
 /**
  * @author tian
@@ -32,6 +30,47 @@ public class UserController {
         Result result = userService.insertUser(user);
         return result;
     }
+
+    /**
+     * 删除用户
+     * @param userId 用户id
+     * @return Result<Object>
+     */
+    @DeleteMapping("/deleteUser/{userId}")
+    public Result<Object> deleteUser(@PathVariable("userId") String userId){
+        return userService.deleteUser(userId);
+    }
+
+    /**
+     * 更新用户
+     * @param user 用户实体类
+     * @return Result<Object>
+     */
+    @PutMapping("/updateUser")
+    public Result<Object> updateUser(@RequestBody User user){
+        return userService.updateUser(user);
+    }
+
+    /**
+     * 分页查询
+     * @param param 入参
+     * @return Result<Object>
+     */
+    @PostMapping("/selectUserList")
+    public Result<Object> selectUserList(@RequestBody Map<String,Object> param){
+        return userService.selectUserList(param);
+    }
+
+    /**
+     * 根据条件查询
+     * @param param 查询条件
+     * @return Result<Object>
+     */
+    @PostMapping("/selectUserListByParam")
+    public Result<Object> selectUserListByParam(@RequestBody Map<String,Object> param){
+        return userService.selectUserListByParam(param);
+    }
+
 
     /**
      * 用户查询API
