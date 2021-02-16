@@ -1,13 +1,16 @@
 package tian.web.controller.user;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 import tian.web.Result;
 import tian.web.bean.user.Role;
 import tian.web.service.user.RoleService;
 
 import java.util.Map;
 
+/**
+ * @author FTS
+ */
 @RestController("/role")
 public class RoleController {
 
@@ -18,7 +21,8 @@ public class RoleController {
      * @param role 角色实体类
      * @return Result<Object>
      */
-    public Result<Object> addRole(Role role){
+    @PostMapping("/addRole")
+    public Result<Object> addRole(@RequestBody Role role){
         return  roleService.addRole(role);
     }
 
@@ -27,6 +31,7 @@ public class RoleController {
      * @param roleId 角色Id
      * @return Result<Object>
      */
+    @DeleteMapping("/deleteRole")
     public Result<Object> deleteRole(String roleId){
         return roleService.deleteRole(roleId);
     }
@@ -36,7 +41,8 @@ public class RoleController {
      * @param role 角色实体类
      * @return Result<Object>
      */
-    public Result<Object> editRole(Role role){
+    @PutMapping("/editRole")
+    public Result<Object> editRole(@RequestBody Role role){
         return roleService.editRole(role);
     }
 
@@ -45,7 +51,8 @@ public class RoleController {
      * @param param 分页参数
      * @return Result<Object>
      */
-    public Result<Object> selectRole(Map<String,Object> param){
+    @PostMapping("/selectRole")
+    public Result<Object> selectRole(@RequestBody Map<String,Object> param){
         return roleService.selectRole(param);
     }
 
