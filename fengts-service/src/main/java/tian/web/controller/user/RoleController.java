@@ -11,7 +11,8 @@ import java.util.Map;
 /**
  * @author FTS
  */
-@RestController("/role")
+@RestController
+@RequestMapping("/role")
 public class RoleController {
 
     @Autowired
@@ -31,8 +32,8 @@ public class RoleController {
      * @param roleId 角色Id
      * @return Result<Object>
      */
-    @DeleteMapping("/deleteRole")
-    public Result<Object> deleteRole(String roleId){
+    @DeleteMapping("/deleteRole/{roleId}")
+    public Result<Object> deleteRole(@PathVariable("roleId") String roleId){
         return roleService.deleteRole(roleId);
     }
 

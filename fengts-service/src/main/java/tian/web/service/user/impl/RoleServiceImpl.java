@@ -9,6 +9,7 @@ import tian.web.bean.user.Role;
 import tian.web.dao.user.RoleDao;
 import tian.web.service.user.RoleService;
 
+import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -31,6 +32,8 @@ public class RoleServiceImpl implements RoleService {
             result.setMessage("已有该角色");
             return result;
         }
+        role.setCreateTime(new Date());
+        role.setUpdateTime(role.getCreateTime());
         int i = roleDao.insert(role);
         if (i<=0){
             result.setCode(-999);
@@ -70,6 +73,7 @@ public class RoleServiceImpl implements RoleService {
             result.setMessage("更新失败");
             return result;
         }
+        role.setUpdateTime(new Date());
         int i = roleDao.updateById(role);
         if (i<=0){
             result.setCode(-999);
