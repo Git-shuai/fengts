@@ -20,9 +20,9 @@
     </select>
     <select id="selectMenuListBymap" resultType="java.util.Map">
         SELECT
-        IFNULL(m.parent_id,'--') parent_id,
-        IFNULL(mm.menu_item_name,'--') parentName,
-        IFNULL(mm.icon_name,'--') parentIconName,
+        IFNULL( m.parent_id, '--' ) parent_id,
+        IFNULL( mm.menu_item_name, '--' ) parentName,
+        IFNULL( mm.icon_name, '--' ) parentIconName,
         m.menu_id,
         m.menu_name,
         m.menu_item_name,
@@ -31,17 +31,20 @@
         m.menu_des
         FROM
         menu m
-        LEFT JOIN menu mm ON m.parent_id=mm.menu_id
-        WHERE m.parent_id is not null and
-        1=1
-        <if test="map.menuName !=null and map.menuName !=''">
-            and m.menu_name LIKE #{map.menuName}
+        LEFT JOIN menu mm ON m.parent_id = mm.menu_id
+        WHERE  1=1
+        <if test="map.parentId !=null and map.parentId !=''">
+            and m.parent_id = #{map.parentId}
         </if>
-        <if test="map.iconName !=null and map.iconName !=''">
-            AND m.icon_name LIKE #{map.iconName}
+        <if test="map.menuItemName !=null and map.menuItemName !=''">
+            and m.menu_item_name LIKE #{map.menuItemName}
+        </if>
+        <if test="map.menuName !=null and map.menuName !=''">
+            AND m.menu_name LIKE #{map.menuName}
         </if>
         <if test="map.menuUrl !=null and map.menuUrl !=''">
             and m.menu_url like #{map.menuUrl}
         </if>
+        ORDER BY parent_id
     </select>
 </mapper>

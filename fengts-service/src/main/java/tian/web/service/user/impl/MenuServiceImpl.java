@@ -129,11 +129,14 @@ public class MenuServiceImpl implements MenuService {
         size = Long.parseLong(sizeString);
         //查询参数处理
         HashMap<String, Object> map = new HashMap<>();
+        if (!StringUtils.isEmpty(param.get("parentId"))) {
+            map.put("parentId", param.get("parentId"));
+        }
+        if (!StringUtils.isEmpty(param.get("menuItemName"))) {
+            map.put("menuItemName", "%" + param.get("menuItemName") + "%");
+        }
         if (!StringUtils.isEmpty(param.get("menuName"))) {
             map.put("menuName", "%" + param.get("menuName") + "%");
-        }
-        if (!StringUtils.isEmpty(param.get("iconName"))) {
-            map.put("iconName", "%" + param.get("iconName") + "%");
         }
         if (!StringUtils.isEmpty(param.get("menuUrl"))) {
             map.put("menuUrl", "%" + param.get("menuUrl") + "%");
