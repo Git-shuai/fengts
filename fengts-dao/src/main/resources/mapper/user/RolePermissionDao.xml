@@ -1,5 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="tian.web.dao.user.RolePermissionDao">
+    <insert id="insertExp">
+        insert into role_permission (role_id, per_id)
+        values
+        <foreach collection="apiIds" item="apiId" separator=",">
+            (#{roleId},#{apiId})
+        </foreach>
+        ;
+    </insert>
 
+    <select id="selectRolePermissionListByRole" resultType="java.util.Map">
+        SELECT p.per_id,
+               p.per_name,
+               p.des
+        FROM permission p
+                 LEFT JOIN role_permission rp ON rp.per_id = p.per_id
+        WHERE rp.role_id = #{roleId}
+    </select>
 </mapper>
