@@ -24,9 +24,14 @@
           AND rp.per_id = p.per_id
           AND p.per_api_url IS NOT NULL
     </select>
-    <select id="getListMenuByUsername" resultType="tian.web.bean.user.Menu">
+    <select id="getListMenuByUsername" resultType="java.util.Map">
         SELECT
-            m.menu_id, m.menu_name,m. menu_url,m.parent_id
+            m.menu_id,
+            m.parent_id ,
+            m.menu_name,
+            m.menu_item_name,
+            m.menu_url,
+            m.icon_name
         FROM
             `user` u,
             role r,

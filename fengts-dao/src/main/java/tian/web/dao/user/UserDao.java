@@ -18,5 +18,5 @@ public interface UserDao extends BaseMapper<User> {
 
     public List<Permission> getListPerByUsername(String username);
 
-    List<Menu> getListMenuByUsername(String username);
+    List<Map<String,Object>> getListMenuByUsername(String username);
 }

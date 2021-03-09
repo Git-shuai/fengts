@@ -71,12 +71,12 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .and().headers().cacheControl();
 
         //第三步，请求权限配置
-        http.authorizeRequests().anyRequest().permitAll();
-//        http.authorizeRequests()
-//                .antMatchers(HttpMethod.POST,"/register").permitAll()
-//                .antMatchers(HttpMethod.POST,"/getCode").authenticated()
-//                 //动态配置请求路径问题
-//                .anyRequest().access("@dynamicPermission.checkPermisstion(request,authentication)");
+//        http.authorizeRequests().anyRequest().permitAll();
+        http.authorizeRequests()
+                .antMatchers(HttpMethod.POST,"/register").permitAll()
+                .antMatchers(HttpMethod.POST,"/getCode").permitAll()
+                 //动态配置请求路径问题
+                .anyRequest().access("@dynamicPermission.checkPermisstion(request,authentication)");
 
         //第四步，拦截账号密码 覆盖 UsernamePasswordAuthenticationFilter过滤器
         http.addFilterAt(myUsernamePasswordAuthenticationFilter(),UsernamePasswordAuthenticationFilter.class);

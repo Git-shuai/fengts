@@ -18,10 +18,7 @@ import tian.web.enums.ResCode;
 import tian.web.service.user.UserService;
 
 import javax.annotation.Resource;
-import java.util.Date;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 /**
  * @author tian
@@ -66,7 +63,7 @@ public class UserServiceImpl implements UserService {
         result.setMessage("注册成功");
         //设置返回token
         String token = jwtTokenUtil.generateToken(user.getUsername());
-        List<Menu> urls = this.getListMenuByUsername(user.getUsername());
+        List<Map<String,Object>> urls = this.getListMenuByUsername(user.getUsername());
         HashMap<Object, Object> map = new HashMap<>();
         map.put("token",token);
         map.put("username",user.getUsername());
@@ -186,8 +183,58 @@ public class UserServiceImpl implements UserService {
         return result;
     }
 
+    @Override
+    public Result<Object> selectUserByUserName(String username) {
+        Result<Object> result = new Result<>();
+        if (StringUtils.isEmpty(username)){
+            result.setCode(-999);
+            result.setMessage("没有该用户");
+            return result;
+        }
+        HashMap<String, Object> map = new HashMap<>();
+        map.put("username",username);
+        List<User> users = userDao.selectByMap(map);
+        if (users.size()<=0){
+            result.setCode(-999);
+            result.setMessage("没有该用户");
+            return result;
+        }
+        result.setCode(0);
+        result.setData(users.get(0));
+        result.setMessage("查询成功");
+        return result;
+    }
 
-
+    @Override
+    public Result<Object> updateUserByUsernamePassword(User user) {
+        Result<Object> result = new Result<>();
+        if (StringUtils.isEmpty(user)){
+            result.setCode(-999);
+            result.setMessage("不知道更新哪个用户");
+            return result;
+        }
+        //设置更新时间
+        user.setUpdateTime(new Date());
+        //设置更新密码为密文
+        if (!StringUtils.isEmpty(user.getPassword())){
+            String newPassword = new BCryptPasswordEncoder().encode(user.getPassword());
+            user.setPassword(newPassword);
+        }
+        String token="";
+        if (!StringUtils.isEmpty(user.getUsername())){
+            token = jwtTokenUtil.generateToken(user.getUsername());
+        }
+        int updateStatus = userDao.updateById(user);
+        if (updateStatus<=0){
+            result.setCode(-999);
+            result.setMessage("更新失败");
+            return result;
+        }
+        result.setCode(0);
+        result.setMessage("更新成功");
+        result.setData(token);
+        return result;
+    }
 
 
     @Override
@@ -231,7 +278,77 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public List<Menu> getListMenuByUsername(String username) {
-        return userDao.getListMenuByUsername(username);
+    public List<Map<String,Object>> getListMenuByUsername(String username) {
+        List<Map<String, Object>> menu = userDao.getListMenuByUsername(username);
+        //取出父级
+        List<Map<String, Object>> parentList = getParentNodeList(menu, "parentId");
+        //取出子级
+        List<Map<String, Object>> childList = getNodeList(menu, "parentId");
+        //向父级集合中塞如子级
+        return getParentMakeChildList(parentList, childList);
+
+    }
+
+    /**
+     *
+     * @param parentNode
+     * @param childNode
+     * @return
+     */
+    public List<Map<String,Object>> getParentMakeChildList(List<Map<String,Object>> parentNode,List<Map<String,Object>> childNode){
+
+        if (StringUtils.isEmpty(parentNode)||StringUtils.isEmpty(childNode)){
+            return parentNode;
+        }
+        for (Map<String, Object> parentMap : parentNode) {
+            ArrayList<Map<String,Object>> childList = new ArrayList<>();
+            for (Map<String, Object> childMap : childNode) {
+                String menuId = StringUtils.getString(parentMap.get("menuId"));
+                String parentId = StringUtils.getString(childMap.get("parentId"));
+                if (menuId.equals(parentId)){
+                    childList.add(childMap);
+                }
+            }
+            parentMap.put("child",childList);
+        }
+        return parentNode;
+    }
+
+    /**
+     *
+     * @param parentNode
+     * @param nodeName
+     * @return
+     */
+    public List<Map<String,Object>> getParentNodeList(List<Map<String,Object>> parentNode,String nodeName){
+        ArrayList<Map<String,Object>> result = new ArrayList<>();
+        if (StringUtils.isEmpty(parentNode)){
+            return result;
+        }
+        for (Map<String, Object> map : parentNode) {
+            if (StringUtils.isEmpty(StringUtils.getString(map.get(nodeName)))){
+                result.add(map);
+            }
+        }
+        return result;
+    }
+
+    /**
+     *
+     * @param node
+     * @param nodeName
+     * @return
+     */
+    public List<Map<String,Object>> getNodeList(List<Map<String,Object>> node,String nodeName){
+        ArrayList<Map<String,Object>> result = new ArrayList<>();
+        if (StringUtils.isEmpty(node)){
+            return result;
+        }
+        for (Map<String, Object> map : node) {
+            if (!StringUtils.isEmpty(StringUtils.getString(map.get(nodeName)))){
+                result.add(map);
+            }
+        }
+        return result;
     }
 }

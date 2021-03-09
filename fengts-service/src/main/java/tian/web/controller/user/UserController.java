@@ -62,6 +62,16 @@ public class UserController {
     }
 
     /**
+     * 根据用户名查询用户
+     * @param username 查询条件
+     * @return Result<Object>
+     */
+    @GetMapping("/queryUserByUsername/{username}")
+    public Result<Object> queryUserByUsername(@PathVariable("username") String username){
+        return  userService.selectUserByUserName(username);
+    }
+
+    /**
      * 根据条件查询
      * @param param 查询条件
      * @return Result<Object>
@@ -102,5 +112,15 @@ public class UserController {
         map.put("code",String.valueOf((int)((Math.random() * 9 + 1) * 100000)));
         result.setData(map);
         return result;
+    }
+
+    /**
+     * 更新用户名和密码
+     * @param user 查询条件
+     * @return Result<Object>
+     */
+    @PostMapping("/updateUserByUsernamePassword")
+    public Result<Object> updateUserByUsernamePassword(@RequestBody User user){
+        return userService.updateUserByUsernamePassword(user);
     }
 }

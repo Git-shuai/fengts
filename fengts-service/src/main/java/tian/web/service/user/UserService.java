@@ -48,6 +48,20 @@ public interface UserService {
      */
     public Result<Object> selectUserListByParam(Map<String,Object> param);
 
+    /**
+     * 根据用户名查询用户
+     * @param userName 查询条件
+     * @return Result<Object>
+     */
+    public Result<Object> selectUserByUserName(String userName);
+
+    /**
+     * 更新用户名和密码
+     * @param user 查询条件
+     * @return Result<Object>
+     */
+    public Result<Object> updateUserByUsernamePassword(User user);
+
 
     public Boolean exitsUsername(User user);
 
@@ -57,5 +71,5 @@ public interface UserService {
 
     public List<Permission> getListPerByUsername(String username);
 
-    public List<Menu> getListMenuByUsername(String username);
+    public List<Map<String,Object>> getListMenuByUsername(String username);
 }

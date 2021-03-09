@@ -60,7 +60,7 @@ public class MyAuthenticationSuccessHandler extends JSONAuthentication implement
         }
 
 //        //加载前端菜单
-        List<Menu> urls = userService.getListMenuByUsername(userDetails.getUsername());
+        List<Map<String,Object>> urls = userService.getListMenuByUsername(userDetails.getUsername());
 
         //
         Map<String, Object> map = new HashMap<>();
