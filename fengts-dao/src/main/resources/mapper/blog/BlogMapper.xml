@@ -38,6 +38,15 @@
             blog_status=#{blogStatus}
         where id=#{id};
     </update>
+    <update id="updateBlogBatch">
+        update blog
+        set
+            blog_status='回收站'
+        where id in
+            <foreach collection="list" item="blogId" open="(" close=")" separator=",">
+                #{blogId}
+            </foreach> ;
+    </update>
 
 
     <select id="selectBlogList" resultType="java.util.Map">
@@ -51,9 +60,9 @@
             blog b
                 LEFT JOIN blog_tag bt ON bt.blog_id = b.id
                 LEFT JOIN blog_classify bc ON bc.blog_id = b.id
+        WHERE b.blog_status!='回收站'
         GROUP BY
             b.id
-
     </select>
     <select id="selectBlogById" resultType="java.util.Map">
         SELECT
@@ -94,5 +103,31 @@
                 and b.content like #{map.keyWord}
             </if>
         GROUP BY b.id
+    </select>
+    <select id="selectBlogListOfEcharts" resultType="java.util.Map">
+        SELECT MONTH
+                   ( b.create_time ) AS blogMon,
+               COUNT( b.id ) AS blogNum
+        FROM
+            blog b
+        GROUP BY
+            blogMon
+        ORDER BY
+            blogMon
+    </select>
+    <select id="selectRecycleBlogList" resultType="java.util.Map">
+        SELECT
+            b.*,
+            GROUP_CONCAT( DISTINCT bt.tag_id ) tagId,
+            GROUP_CONCAT( DISTINCT ( SELECT ts.tag_name FROM tags ts WHERE ts.id = bt.tag_id ) ) tagName,
+            GROUP_CONCAT( DISTINCT bc.classify_id ) classifyId,
+            GROUP_CONCAT( DISTINCT ( SELECT cf.classify_name FROM classify cf WHERE cf.id = bc.classify_id ) ) classifyName
+        FROM
+            blog b
+                LEFT JOIN blog_tag bt ON bt.blog_id = b.id
+                LEFT JOIN blog_classify bc ON bc.blog_id = b.id
+        WHERE b.blog_status='回收站'
+        GROUP BY
+            b.id
     </select>
 </mapper>

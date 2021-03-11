@@ -46,6 +46,27 @@ public class BlogController {
     }
 
     /**
+     * 批量删除博客
+     * @param blogId 博客id
+     * @return Result
+     */
+    @PostMapping("/deleteBatchIdList")
+    public Result deleteBatchIdList(@RequestBody Map<String,Object> param){
+        return blogService.deleteBatchIdList(param);
+    }
+
+
+    /**
+     * 回收站删除博客
+     * @param blogId 博客id
+     * @return Result
+     */
+    @GetMapping("/deleteRecycleBlogById/{blogId}")
+    public Result deleteRecycleBlogById( @PathVariable("blogId") String blogId){
+        return blogService.deleteRecycleBlogById(blogId);
+    }
+
+    /**
      * 修改博客
      * @param param
      * @return
@@ -69,6 +90,16 @@ public class BlogController {
     }
 
     /**
+     * 回收站查询
+     * @param page
+     * @param size
+     * @return
+     */
+    @GetMapping("/selectRecycleBlogList/{page}/{size}")
+    public Result selectRecycleBlogList( @PathVariable("page") Long page,@PathVariable("size") Long size){
+        return blogService.selectRecycleBlogList(page,size);
+    }
+    /**
      * 分页查询
      * @param param
      * @return
@@ -83,7 +114,14 @@ public class BlogController {
         return  blogService.selectBlogListByParam(param);
     }
 
-
+    /**
+     * 用户柱状图
+     * @return
+     */
+    @GetMapping("/selectBlogListOfEcharts")
+    public Result<Object> selectBlogListOfEcharts(){
+        return  blogService.selectBlogListOfEcharts();
+    }
 
 
 }

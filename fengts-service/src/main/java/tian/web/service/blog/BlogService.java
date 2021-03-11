@@ -56,4 +56,17 @@ public interface BlogService extends IService<Blog> {
      * @return
      */
     public Result selectBlogListByParam(Map<String,Object> map);
+
+    /**
+     * 查询柱状图信息
+     * @param map
+     * @return
+     */
+    public Result<Object> selectBlogListOfEcharts();
+
+    public Result selectRecycleBlogList(Long page, Long size);
+
+    public Result deleteRecycleBlogById(String blogId);
+
+    public Result deleteBatchIdList(Map<String, Object> param);
 }

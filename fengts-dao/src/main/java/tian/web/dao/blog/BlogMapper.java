@@ -29,4 +29,9 @@ public interface BlogMapper extends BaseMapper<Blog> {
 
     public IPage<Map<String,Object>> selectBlogListByParam(Page page,@Param("map") Map<String,Object> map);
 
+    List<Map<String,Object>> selectBlogListOfEcharts();
+
+    public IPage<Map<String, Object>> selectRecycleBlogList(Page<Blog> blogPage);
+
+    int updateBlogBatch(List<Integer> batchIdList);
 }

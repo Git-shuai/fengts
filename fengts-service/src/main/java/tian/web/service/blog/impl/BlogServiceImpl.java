@@ -3,6 +3,8 @@ package tian.web.service.blog.impl;
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
+import com.fasterxml.jackson.databind.util.BeanUtil;
+import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -117,6 +119,32 @@ public class BlogServiceImpl extends ServiceImpl<BlogMapper, Blog> implements Bl
         if (StringUtils.isEmpty(blogId)) {
             return new Result(ResCode.ERROR_CODE, null);
         }
+        //修改博客状态
+        Blog blog = new Blog();
+        blog.setId(Long.parseLong(blogId));
+        blog.setBlogStatus("回收站");
+        int i = blogMapper.updateById(blog);
+        if (i<=0){
+            return new Result(ResCode.ERROR_CODE, null);
+        }
+        Result result = new Result<>();
+        result.setCode(0);
+        result.setMessage("该文章已经放入回收站,可以在回收站永久删除或者恢复");
+        return result;
+    }
+
+    /**
+     * 删除
+     *
+     * @param blogId
+     * @return
+     */
+    @Transactional
+    @Override
+    public Result deleteRecycleBlogById(String blogId) {
+        if (StringUtils.isEmpty(blogId)) {
+            return new Result(ResCode.ERROR_CODE, null);
+        }
         //删除博客相关的标签
         HashMap<String, Object> param = new HashMap<>();
         param.put("blog_id", blogId);
@@ -130,7 +158,47 @@ public class BlogServiceImpl extends ServiceImpl<BlogMapper, Blog> implements Bl
         if (bl <= 0) {
             throw new RuntimeException();
         }
-        return new Result(ResCode.SUCCESS_CODE, null);
+        Result result = new Result();
+        result.setCode(0);
+        result.setMessage("删除成功");
+        return result;
+    }
+
+    @Override
+    public Result deleteBatchIdList(Map<String, Object> param) {
+        List<Integer> batchRecycleId=new ArrayList<>();
+        List<Integer> batchId=new ArrayList<>();
+
+        Result<Object> result = new Result<>();
+        if (!StringUtils.isEmpty(param.get("batchRecycleId"))){
+            batchRecycleId =(List<Integer>)param.get("batchRecycleId");
+            if (batchRecycleId.size()!=0) {
+                int ids = blogMapper.deleteBatchIds(batchRecycleId);
+                if (ids <= 0) {
+                    result.setCode(-999);
+                    result.setMessage("删除失败");
+                    return result;
+                }
+                result.setCode(0);
+                result.setMessage("删除成功");
+                return result;
+            }
+        }
+        if (!StringUtils.isEmpty(param.get("batchId"))){
+            batchId =(List<Integer>) param.get("batchId");
+            if (batchId.size()!=0) {
+                int ids = blogMapper.updateBlogBatch(batchId);
+                if (ids <= 0) {
+                    result.setCode(-999);
+                    result.setMessage("删除失败");
+                    return result;
+                }
+                result.setCode(0);
+                result.setMessage("文章已经放入回收站");
+                return result;
+            }
+        }
+        return result;
     }
 
     /**
@@ -215,6 +283,29 @@ public class BlogServiceImpl extends ServiceImpl<BlogMapper, Blog> implements Bl
     }
 
 
+    @Override
+    public Result selectRecycleBlogList(Long page, Long size) {
+        Page<Blog> blogPage = new Page<>();
+        //取到分页信息
+        if (!StringUtils.isEmpty(page) && !StringUtils.isEmpty(size)) {
+            //当前页码
+            //当前页的数量
+            blogPage.setCurrent(page);
+            blogPage.setSize(size);
+        }
+        //进行分页查询
+        IPage<Map<String, Object>> blogList = blogMapper.selectRecycleBlogList(blogPage);
+        if (StringUtils.isEmpty(blogList.getRecords())) {
+            return new Result(ResCode.SUCCESS_CODE, null);
+        }
+        for (Map<String, Object> map : blogList.getRecords()) {
+            String[] targets = {"tagId", "tagName", "classifyId", "classifyName"};
+            StringUtils.mapStringToList(map, targets);
+        }
+        //封装出参
+        return new Result(ResCode.SUCCESS_CODE, blogList);
+    }
+
     /**
      * 查询列表
      *
@@ -281,6 +372,12 @@ public class BlogServiceImpl extends ServiceImpl<BlogMapper, Blog> implements Bl
         result.setCode(0);
         result.setData(paramBlogList);
         return result;
+    }
+
+    @Override
+    public Result<Object> selectBlogListOfEcharts() {
+        List<Map<String,Object>> list=blogMapper.selectBlogListOfEcharts();
+        return new Result<>(ResCode.SUCCESS_CODE, list);
     }
 
 }
