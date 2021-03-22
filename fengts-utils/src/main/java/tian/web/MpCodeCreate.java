@@ -22,10 +22,10 @@ public class MpCodeCreate {
 
     public static String author="FTS";
     public static String DBName="fengts";
-    public static String[] DBTable={"blog","blog_classify","blog_tag","classify","tags"};
+    public static String[] DBTable={"reply"};
 
     public static String parent="tian.web";
-    public static String baoName="blog";
+    public static String baoName="reply";
 
 
     public static String moduleBeanName="/fengts-bean";
