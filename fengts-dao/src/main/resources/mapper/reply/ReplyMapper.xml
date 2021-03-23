@@ -2,4 +2,33 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="tian.web.dao.reply.ReplyMapper">
 
+    <select id="selectReplyListParentIsNull" resultType="java.util.Map">
+        SELECT
+            r.*,
+            COUNT(rr.id) sum
+        FROM
+            reply r
+                Left JOIN reply rr ON r.id = rr.parent_id
+        WHERE r.parent_id is null
+        GROUP BY r.id
+    </select>
+    <select id="selectReplyListParentIsNotNull" resultType="tian.web.bean.reply.Reply">
+        SELECT
+            r.id,
+            CONCAT(r.username,' 回复 ',rr.username) username,
+            r.content,
+            r.create_time,
+            r.praise_num,
+            r.reply_status,
+            r.praise_status
+        FROM
+            reply r
+                LEFT JOIN reply rr ON rr.id = r.parent_id
+        WHERE
+            r.parent_id in
+            <foreach collection="list" item="listId" open="(" separator="," close=")">
+                #{listId}
+            </foreach>
+            ;
+    </select>
 </mapper>

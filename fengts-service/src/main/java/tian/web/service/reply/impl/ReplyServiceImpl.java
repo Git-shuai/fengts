@@ -1,19 +1,20 @@
 package tian.web.service.reply.impl;
 
-import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
+import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import tian.web.Result;
 import tian.web.StringUtils;
 import tian.web.bean.reply.Reply;
 import tian.web.dao.reply.ReplyMapper;
 import tian.web.service.reply.ReplyService;
-import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 /**
  * <p>
@@ -36,6 +37,11 @@ public class ReplyServiceImpl implements ReplyService {
         if (StringUtils.isEmpty(reply)) {
             result.setCode(-999);
             result.setMessage("留言失败");
+            return result;
+        }
+        if (StringUtils.isEmpty(reply.getContent())){
+            result.setCode(-999);
+            result.setMessage("请填写留言在提交");
             return result;
         }
         reply.setCreateTime(new Date());
@@ -107,9 +113,7 @@ public class ReplyServiceImpl implements ReplyService {
     @Override
     public Result<Object> selectReplyListParentIsNull() {
         Result<Object> result = new Result<>();
-        HashMap<String, Object> map = new HashMap<>(1);
-        map.put("parent_id", null);
-        List<Reply> replyList = replyMapper.selectByMap(map);
+        List<Map<String,Object>> replyList = replyMapper.selectReplyListParentIsNull();
         result.setData(replyList);
         result.setCode(0);
         result.setMessage("成功");
@@ -129,6 +133,13 @@ public class ReplyServiceImpl implements ReplyService {
         HashMap<String, Object> map = new HashMap<>(1);
         map.put("parent_id",replyId);
         List<Reply> list = replyMapper.selectByMap(map);
+        List<Long> listId = list.stream().map(Reply::getId).collect(Collectors.toList());
+        while (listId.size()!=0){
+            List<Reply> replies=replyMapper.selectReplyListParentIsNotNull(listId);
+            listId.clear();
+            listId=replies.stream().map(Reply::getId).collect(Collectors.toList());
+            list.addAll(replies);
+        }
         if (list.size() == 0) {
             result.setCode(0);
             result.setData(list);
