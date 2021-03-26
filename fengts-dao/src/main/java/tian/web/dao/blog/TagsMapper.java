@@ -24,4 +24,6 @@ public interface TagsMapper extends BaseMapper<Tags> {
      * @return
      */
     public IPage<Map<String,Object>> selectTagList(Page page);
+
+    List<Map<String,Object>> selectTagCloud();
 }

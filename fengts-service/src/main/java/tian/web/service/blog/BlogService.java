@@ -69,4 +69,16 @@ public interface BlogService extends IService<Blog> {
     public Result deleteRecycleBlogById(String blogId);
 
     public Result deleteBatchIdList(Map<String, Object> param);
+
+    Result<Object> selectArticleAndTagNum();
+
+    Result<Object> classifyOfArticleNum();
+
+    Result<Object> selectNewArticle();
+
+    Result<Object> selectHoldArticle();
+
+    Result<Object> selectTagCloud();
+
+    Result<Object> selectBlogListIndex(Map<String,Integer> param);
 }

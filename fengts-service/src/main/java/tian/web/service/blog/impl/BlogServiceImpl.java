@@ -1,5 +1,6 @@
 package tian.web.service.blog.impl;
 
+import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
@@ -13,9 +14,11 @@ import tian.web.StringUtils;
 import tian.web.bean.blog.Blog;
 import tian.web.bean.blog.BlogClassify;
 import tian.web.bean.blog.BlogTag;
+import tian.web.bean.blog.Tags;
 import tian.web.dao.blog.BlogClassifyMapper;
 import tian.web.dao.blog.BlogMapper;
 import tian.web.dao.blog.BlogTagMapper;
+import tian.web.dao.blog.TagsMapper;
 import tian.web.enums.ResCode;
 import tian.web.service.blog.BlogService;
 
@@ -34,6 +37,9 @@ public class BlogServiceImpl extends ServiceImpl<BlogMapper, Blog> implements Bl
 
     @Autowired
     private BlogMapper blogMapper;
+
+    @Autowired
+    private TagsMapper tagsMapper;
 
     @Autowired
     private BlogClassifyMapper blogClassifyMapper;
@@ -380,4 +386,57 @@ public class BlogServiceImpl extends ServiceImpl<BlogMapper, Blog> implements Bl
         return new Result<>(ResCode.SUCCESS_CODE, list);
     }
 
+    @Override
+    public Result<Object> selectArticleAndTagNum() {
+        QueryWrapper<Blog> queryWrapper = new QueryWrapper<>();
+        queryWrapper.eq("blog_status","发布");
+        Integer blogCount = blogMapper.selectCount(queryWrapper);
+        Integer tagsCount = tagsMapper.selectCount(null);
+        HashMap<String, Object> map = new HashMap<>();
+        map.put("blogCount",blogCount);
+        map.put("tagsCount",tagsCount);
+        return new Result<>(ResCode.SUCCESS_CODE,map);
+    }
+
+    @Override
+    public Result<Object> classifyOfArticleNum() {
+        List<Map<String,Object>> list=blogClassifyMapper.classifyOfArticleNum();
+        return new Result<>(ResCode.SUCCESS_CODE,list);
+    }
+
+    @Override
+    public Result<Object> selectNewArticle() {
+        QueryWrapper<Blog> queryWrapper = new QueryWrapper<>();
+        queryWrapper.orderByDesc("create_time").eq("blog_status","发布");
+        Page<Map<String, Object>> page = blogMapper.selectMapsPage(new Page<>(1, 10), queryWrapper);
+        return new Result<>(ResCode.SUCCESS_CODE,page);
+    }
+
+    @Override
+    public Result<Object> selectHoldArticle() {
+        QueryWrapper<Blog> queryWrapper = new QueryWrapper<>();
+        queryWrapper.orderByDesc("read_num").eq("blog_status","发布");
+        Page<Map<String, Object>> page = blogMapper.selectMapsPage(new Page<>(1, 10), queryWrapper);
+        return new Result<>(ResCode.SUCCESS_CODE,page);
+    }
+
+    @Override
+    public Result<Object> selectTagCloud() {
+        List<Map<String,Object>> tags = tagsMapper.selectTagCloud();
+        return new Result<>(ResCode.SUCCESS_CODE,tags);
+    }
+
+    @Override
+    public Result<Object> selectBlogListIndex(Map<String, Integer> param) {
+        Integer page = param.get("page");
+        Integer size = param.get("size");
+        if(StringUtils.isEmpty(page)||StringUtils.isEmpty(size)){
+            page=1;
+            size=8;
+        }
+        QueryWrapper<Blog> queryWrapper = new QueryWrapper<>();
+        queryWrapper.eq("blog_status","发布");
+        Page<Map<String, Object>> blogList = blogMapper.selectMapsPage(new Page<>(page, size), queryWrapper);
+        return new Result<>(ResCode.SUCCESS_CODE,blogList);
+    }
 }

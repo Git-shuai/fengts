@@ -4,6 +4,7 @@ import tian.web.bean.blog.BlogClassify;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 
 import java.util.List;
+import java.util.Map;
 
 /**
  * <p>
@@ -21,4 +22,6 @@ public interface BlogClassifyMapper extends BaseMapper<BlogClassify> {
      * @return
      */
     public int addBlogClassifyBatch(List<BlogClassify> blogClassifies);
+
+    List<Map<String, Object>> classifyOfArticleNum();
 }

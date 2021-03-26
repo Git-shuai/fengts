@@ -5,9 +5,19 @@
     <insert id="addBlogClassifyBatch">
         insert into fengts.blog_classify(blog_id, classify_id)
         values
-         <foreach collection="list" item="blogClassifies"  separator=",">
-             (#{blogClassifies.blogId},#{blogClassifies.classifyId})
-         </foreach>
-;
+        <foreach collection="list" item="blogClassifies" separator=",">
+            (#{blogClassifies.blogId},#{blogClassifies.classifyId})
+        </foreach>
+        ;
     </insert>
+    <select id="classifyOfArticleNum" resultType="java.util.Map">
+        SELECT c.id,
+               c.parent_id,
+               c.des,
+               c.classify_name,
+               COUNT(bc.id) count
+        FROM classify c
+                 LEFT JOIN blog_classify bc ON bc.classify_id = c.id
+        GROUP BY c.id
+    </select>
 </mapper>
