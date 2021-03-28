@@ -1,5 +1,8 @@
 package tian.web.dao.blog;
 
+import com.baomidou.mybatisplus.core.metadata.IPage;
+import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
+import org.apache.ibatis.annotations.Param;
 import tian.web.bean.blog.BlogClassify;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 
@@ -24,4 +27,8 @@ public interface BlogClassifyMapper extends BaseMapper<BlogClassify> {
     public int addBlogClassifyBatch(List<BlogClassify> blogClassifies);
 
     List<Map<String, Object>> classifyOfArticleNum();
+
+    List<Map<String, Object>> selectClassify();
+
+    IPage<Map<String, Object>> selectBlogListByClassify(Page page,@Param("classifyId") String classifyId);
 }

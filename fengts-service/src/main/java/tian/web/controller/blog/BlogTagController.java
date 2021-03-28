@@ -1,9 +1,13 @@
 package tian.web.controller.blog;
 
 
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.*;
 
-import org.springframework.web.bind.annotation.RestController;
+import tian.web.Result;
+import tian.web.service.blog.BlogTagService;
+
+import java.util.Map;
 
 /**
  * <p>
@@ -14,8 +18,30 @@ import org.springframework.web.bind.annotation.RestController;
  * @since 2021-01-05
  */
 @RestController
-@RequestMapping("/blog-tag")
+@RequestMapping("/blogTag")
 public class BlogTagController {
+
+    @Autowired
+    private BlogTagService blogTagService;
+
+    /**
+     * 查询标签
+     * @return Result
+     */
+    @GetMapping("/selectTag")
+    public Result<Object> selectTag(){
+        return blogTagService.selectTag();
+    }
+
+    /**
+     * 查询标签下的博客
+     * @return Result
+     */
+    @PostMapping("/selectBlogListByTag")
+    public Result<Object> selectBlogListByTag(@RequestBody Map<String,Object> param){
+        return blogTagService.selectBlogListByTag(param);
+    }
+
 
 }
 

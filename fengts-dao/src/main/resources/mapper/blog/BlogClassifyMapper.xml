@@ -20,4 +20,32 @@
                  LEFT JOIN blog_classify bc ON bc.classify_id = c.id
         GROUP BY c.id
     </select>
+    <select id="selectClassify" resultType="java.util.Map">
+        SELECT
+            c.id,
+            c.classify_name,
+            COUNT(bc.id) num
+        FROM
+            classify c
+                LEFT JOIN blog_classify bc ON c.id = bc.classify_id
+        GROUP BY
+            c.id
+    </select>
+    <select id="selectBlogListByClassify" resultType="java.util.Map">
+        SELECT
+            b.*,
+            GROUP_CONCAT( DISTINCT bt.tag_id ) tagId,
+            GROUP_CONCAT( DISTINCT ( SELECT ts.tag_name FROM tags ts WHERE ts.id = bt.tag_id ) ) tagName,
+            GROUP_CONCAT( DISTINCT bc.classify_id ) classifyId,
+            GROUP_CONCAT( DISTINCT ( SELECT cf.classify_name FROM classify cf WHERE cf.id = bc.classify_id ) ) classifyName
+        FROM
+            blog b
+                LEFT JOIN blog_tag bt ON bt.blog_id = b.id
+                LEFT JOIN blog_classify bc ON bc.blog_id = b.id
+        WHERE
+            bc.classify_id LIKE #{classifyId}
+          AND b.blog_status = '发布'
+        GROUP BY
+            b.id
+    </select>
 </mapper>

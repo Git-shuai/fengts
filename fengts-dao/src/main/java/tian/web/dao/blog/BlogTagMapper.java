@@ -1,9 +1,13 @@
 package tian.web.dao.blog;
 
+import com.baomidou.mybatisplus.core.metadata.IPage;
+import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
+import org.apache.ibatis.annotations.Param;
 import tian.web.bean.blog.BlogTag;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 
 import java.util.List;
+import java.util.Map;
 
 /**
  * <p>
@@ -20,4 +24,8 @@ public interface BlogTagMapper extends BaseMapper<BlogTag> {
      * @return
      */
     public int addBlogTagBatch(List<BlogTag> blogTagList);
+
+    List<Map<String, Object>> selectTag();
+
+    IPage<Map<String, Object>> selectBlogListByTag(Page page,@Param("tagId") String tagId);
 }

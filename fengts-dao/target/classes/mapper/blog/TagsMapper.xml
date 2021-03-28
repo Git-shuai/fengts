@@ -17,4 +17,10 @@
         GROUP BY
             id
     </select>
+    <select id="selectTagCloud" resultType="java.util.Map">
+        SELECT
+            id,tag_name name
+        FROM
+            `tags`
+    </select>
 </mapper>

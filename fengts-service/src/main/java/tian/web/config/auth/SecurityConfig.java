@@ -75,6 +75,8 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
         http.authorizeRequests()
                 .antMatchers("/reply/**").permitAll()
                 .antMatchers("/blog/select/**").permitAll()
+                .antMatchers("/blogTag/**").permitAll()
+                .antMatchers("/blogClassify/**").permitAll()
                 .antMatchers(HttpMethod.POST,"/register").permitAll()
                 .antMatchers(HttpMethod.POST,"/getCode").permitAll()
                  //动态配置请求路径问题
