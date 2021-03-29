@@ -186,5 +186,15 @@ public class BlogController {
     public Result<Object> selectBlogListIndex(@RequestBody Map<String,Integer> param) {
         return blogService.selectBlogListIndex(param);
     }
+    /**
+     * 分页查询
+     *
+     * @param param
+     * @return
+     */
+    @PostMapping("/select/selectBlogById")
+    public Result selectBlogById(@RequestBody Map<String, Object> param) {
+        return blogService.selectBlogById(param);
+    }
 }
 
