@@ -83,4 +83,8 @@ public interface BlogService extends IService<Blog> {
     Result<Object> selectBlogListIndex(Map<String,Integer> param);
 
     Result selectBlogReadNum();
+
+    Result selectCarousel();
+
+    Result selectCommentList();
 }

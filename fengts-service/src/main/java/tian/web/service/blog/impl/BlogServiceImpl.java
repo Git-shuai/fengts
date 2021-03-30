@@ -19,6 +19,7 @@ import tian.web.dao.blog.BlogClassifyMapper;
 import tian.web.dao.blog.BlogMapper;
 import tian.web.dao.blog.BlogTagMapper;
 import tian.web.dao.blog.TagsMapper;
+import tian.web.dao.reply.ReplyMapper;
 import tian.web.dao.user.UserDao;
 import tian.web.enums.ResCode;
 import tian.web.service.blog.BlogService;
@@ -47,6 +48,9 @@ public class BlogServiceImpl extends ServiceImpl<BlogMapper, Blog> implements Bl
 
     @Autowired
     private BlogTagMapper blogTagMapper;
+
+    @Autowired
+    private ReplyMapper replyMapper;
 
     /**
      * 添加
@@ -452,5 +456,25 @@ public class BlogServiceImpl extends ServiceImpl<BlogMapper, Blog> implements Bl
     public Result selectBlogReadNum() {
         Map<String,Object> map=blogMapper.selectBlogReadNum();
         return new Result(ResCode.SUCCESS_CODE,map);
+    }
+
+    @Override
+    public Result selectCarousel() {
+        Result<Object> result = new Result<>();
+        List<Map<String,Object>> list= blogMapper.selectCarousel();
+        result.setMessage("成功");
+        result.setCode(0);
+        result.setData(list);
+        return result;
+    }
+
+    @Override
+    public Result selectCommentList() {
+        Result<Object> result = new Result<>();
+        Page<Map<String, Object>> page = replyMapper.selectMapsPage(new Page<>(1, 10), null);
+        result.setMessage("成功");
+        result.setCode(0);
+        result.setData(page);
+        return result;
     }
 }

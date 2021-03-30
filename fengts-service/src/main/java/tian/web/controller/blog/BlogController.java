@@ -5,6 +5,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import tian.web.Result;
+import tian.web.dao.reply.ReplyMapper;
 import tian.web.service.blog.BlogService;
 
 import javax.websocket.server.PathParam;
@@ -24,6 +25,8 @@ public class BlogController {
 
     @Autowired
     private BlogService blogService;
+
+
 
     /**
      * 添加博客
@@ -206,6 +209,28 @@ public class BlogController {
     @PostMapping("/select/selectBlogReadNum")
     public Result selectBlogReadNum() {
         return blogService.selectBlogReadNum();
+    }
+
+    /**
+     * 查询幻灯片的信息
+     *
+     * @param param
+     * @return
+     */
+    @GetMapping("/select/selectCarousel")
+    public Result selectCarousel() {
+        return blogService.selectCarousel();
+    }
+
+    /**
+     * 加载评论列表
+     *
+     * @param param
+     * @return
+     */
+    @GetMapping("/select/selectCommentList")
+    public Result selectCommentList() {
+        return blogService.selectCommentList();
     }
 }
 

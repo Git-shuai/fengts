@@ -88,4 +88,8 @@ public class Blog implements Serializable {
      */
     private String blogStatus;
 
+    /**
+     * 封面图
+     */
+    private String blogUrl;
 }

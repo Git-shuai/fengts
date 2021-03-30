@@ -11,7 +11,8 @@
                     is_original,
                     is_admire,
                     is_comment,
-                    blog_status           )
+                    blog_status ,
+                    blog_url        )
             values (#{title},
                     #{auth},
                     #{createTime},
@@ -21,7 +22,9 @@
                     #{isOriginal},
                     #{isAdmire},
                     #{isComment},
-                    #{blogStatus});
+                    #{blogStatus},
+                    #{blogUrl}
+                    );
     </insert>
     <update id="updateBlog">
         update blog
@@ -129,5 +132,21 @@
         WHERE b.blog_status='回收站'
         GROUP BY
             b.id
+    </select>
+    <select id="selectBlogReadNum" resultType="java.util.Map">
+        SELECT
+            SUM(b.read_num) readNum
+        FROM
+            blog b
+    </select>
+    <select id="selectCarousel" resultType="java.util.Map">
+        SELECT
+            b.id,
+            b.blog_url url
+        FROM
+            blog b
+        ORDER BY
+            create_time DESC
+        LIMIT 0,5
     </select>
 </mapper>

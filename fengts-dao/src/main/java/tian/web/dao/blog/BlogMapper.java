@@ -36,4 +36,7 @@ public interface BlogMapper extends BaseMapper<Blog> {
     int updateBlogBatch(List<Integer> batchIdList);
 
     Map<String,Object> selectBlogReadNum();
+
+    List<Map<String, Object>> selectCarousel();
+
 }
