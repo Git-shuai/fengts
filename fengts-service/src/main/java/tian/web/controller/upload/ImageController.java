@@ -11,6 +11,8 @@ import tian.web.enums.ResCode;
 import tian.web.service.upload.BaseUploadImage;
 import tian.web.service.upload.OSSImageService;
 
+import java.util.Map;
+
 /**
  * @author tian
  * @date 2020/9/14
@@ -48,6 +50,18 @@ public class ImageController {
 //        throw new RuntimeException("服务端测试异常！");
         String url = baseUploadImage.uploadImage(file);
         return new Result<Object>(ResCode.SUCCESS_CODE,url);
+    }
+
+    @PostMapping("/uploadImageOfUserRul")
+    public Result<Object> uploadImageOfUserRul(@RequestParam("file") MultipartFile file, @RequestParam("id") String id){
+        String userID = StringUtils.getString(id);
+        if (StringUtils.isEmpty(userID)){
+            return new Result<Object>(ResCode.ERROR_CODE,null);
+        }
+        if (StringUtils.isEmpty(file)){
+            return new Result<Object>(ResCode.ERROR_CODE,null);
+        }
+        return ossImageService.uploadImage(file,userID);
     }
 
 }

@@ -19,6 +19,7 @@ import tian.web.dao.blog.BlogClassifyMapper;
 import tian.web.dao.blog.BlogMapper;
 import tian.web.dao.blog.BlogTagMapper;
 import tian.web.dao.blog.TagsMapper;
+import tian.web.dao.user.UserDao;
 import tian.web.enums.ResCode;
 import tian.web.service.blog.BlogService;
 
@@ -278,8 +279,15 @@ public class BlogServiceImpl extends ServiceImpl<BlogMapper, Blog> implements Bl
             result.setMessage("查询失败");
             return result;
         }
+
         Map<String, Object> blog = blogMapper.selectBlogById(blogId);
+
+        Blog blog1 = new Blog();
+        blog1.setId(Long.parseLong(blogId));
+        blog1.setReadNum(Long.parseLong(StringUtils.getString(blog.get("readNum")))+1);
+        blogMapper.updateById(blog1);
         //处理tag标签
+        blog.put("readNum",Long.parseLong(StringUtils.getString(blog.get("readNum")))+1);
         String[] targets = {"tagId", "tagName", "classifyId", "classifyName"};
         Map<String, Object> blogB = StringUtils.mapStringToList(blog, targets);
         result.setCode(0);
@@ -438,5 +446,11 @@ public class BlogServiceImpl extends ServiceImpl<BlogMapper, Blog> implements Bl
         queryWrapper.eq("blog_status","发布");
         Page<Map<String, Object>> blogList = blogMapper.selectMapsPage(new Page<>(page, size), queryWrapper);
         return new Result<>(ResCode.SUCCESS_CODE,blogList);
+    }
+
+    @Override
+    public Result selectBlogReadNum() {
+        Map<String,Object> map=blogMapper.selectBlogReadNum();
+        return new Result(ResCode.SUCCESS_CODE,map);
     }
 }

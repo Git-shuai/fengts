@@ -130,4 +130,10 @@
         GROUP BY
             b.id
     </select>
+    <select id="selectBlogReadNum" resultType="java.util.Map">
+        SELECT
+            SUM(b.read_num) readNum
+        FROM
+            blog b
+    </select>
 </mapper>

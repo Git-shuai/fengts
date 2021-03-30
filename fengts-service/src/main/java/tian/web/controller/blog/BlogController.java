@@ -196,5 +196,16 @@ public class BlogController {
     public Result selectBlogById(@RequestBody Map<String, Object> param) {
         return blogService.selectBlogById(param);
     }
+
+    /**
+     * 阅读量查询
+     *
+     * @param param
+     * @return
+     */
+    @PostMapping("/select/selectBlogReadNum")
+    public Result selectBlogReadNum() {
+        return blogService.selectBlogReadNum();
+    }
 }
 

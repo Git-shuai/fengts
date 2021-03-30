@@ -1,6 +1,7 @@
 package tian.web.service.upload;
 
 import org.springframework.web.multipart.MultipartFile;
+import tian.web.Result;
 
 /**
  * @author tian
@@ -14,4 +15,10 @@ public interface OSSImageService {
      * @return
      */
     String uploadImage(MultipartFile file);
+
+    /**
+     * 简单上传图片
+     * @return
+     */
+    Result<Object> uploadImage(MultipartFile file, String id);
 }

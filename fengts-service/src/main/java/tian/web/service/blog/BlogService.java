@@ -81,4 +81,6 @@ public interface BlogService extends IService<Blog> {
     Result<Object> selectTagCloud();
 
     Result<Object> selectBlogListIndex(Map<String,Integer> param);
+
+    Result selectBlogReadNum();
 }
