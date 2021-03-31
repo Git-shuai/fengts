@@ -3,6 +3,7 @@ package tian.web.controller.user;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import tian.web.Result;
+import tian.web.SendMail;
 import tian.web.bean.user.User;
 import tian.web.enums.ResCode;
 import tian.web.service.user.UserService;
@@ -102,16 +103,14 @@ public class UserController {
     public Result<Object> getCode(@RequestBody User user){
         Result<Object> result = new Result<>();
         Boolean exitsUsername = userService.exitsUsername(user);
+        String code = String.valueOf((int) ((Math.random() * 9 + 1) * 100000));
         if (!exitsUsername){
-            result.setCode(ResCode.ERROR_CODE);
-            result.setMessage("用户名不存在");
+            SendMail.sendText(user.getUsername(),code);
+            result.setCode(0);
+            result.setMessage("已发送");
+            return result;
         }
-        result.setCode(ResCode.SUCCESS_CODE);
-        result.setMessage("验证码已发送");
-        HashMap<String, Object> map = new HashMap<>();
-        map.put("code",String.valueOf((int)((Math.random() * 9 + 1) * 100000)));
-        result.setData(map);
-        return result;
+        return userService.sendText(user.getUsername(),code);
     }
 
     /**

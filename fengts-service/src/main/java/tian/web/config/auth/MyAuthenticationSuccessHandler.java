@@ -1,6 +1,5 @@
 package tian.web.config.auth;
 
-import com.baomidou.mybatisplus.extension.api.R;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
@@ -8,8 +7,6 @@ import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.web.authentication.AuthenticationSuccessHandler;
 import org.springframework.stereotype.Component;
 import tian.web.Result;
-import tian.web.bean.user.Menu;
-import tian.web.bean.user.Permission;
 import tian.web.components.TokenCache;
 import tian.web.enums.ResCode;
 import tian.web.service.user.UserService;

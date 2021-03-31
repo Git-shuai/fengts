@@ -46,12 +46,13 @@ public class MyUsernamePasswordAuthenticationFilter extends UsernamePasswordAuth
                     //获得账号、密码
                     String username = authenticationBean.get(SPRING_SECURITY_FORM_USERNAME_KEY);
                     String password = authenticationBean.get(SPRING_SECURITY_FORM_PASSWORD_KEY);
+                    String code = authenticationBean.get("code");
                     //可以验证账号、密码
                     //System.out.println("username = " + username);
                     //System.out.println("password = " + password);
 
                     //检测账号、密码是否存在
-                    if (userService.checkLogin(username, password)) {
+                    if (userService.checkLogin(username, password,code)) {
                         //将账号、密码装入UsernamePasswordAuthenticationToken中
                         UsernamePasswordAuthenticationToken authenticationToken = new UsernamePasswordAuthenticationToken(username, password);
                         setDetails(request, authenticationToken);

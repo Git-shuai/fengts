@@ -1,13 +1,12 @@
 package tian.web.service.user.impl;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import tian.web.Result;
 import tian.web.StringUtils;
 import tian.web.dao.user.UserRoleDao;
 import tian.web.service.user.UserRoleService;
 
-import java.util.ArrayList;
+import javax.annotation.Resource;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -18,7 +17,7 @@ import java.util.Map;
 @Service("userRoleService")
 public class UserRoleServiceImpl implements UserRoleService {
 
-    @Autowired
+    @Resource
     private UserRoleDao userRoleDao;
 
     @Override
@@ -42,14 +41,14 @@ public class UserRoleServiceImpl implements UserRoleService {
         }
         //判断用户ID集合是否为空
         List<Object> userIds = (List<Object>) param.get("userIds");
-        if (userIds.size()==0){
+        if (userIds.size() == 0) {
             result.setCode(0);
             result.setMessage("删除该角色下的用户成功");
             return result;
         }
         //添加该角色下单用户信息
 
-        int insertExp = userRoleDao.insertExp(roleId,userIds);
+        int insertExp = userRoleDao.insertExp(roleId, userIds);
         if (insertExp <= 0) {
             result.setCode(-999);
             result.setMessage("分配角色失败");
@@ -64,12 +63,12 @@ public class UserRoleServiceImpl implements UserRoleService {
     public Result<Object> selectUserRoleList(Map<String, Object> param) {
         Result<Object> result = new Result<>();
         String roleId = StringUtils.getString(param.get("roleId"));
-        if (StringUtils.isEmpty(roleId)){
+        if (StringUtils.isEmpty(roleId)) {
             result.setCode(-999);
             result.setMessage("查询失败");
             return result;
         }
-        List<Map<String,Object>> list=userRoleDao.selectUserRoleListByRole(roleId);
+        List<Map<String, Object>> list = userRoleDao.selectUserRoleListByRole(roleId);
         result.setCode(0);
         result.setMessage("查询成功");
         result.setData(list);

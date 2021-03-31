@@ -7,6 +7,7 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import tian.web.Result;
+import tian.web.SendMail;
 import tian.web.StringUtils;
 import tian.web.bean.user.Menu;
 import tian.web.bean.user.Permission;
@@ -42,7 +43,7 @@ public class UserServiceImpl implements UserService {
         //判断用户是否存在
         Result<Object> result = new Result<>();
         Boolean userExits = this.exitsUsername(user);
-        if (userExits){
+        if (userExits) {
             result.setCode(ResCode.ERROR_CODE);
             result.setMessage("用户名已存在");
             return result;
@@ -55,7 +56,7 @@ public class UserServiceImpl implements UserService {
         user.setCreateTime(new Date());
         user.setUpdateTime(user.getCreateTime());
         int i = userDao.insert(user);
-        if (i!=1){
+        if (i != 1) {
             result.setCode(ResCode.ERROR_CODE);
             result.setMessage("用户注册失败");
         }
@@ -63,12 +64,12 @@ public class UserServiceImpl implements UserService {
         result.setMessage("注册成功");
         //设置返回token
         String token = jwtTokenUtil.generateToken(user.getUsername());
-        List<Map<String,Object>> urls = this.getListMenuByUsername(user.getUsername());
+        List<Map<String, Object>> urls = this.getListMenuByUsername(user.getUsername());
         HashMap<Object, Object> map = new HashMap<>();
-        map.put("token",token);
-        map.put("username",user.getUsername());
-        map.put("menu",urls);
-        map.put("auth","默认用户");
+        map.put("token", token);
+        map.put("username", user.getUsername());
+        map.put("menu", urls);
+        map.put("auth", "默认用户");
         result.setData(map);
         return result;
     }
@@ -77,13 +78,13 @@ public class UserServiceImpl implements UserService {
     @Override
     public Result<Object> deleteUser(String userId) {
         Result<Object> result = new Result<>();
-        if (StringUtils.isEmpty(userId)){
+        if (StringUtils.isEmpty(userId)) {
             result.setCode(-999);
             result.setMessage("不知道删除哪个用户");
             return result;
         }
         int deleteStatus = userDao.deleteById(userId);
-        if (deleteStatus<=0){
+        if (deleteStatus <= 0) {
             result.setCode(-999);
             result.setMessage("删除失败");
             return result;
@@ -97,7 +98,7 @@ public class UserServiceImpl implements UserService {
     @Override
     public Result<Object> updateUser(User user) {
         Result<Object> result = new Result<>();
-        if (StringUtils.isEmpty(user)){
+        if (StringUtils.isEmpty(user)) {
             result.setCode(-999);
             result.setMessage("不知道更新哪个用户");
             return result;
@@ -105,12 +106,12 @@ public class UserServiceImpl implements UserService {
         //设置更新时间
         user.setUpdateTime(new Date());
         //设置更新密码为密文
-        if (!StringUtils.isEmpty(user.getPassword())){
+        if (!StringUtils.isEmpty(user.getPassword())) {
             String newPassword = new BCryptPasswordEncoder().encode(user.getPassword());
             user.setPassword(newPassword);
         }
         int updateStatus = userDao.updateById(user);
-        if (updateStatus<=0){
+        if (updateStatus <= 0) {
             result.setCode(-999);
             result.setMessage("更新失败");
             return result;
@@ -128,12 +129,12 @@ public class UserServiceImpl implements UserService {
         long size;
         String pageString = StringUtils.getString(param.get("page"));
         String sizeString = StringUtils.getString(param.get("size"));
-        if (StringUtils.isEmpty(pageString) || StringUtils.isEmpty(sizeString)){
-            page=1;
-            size=8;
+        if (StringUtils.isEmpty(pageString) || StringUtils.isEmpty(sizeString)) {
+            page = 1;
+            size = 8;
         }
-        page=Long.parseLong(pageString);
-        size=Long.parseLong(sizeString);
+        page = Long.parseLong(pageString);
+        size = Long.parseLong(sizeString);
         Page<User> userPage = userDao.selectPage(new Page<>(page, size), null);
         result.setCode(0);
         result.setMessage("查询成功");
@@ -144,7 +145,7 @@ public class UserServiceImpl implements UserService {
     @Override
     public Result<Object> selectUserListByParam(Map<String, Object> param) {
         Result<Object> result = new Result<>();
-        if (StringUtils.isEmpty(param)){
+        if (StringUtils.isEmpty(param)) {
             result.setCode(-999);
             result.setMessage("查询条件为空");
             return result;
@@ -152,29 +153,29 @@ public class UserServiceImpl implements UserService {
         //取得查询条件
         String username = StringUtils.getString(param.get("username"));
 
-        String createTimeStart="";
-        String createTimeEnd="";
-        if (!StringUtils.isEmpty(param.get("createTime"))){
-            List<String> createTime =(List<String>) param.get("createTime");
-            createTimeStart=createTime.get(0);
-            createTimeEnd=createTime.get(1);
+        String createTimeStart = "";
+        String createTimeEnd = "";
+        if (!StringUtils.isEmpty(param.get("createTime"))) {
+            List<String> createTime = (List<String>) param.get("createTime");
+            createTimeStart = createTime.get(0);
+            createTimeEnd = createTime.get(1);
         }
         long page;
         long size;
         String pageString = StringUtils.getString(param.get("page"));
         String sizeString = StringUtils.getString(param.get("size"));
-        if (StringUtils.isEmpty(pageString) || StringUtils.isEmpty(sizeString)){
-            page=1;
-            size=8;
+        if (StringUtils.isEmpty(pageString) || StringUtils.isEmpty(sizeString)) {
+            page = 1;
+            size = 8;
         }
-        page=Long.parseLong(pageString);
-        size=Long.parseLong(sizeString);
+        page = Long.parseLong(pageString);
+        size = Long.parseLong(sizeString);
         QueryWrapper<User> queryWrapper = new QueryWrapper<>();
-        if (StringUtils.isEmpty(param.get("createTime"))){
-            queryWrapper.like("username",username);
-        }else {
-            queryWrapper.like("username",username)
-                    .between("create_time",createTimeStart,createTimeEnd);
+        if (StringUtils.isEmpty(param.get("createTime"))) {
+            queryWrapper.like("username", username);
+        } else {
+            queryWrapper.like("username", username)
+                    .between("create_time", createTimeStart, createTimeEnd);
         }
         Page<User> userPage = userDao.selectPage(new Page<>(page, size), queryWrapper);
         result.setCode(0);
@@ -186,15 +187,15 @@ public class UserServiceImpl implements UserService {
     @Override
     public Result<Object> selectUserByUserName(String username) {
         Result<Object> result = new Result<>();
-        if (StringUtils.isEmpty(username)){
+        if (StringUtils.isEmpty(username)) {
             result.setCode(-999);
             result.setMessage("没有该用户");
             return result;
         }
         HashMap<String, Object> map = new HashMap<>();
-        map.put("username",username);
+        map.put("username", username);
         List<User> users = userDao.selectByMap(map);
-        if (users.size()<=0){
+        if (users.size() <= 0) {
             result.setCode(-999);
             result.setMessage("没有该用户");
             return result;
@@ -208,7 +209,7 @@ public class UserServiceImpl implements UserService {
     @Override
     public Result<Object> updateUserByUsernamePassword(User user) {
         Result<Object> result = new Result<>();
-        if (StringUtils.isEmpty(user)){
+        if (StringUtils.isEmpty(user)) {
             result.setCode(-999);
             result.setMessage("不知道更新哪个用户");
             return result;
@@ -216,16 +217,16 @@ public class UserServiceImpl implements UserService {
         //设置更新时间
         user.setUpdateTime(new Date());
         //设置更新密码为密文
-        if (!StringUtils.isEmpty(user.getPassword())){
+        if (!StringUtils.isEmpty(user.getPassword())) {
             String newPassword = new BCryptPasswordEncoder().encode(user.getPassword());
             user.setPassword(newPassword);
         }
-        String token="";
-        if (!StringUtils.isEmpty(user.getUsername())){
+        String token = "";
+        if (!StringUtils.isEmpty(user.getUsername())) {
             token = jwtTokenUtil.generateToken(user.getUsername());
         }
         int updateStatus = userDao.updateById(user);
-        if (updateStatus<=0){
+        if (updateStatus <= 0) {
             result.setCode(-999);
             result.setMessage("更新失败");
             return result;
@@ -238,25 +239,29 @@ public class UserServiceImpl implements UserService {
 
 
     @Override
-    public Boolean exitsUsername(User user){
+    public Boolean exitsUsername(User user) {
         HashMap<String, Object> map = new HashMap<>();
-        map.put("username",user.getUsername());
+        map.put("username", user.getUsername());
         List<User> list = userDao.selectByMap(map);
         return list.size() > 0;
     }
 
     @Override
-    public Boolean checkLogin(String username, String password) throws Exception {
+    public Boolean checkLogin(String username, String password, String code) throws Exception {
         HashMap<String, Object> usernameMap = new HashMap<>();
-        usernameMap.put("username",username);
+        usernameMap.put("username", username);
         List<User> users = userDao.selectByMap(usernameMap);
-        if (users.isEmpty()){
-            throw  new Exception("账号不存在，请重新尝试！");
+        if (users.isEmpty()) {
+            throw new Exception("账号不存在，请重新尝试！");
         }
-        String dbPassword=users.get(0).getPassword();
-        if (!bCryptPasswordEncoderUtil.matches(password,dbPassword)){
+        String dbPassword = users.get(0).getPassword();
+        if (!bCryptPasswordEncoderUtil.matches(password, dbPassword)) {
             //设置友好提示
             throw new Exception("密码不正确！");
+        }
+        String DBCode = users.get(0).getCode();
+        if (!code.equals(DBCode)) {
+            throw new Exception("验证码错误！");
         }
         return true;
     }
@@ -264,9 +269,9 @@ public class UserServiceImpl implements UserService {
     @Override
     public User queryUserByUsername(String username) {
         HashMap<String, Object> map = new HashMap<>();
-        map.put("username",username);
+        map.put("username", username);
         List<User> users = userDao.selectByMap(map);
-        if (!users.isEmpty()){
+        if (!users.isEmpty()) {
             return users.get(0);
         }
         return null;
@@ -278,7 +283,7 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public List<Map<String,Object>> getListMenuByUsername(String username) {
+    public List<Map<String, Object>> getListMenuByUsername(String username) {
         List<Map<String, Object>> menu = userDao.getListMenuByUsername(username);
         //取出父级
         List<Map<String, Object>> parentList = getParentNodeList(menu, "parentId");
@@ -290,43 +295,41 @@ public class UserServiceImpl implements UserService {
     }
 
     /**
-     *
      * @param parentNode
      * @param childNode
      * @return
      */
-    public List<Map<String,Object>> getParentMakeChildList(List<Map<String,Object>> parentNode,List<Map<String,Object>> childNode){
+    public List<Map<String, Object>> getParentMakeChildList(List<Map<String, Object>> parentNode, List<Map<String, Object>> childNode) {
 
-        if (StringUtils.isEmpty(parentNode)||StringUtils.isEmpty(childNode)){
+        if (StringUtils.isEmpty(parentNode) || StringUtils.isEmpty(childNode)) {
             return parentNode;
         }
         for (Map<String, Object> parentMap : parentNode) {
-            ArrayList<Map<String,Object>> childList = new ArrayList<>();
+            ArrayList<Map<String, Object>> childList = new ArrayList<>();
             for (Map<String, Object> childMap : childNode) {
                 String menuId = StringUtils.getString(parentMap.get("menuId"));
                 String parentId = StringUtils.getString(childMap.get("parentId"));
-                if (menuId.equals(parentId)){
+                if (menuId.equals(parentId)) {
                     childList.add(childMap);
                 }
             }
-            parentMap.put("child",childList);
+            parentMap.put("child", childList);
         }
         return parentNode;
     }
 
     /**
-     *
      * @param parentNode
      * @param nodeName
      * @return
      */
-    public List<Map<String,Object>> getParentNodeList(List<Map<String,Object>> parentNode,String nodeName){
-        ArrayList<Map<String,Object>> result = new ArrayList<>();
-        if (StringUtils.isEmpty(parentNode)){
+    public List<Map<String, Object>> getParentNodeList(List<Map<String, Object>> parentNode, String nodeName) {
+        ArrayList<Map<String, Object>> result = new ArrayList<>();
+        if (StringUtils.isEmpty(parentNode)) {
             return result;
         }
         for (Map<String, Object> map : parentNode) {
-            if (StringUtils.isEmpty(StringUtils.getString(map.get(nodeName)))){
+            if (StringUtils.isEmpty(StringUtils.getString(map.get(nodeName)))) {
                 result.add(map);
             }
         }
@@ -334,21 +337,47 @@ public class UserServiceImpl implements UserService {
     }
 
     /**
-     *
      * @param node
      * @param nodeName
      * @return
      */
-    public List<Map<String,Object>> getNodeList(List<Map<String,Object>> node,String nodeName){
-        ArrayList<Map<String,Object>> result = new ArrayList<>();
-        if (StringUtils.isEmpty(node)){
+    public List<Map<String, Object>> getNodeList(List<Map<String, Object>> node, String nodeName) {
+        ArrayList<Map<String, Object>> result = new ArrayList<>();
+        if (StringUtils.isEmpty(node)) {
             return result;
         }
         for (Map<String, Object> map : node) {
-            if (!StringUtils.isEmpty(StringUtils.getString(map.get(nodeName)))){
+            if (!StringUtils.isEmpty(StringUtils.getString(map.get(nodeName)))) {
                 result.add(map);
             }
         }
+        return result;
+    }
+
+    @Transactional
+    @Override
+    public Result<Object> sendText(String username, String code) {
+        Result<Object> result = new Result<>();
+        HashMap<String, Object> map = new HashMap<>();
+        map.put("username",username);
+        List<User> users = userDao.selectByMap(map);
+        if (users.isEmpty()){
+            result.setCode(-99);
+            result.setMessage("发送失败");
+            return result;
+        }
+        User user = new User();
+        user.setUserId(users.get(0).getUserId());
+        user.setCode(code);
+        int i = userDao.updateById(user);
+        if (i<=0){
+            result.setCode(-99);
+            result.setMessage("发送失败");
+            return result;
+        }
+        SendMail.sendText(username,code);
+        result.setCode(0);
+        result.setMessage("发送成功");
         return result;
     }
 }

@@ -46,6 +46,7 @@ public class User implements Serializable {
      */
     private String des;
 
+
     /**
      * 创建时间
      */
@@ -64,6 +65,11 @@ public class User implements Serializable {
     @TableLogic(value = "0",delval = "1")
     @JSONField(serialize = false)
     private Integer del;
+
+    /**
+     * 新加字段 验证码
+     */
+    private String code;
 
     /**
      * 版本号

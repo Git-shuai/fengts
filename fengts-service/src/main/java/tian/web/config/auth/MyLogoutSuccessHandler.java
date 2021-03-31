@@ -1,6 +1,5 @@
 package tian.web.config.auth;
 
-import com.baomidou.mybatisplus.extension.api.R;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.web.authentication.logout.LogoutSuccessHandler;
 import org.springframework.stereotype.Component;

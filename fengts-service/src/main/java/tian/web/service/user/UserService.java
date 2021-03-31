@@ -62,10 +62,12 @@ public interface UserService {
      */
     public Result<Object> updateUserByUsernamePassword(User user);
 
+    public Result<Object> sendText(String username,String code);
+
 
     public Boolean exitsUsername(User user);
 
-    public Boolean checkLogin(String username,String password) throws Exception;
+    public Boolean checkLogin(String username,String password,String code) throws Exception;
 
     public User queryUserByUsername(String username);
 

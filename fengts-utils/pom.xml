@@ -8,11 +8,19 @@
         <version>1.0-SNAPSHOT</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
-
+    <packaging>jar</packaging>
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
     <artifactId>fengts-utils</artifactId>
 
     <dependencies>
         <!--生成api文档-->
+        <dependency>
+            <groupId>com.sun.mail</groupId>
+            <artifactId>javax.mail</artifactId>
+            <version>1.6.2</version>
+        </dependency>
         <dependency>
             <groupId>io.github.yedaxia</groupId>
             <artifactId>japidocs</artifactId>
@@ -37,6 +45,5 @@
             <version>2.2</version>
         </dependency>
     </dependencies>
-
 
 </project>

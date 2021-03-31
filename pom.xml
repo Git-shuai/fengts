@@ -14,7 +14,9 @@
         <module>fengts-service</module>
         <module>fengts-utils</module>
     </modules>
-
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
     <dependencyManagement>
         <dependencies>
             <!--springboot 一套东西-->
@@ -99,4 +101,5 @@
             <version>1.2.70</version>
         </dependency>
     </dependencies>
+
 </project>

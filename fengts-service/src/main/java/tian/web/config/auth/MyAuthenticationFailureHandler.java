@@ -1,7 +1,6 @@
 package tian.web.config.auth;
 
 
-import com.baomidou.mybatisplus.extension.api.R;
 import org.springframework.security.core.AuthenticationException;
 import org.springframework.security.web.authentication.AuthenticationFailureHandler;
 import org.springframework.stereotype.Component;
