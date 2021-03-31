@@ -42,13 +42,3 @@ spring:
       test-on-borrow: false
       test-on-return: false
 
-alibaba:
-  oss:
-    endpoint: oss-cn-beijing.aliyuncs.com
-    bucketName: fengts-upload
-    filename: upload
-  regionId: cn-hangzhou
-  accessKeyId: LTAI4GKFEdq8rX8H5NJRhfzg
-  secret: 26UOpMCkZAjzvlHbhtpJTThYHBMSPV
-  signName: ABC博客
-  templateCode: SMS_199808309
