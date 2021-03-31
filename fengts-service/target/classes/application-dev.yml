@@ -2,7 +2,20 @@ server:
   port: 9000
 logging:
   config: classpath:log4j2.xml
+
 spring:
+  resources:
+    add-mappings: false
+  mvc:
+    # 开启404
+    throw-exception-if-no-handler-found: true
+  application:
+    name: fengts
+  servlet:
+    # 表单上传文件限制大小
+    multipart:
+      max-request-size: 100MB
+      max-file-size: 10MB
   datasource:
     username: root
     password: root
@@ -28,3 +41,14 @@ spring:
       test-while-idle: true
       test-on-borrow: false
       test-on-return: false
+
+alibaba:
+  oss:
+    endpoint: oss-cn-beijing.aliyuncs.com
+    bucketName: fengts-upload
+    filename: upload
+  regionId: cn-hangzhou
+  accessKeyId: LTAI4GKFEdq8rX8H5NJRhfzg
+  secret: 26UOpMCkZAjzvlHbhtpJTThYHBMSPV
+  signName: ABC博客
+  templateCode: SMS_199808309
